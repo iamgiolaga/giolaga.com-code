@@ -1,14 +1,11 @@
-import me from './me.png';
 import './App.css';
+import Presentation from './Presentation';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div id="presentationContainer">
-          <p id="hello">Hi! I am Giovanni :)</p>
-          <img id="profilePic" src={me} alt="Profile"/>
-        </div>
+        <Presentation />
       </header>
     </div>
   );
