@@ -1,5 +1,6 @@
 import './App.css';
 import Presentation from './Presentation';
+import Biography from './Biography';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <header className="App-header">
         <Presentation />
       </header>
+      <Biography />
     </div>
   );
 }
