@@ -173,7 +173,7 @@ const CustomizedTimeLine = () => {
           <Typography variant="h6" component="span">
           Informatica
           </Typography>
-          <Typography>Università degli Studi di Milano, 110/110 e lode</Typography>
+          <Typography>Università degli Studi di Milano, 110/110 with honors</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
