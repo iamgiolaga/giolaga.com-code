@@ -23,7 +23,7 @@ const Biography = () => {
                 <Col xs={3} md={1}>
                 </Col>
                 <Col xs={9} md={11}>
-                  <Image id="signature" src={signature} fluid />
+                  <Image className="hide-on-landscape" id="signature" src={signature} fluid />
                 </Col>
               </Row>
             </Container>

@@ -19,3 +19,15 @@ h1 {
   margin-left: 70%;
   float: right;
 }
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+  .hide-on-landscape {
+      display: none;
+  }
+}
+
+@media (orientation:portrait) {
+  .hide-on-portrait {
+      display: none;
+  }
+}
