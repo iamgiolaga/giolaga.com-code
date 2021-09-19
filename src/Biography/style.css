@@ -7,17 +7,15 @@ h1 {
   background-color: #667085;
   color: white;
   width: 100%;
-  height: 726px;
+  height: 100%;
 }
 
 #biographyText {
-  position: absolute;
-  left: 20%;
-  top: 35%;
-  width: 60%;
+  margin-top: 18%;
 }
 
 #signature {
-  margin-top: 3%;
-  position: absolute;
+  margin-top: -10%;
+  margin-left: 70%;
+  float: right;
 }
