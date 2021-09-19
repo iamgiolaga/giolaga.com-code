@@ -2,7 +2,7 @@ h1 {
   margin-block-start: 0;
 }
 
-#biography {
+#biographyContainer {
   position: absolute;
   background-color: #667085;
   color: white;
@@ -11,7 +11,11 @@ h1 {
 }
 
 #biographyText {
-  margin-top: 15%;
+  margin-top: 10%;
+}
+
+#biography {
+  margin-top: 5%;
 }
 
 #signature {
