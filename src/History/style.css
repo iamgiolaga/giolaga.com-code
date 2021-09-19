@@ -1,6 +1,9 @@
 #timelineContainer {
     position: absolute;
     width: 100%;
-    height: 100%;
     background-color: rgb(238, 237, 237);
+}
+
+#historyTitle {
+    margin-top: 2%;
 }
