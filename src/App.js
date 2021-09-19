@@ -12,9 +12,9 @@ function App() {
       <header className="App-header">
         <Biography />
       </header>
-      <header className="App-header" style={{color: 'black'}}>
+      <section>
         <History />
-      </header>
+      </section>
     </div>
   );
 }
