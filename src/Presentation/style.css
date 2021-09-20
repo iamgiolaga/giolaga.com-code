@@ -12,6 +12,9 @@
 }
 
 #hello {
+  font: 20px 'opensans-bold', sans-serif;
+  letter-spacing: 2.5px;
+
   -webkit-animation-delay: 5s;
   -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
 

@@ -2,6 +2,7 @@
 
 .slideshow {
     margin: 0 auto;
+    margin-top: 10%;
     overflow: hidden;
     max-width: 500px;
   }
