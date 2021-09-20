@@ -28,11 +28,11 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot className="iconChildhood">
             <a href="https://scontent-mxp1-1.xx.fbcdn.net/v/t1.18169-9/403125_3093045456650_845884444_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=Up_7-tQm0uIAX-n9wlo&_nc_ht=scontent-mxp1-1.xx&oh=086e65cc2989088a89419703f9d3ede0&oe=616FB992">
-              <ChildFriendlyIcon className="iconChildhood"/>
+              <TimelineDot className="iconChildhood">
+                <ChildFriendlyIcon className="iconChildhood"/>
+              </TimelineDot>
             </a> 
-          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -52,11 +52,11 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot className="icon" color="primary">
             <a href="https://www.icmolinovecchio.edu.it">
-              <SchoolIcon/>
+              <TimelineDot className="icon" color="primary">
+                <SchoolIcon/>
+              </TimelineDot>
             </a>
-          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -77,11 +77,11 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
+            <a href="https://www.icmolinovecchio.edu.it">
               <TimelineDot className="icon" color="primary">
-                <a href="https://www.icmolinovecchio.edu.it">
                   <SchoolIcon/>
-                </a>
               </TimelineDot>
+            </a>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -102,11 +102,11 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot className="icon" color="primary">
             <a href="https://itspasolini.edu.it/it/">
-              <SchoolIcon />
+              <TimelineDot className="icon" color="primary">
+                <SchoolIcon />
+              </TimelineDot>
             </a>
-          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -127,11 +127,11 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot className="icon" color="primary">
             <a href="https://www.unimi.it/it/corsi/corsi-di-laurea/informatica-la-comunicazione-digitale">
-              <SchoolIcon />
+              <TimelineDot className="icon" color="primary">
+                <SchoolIcon />
+              </TimelineDot>
             </a>
-          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -152,11 +152,11 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot className="icon" color="primary">
             <a href="https://www.fib.upc.edu/en">
-              <FlightTakeoffIcon />
+              <TimelineDot className="icon" color="primary">
+                <FlightTakeoffIcon />
+              </TimelineDot>
             </a>
-          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -177,11 +177,11 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot className="icon" color="primary">
             <a href="https://www.unimi.it/it/corsi/corsi-di-laurea/informatica-magistrale">
-              <SchoolIcon />
+              <TimelineDot className="icon" color="primary">
+                <SchoolIcon />
+              </TimelineDot>
             </a>
-          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -202,11 +202,11 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector/>
-          <TimelineDot className="iconJob" color="secondary">
             <a href="https://www.quantyca.it">
-              <WorkIcon className="iconJob"/>
+              <TimelineDot className="iconJob" color="secondary">
+                <WorkIcon className="iconJob"/>
+              </TimelineDot>
             </a>
-          </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
