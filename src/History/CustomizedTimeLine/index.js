@@ -12,6 +12,7 @@ import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import Typography from '@mui/material/Typography';
+import './style.css';
 
 const CustomizedTimeLine = () => {
   return (
@@ -27,8 +28,10 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot>
-            <ChildFriendlyIcon />
+          <TimelineDot className="iconChildhood">
+            <a href="https://scontent-mxp1-1.xx.fbcdn.net/v/t1.18169-9/403125_3093045456650_845884444_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=Up_7-tQm0uIAX-n9wlo&_nc_ht=scontent-mxp1-1.xx&oh=086e65cc2989088a89419703f9d3ede0&oe=616FB992">
+              <ChildFriendlyIcon className="iconChildhood"/>
+            </a> 
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -49,8 +52,10 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="primary">
-            <SchoolIcon />
+          <TimelineDot className="icon" color="primary">
+            <a href="https://www.icmolinovecchio.edu.it">
+              <SchoolIcon/>
+            </a>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -72,9 +77,11 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="primary">
-            <SchoolIcon/>
-          </TimelineDot>
+              <TimelineDot className="icon" color="primary">
+                <a href="https://www.icmolinovecchio.edu.it">
+                  <SchoolIcon/>
+                </a>
+              </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -95,8 +102,10 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="primary">
-            <SchoolIcon />
+          <TimelineDot className="icon" color="primary">
+            <a href="https://itspasolini.edu.it/it/">
+              <SchoolIcon />
+            </a>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -118,8 +127,10 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="primary">
-            <SchoolIcon />
+          <TimelineDot className="icon" color="primary">
+            <a href="https://www.unimi.it/it/corsi/corsi-di-laurea/informatica-la-comunicazione-digitale">
+              <SchoolIcon />
+            </a>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -141,8 +152,10 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="primary">
-            <FlightTakeoffIcon />
+          <TimelineDot className="icon" color="primary">
+            <a href="https://www.fib.upc.edu/en">
+              <FlightTakeoffIcon />
+            </a>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -164,8 +177,10 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="primary">
-            <SchoolIcon />
+          <TimelineDot className="icon" color="primary">
+            <a href="https://www.unimi.it/it/corsi/corsi-di-laurea/informatica-magistrale">
+              <SchoolIcon />
+            </a>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -187,8 +202,10 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector/>
-          <TimelineDot color="secondary">
-            <WorkIcon />
+          <TimelineDot className="iconJob" color="secondary">
+            <a href="https://www.quantyca.it">
+              <WorkIcon className="iconJob"/>
+            </a>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>

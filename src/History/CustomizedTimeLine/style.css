@@ -1,0 +1,20 @@
+a {
+    color: white;
+}
+
+.icon:hover {
+    box-shadow: inset 0 0 100px 100px rgba(13, 74, 240, 0.1);
+    background-color: rgb(197, 220, 241);
+}
+
+.iconChildhood:hover {
+    box-shadow: inset 0 0 100px 100px rgba(106, 7, 116, 0.1);
+    background-color: rgb(219, 219, 219);
+    color:rgb(133, 133, 133);
+}
+
+.iconJob:hover {
+    box-shadow: inset 0 0 100px 100px rgba(106, 7, 116, 0.1);
+    background-color: rgb(241, 197, 239);
+    color:rgb(145, 5, 121);
+}
