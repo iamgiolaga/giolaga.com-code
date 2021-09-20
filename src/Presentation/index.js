@@ -1,11 +1,11 @@
 import './style.css';
-import me from '../me.png';
+import Slideshow from '../utils/Slideshow';
 
 const Presentation = () => {
     return(
         <div id="presentationContainer">
           <p id="hello">Hi! I am Giovanni :)</p>
-          <img id="profilePic" src={me} alt="Profile"/>
+          <Slideshow/>
         </div>
     );
 };
