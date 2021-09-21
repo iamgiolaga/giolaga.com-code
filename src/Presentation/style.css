@@ -31,6 +31,19 @@
   animation: fadein 5s; 
 }
 
+.socialIcon {
+  margin: 20px;
+  opacity: 0.6;
+}
+
+.socialIcon:hover {
+  opacity: 1;
+}
+
+.socialLink:hover {
+  color: white;
+}
+
 /*
 * FADE IN
 */
