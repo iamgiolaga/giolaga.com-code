@@ -10,8 +10,20 @@ a {
 
 .iconChildhood:hover {
     box-shadow: inset 0 0 100px 100px rgba(106, 7, 116, 0.1);
-    background-color: rgb(219, 219, 219);
-    color:rgb(133, 133, 133);
+    background-color: rgb(245, 224, 212);
+    color:rgb(236, 95, 13);
+}
+
+.iconCompulsorySchool:hover {
+    box-shadow: inset 0 0 100px 100px rgba(106, 7, 116, 0.1);
+    background-color: rgb(238, 208, 208);
+    color:rgb(226, 7, 7);
+}
+
+.iconErasmus:hover {
+    box-shadow: inset 0 0 100px 100px rgba(106, 7, 116, 0.1);
+    background-color: rgb(124, 233, 103);
+    color:rgb(26, 116, 8);
 }
 
 .iconJob:hover {
@@ -19,3 +31,37 @@ a {
     background-color: rgb(241, 197, 239);
     color:rgb(145, 5, 121);
 }
+
+.childDescription {
+    color: rgb(236, 95, 13);
+}
+
+.primarySchoolDescription {
+    color:rgb(226, 7, 7);
+}
+
+.middleSchoolDescription {
+    color:rgb(226, 7, 7);
+}
+
+.highSchoolDescription {
+    color:rgb(226, 7, 7);
+}
+
+.bachelorDescription {
+    color:rgb(52, 81, 214);
+}
+
+.erasmusDescription {
+    color:rgb(26, 116, 8);
+}
+
+.masterDescription {
+    color:rgb(52, 81, 214);
+}
+
+.jobDescription {
+    color:rgb(170, 8, 143);
+}
+
+
