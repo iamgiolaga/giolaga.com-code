@@ -20,7 +20,7 @@ const Biography = () => {
                       (if you are wondering... yes, where the cheese was invented).
                       I grew up in Gorgonzola, receiving there the first part of my education and 
                       I came back to Milan for high school and both bachelor and master's degree.
-                      Moreover, I spend 5 months between 2019 and 2020 in Barcelona, Spain for the Erasmus+ Programme.</p>
+                      Moreover, I spent 5 months between 2019 and 2020 in Barcelona, Spain for the Erasmus+ Programme.</p>
                   </Col>
                   <Col xs={3} md={1}>
                   </Col>
