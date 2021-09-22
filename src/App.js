@@ -1,8 +1,9 @@
 import './App.css';
+import {Link} from 'react-scroll';
 import Presentation from './Presentation';
 import Biography from './Biography';
 import History from './History';
-import {Link} from 'react-scroll';
+import Projects from './Projects';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <li><Link to="presentation" spy={true} smooth={true} duration={1500}><a className="smoothscroll" href="#presentation">Home</a></Link></li>
           <li><Link to="biography" spy={true} smooth={true} duration={1500}><a className="smoothscroll" href="#biography">Biography</a></Link></li>
           <li><Link to="history" spy={true} smooth={true} duration={1500}><a className="smoothscroll" href="#history">History</a></Link></li>
+          <li><Link to="projects" spy={true} smooth={true} duration={1500}><a className="smoothscroll" href="#projects">Projects</a></Link></li>
         </ul> 
       </nav>
       <section id="presentation" className="App-header">
@@ -23,9 +25,13 @@ function App() {
       <section id="biography" className="App-header">
           <Biography />
       </section>
-      <section id="history" >
+      <section id="history" className="independentSection">
           <History />
       </section>
+      <section id="projects" className="independentSection">
+          <Projects />
+      </section>
+      <p>giolaga.com - v1.0</p>
     </div>
   );
 }
