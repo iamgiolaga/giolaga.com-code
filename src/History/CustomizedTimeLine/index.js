@@ -34,6 +34,7 @@ const CustomizedTimeLine = () => {
           align="right"
           variant="body2"
           color="text.secondary"
+          fontWeight = {hoveredChild ? "600" : "0"}
           style={{color: hoveredChild ? 'rgb(236, 95, 13)' : ''}}
         >
           25th November, 1995
@@ -52,10 +53,16 @@ const CustomizedTimeLine = () => {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" className = {hoveredChild ? "childDescription" : ""}>
+          <Typography 
+            variant="h6" 
+            component="span" 
+            fontWeight = {hoveredChild ? "600" : "0"}
+            className = {hoveredChild ? "childDescription" : ""}>
             Milan
           </Typography>
-          <Typography className = {hoveredChild ? "childDescription" : ""}>at around 2 am, I have always been a night person</Typography>
+          <Typography 
+            fontWeight = {hoveredChild ? "600" : "0"}
+            className = {hoveredChild ? "childDescription" : ""}>at around 2 am, I have always been a night person</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -63,6 +70,7 @@ const CustomizedTimeLine = () => {
           sx={{ m: 'auto 0' }}
           variant="body2"
           color="text.secondary"
+          fontWeight = {hoveredPrimarySchool ? "600" : "0"}
           style={{color: hoveredPrimarySchool ? 'rgb(226, 7, 7)' : ''}}
         >
         June, 2006
@@ -81,10 +89,16 @@ const CustomizedTimeLine = () => {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" className = {hoveredPrimarySchool ? "primarySchoolDescription" : ""}>
+          <Typography 
+            variant="h6" 
+            component="span"
+            fontWeight = {hoveredPrimarySchool ? "600" : "0"}
+            className = {hoveredPrimarySchool ? "primarySchoolDescription" : ""}>
           Istituto Comprensivo "Molino Vecchio"
           </Typography>
-          <Typography className = {hoveredPrimarySchool ? "primarySchoolDescription" : ""}>Primary School</Typography>
+          <Typography 
+            fontWeight = {hoveredPrimarySchool ? "600" : "0"}
+            className = {hoveredPrimarySchool ? "primarySchoolDescription" : ""}>Primary School</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -93,6 +107,7 @@ const CustomizedTimeLine = () => {
             align="right"
             variant="body2"
             color="text.secondary"
+            fontWeight = {hoveredMiddleSchool ? "600" : "0"}
             style={{color: hoveredMiddleSchool ? 'rgb(226, 7, 7)' : ''}}
           >
             July, 2009
@@ -111,10 +126,16 @@ const CustomizedTimeLine = () => {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" className = {hoveredMiddleSchool ? "middleSchoolDescription" : ""}>
+          <Typography 
+            variant="h6" 
+            component="span" 
+            fontWeight = {hoveredMiddleSchool ? "600" : "0"}
+            className = {hoveredMiddleSchool ? "middleSchoolDescription" : ""}>
           Istituto Comprensivo "Molino Vecchio"
           </Typography>
-          <Typography className = {hoveredMiddleSchool ? "middleSchoolDescription" : ""}>Middle School</Typography>
+          <Typography 
+            fontWeight = {hoveredMiddleSchool ? "600" : "0"}
+            className = {hoveredMiddleSchool ? "middleSchoolDescription" : ""}>Middle School</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -124,6 +145,7 @@ const CustomizedTimeLine = () => {
             variant="body2"
             color="text.secondary"
             style={{color: hoveredHighSchool ? 'rgb(226, 7, 7)' : ''}}
+            fontWeight = {hoveredHighSchool ? "600" : "0"}
           >
             June, 2014
         </TimelineOppositeContent>
@@ -141,10 +163,16 @@ const CustomizedTimeLine = () => {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" className = {hoveredHighSchool ? "highSchoolDescription" : ""}>
+          <Typography 
+            variant="h6" 
+            component="span" 
+            fontWeight = {hoveredHighSchool ? "600" : "0"}
+            className = {hoveredHighSchool ? "highSchoolDescription" : ""}>
           ITS Pier Paolo Pasolini
           </Typography>
-          <Typography className = {hoveredHighSchool ? "highSchoolDescription" : ""}>Linguistic High School, 77/100</Typography>
+          <Typography 
+            fontWeight = {hoveredHighSchool ? "600" : "0"}
+            className = {hoveredHighSchool ? "highSchoolDescription" : ""}>Linguistic High School, 77/100</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -153,6 +181,7 @@ const CustomizedTimeLine = () => {
             align="right"
             variant="body2"
             color="text.secondary"
+            fontWeight = {hoveredBachelor ? "600" : "0"}
             style={{color: hoveredBachelor ? 'rgb(52, 81, 214)' : ''}}
           >
             April, 2018
@@ -171,10 +200,16 @@ const CustomizedTimeLine = () => {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" className = {hoveredBachelor ? "bachelorDescription" : ""}>
+          <Typography 
+            variant="h6" 
+            component="span" 
+            fontWeight = {hoveredBachelor ? "600" : "0"}
+            className = {hoveredBachelor ? "bachelorDescription" : ""}>
           Informatica per la Comunicazione Digitale
           </Typography>
-          <Typography className = {hoveredBachelor ? "bachelorDescription" : ""}>Università degli Studi di Milano, 101/110</Typography>
+          <Typography 
+            fontWeight = {hoveredBachelor ? "600" : "0"}
+            className = {hoveredBachelor ? "bachelorDescription" : ""}>Università degli Studi di Milano, 101/110</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -183,6 +218,7 @@ const CustomizedTimeLine = () => {
             align="right"
             variant="body2"
             color="text.secondary"
+            fontWeight = {hoveredErasmus ? "600" : "0"}
             style={{color: hoveredErasmus ? 'rgb(26, 116, 8)' : ''}}
           >
             September 2019 - February 2020
@@ -201,10 +237,16 @@ const CustomizedTimeLine = () => {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" className = {hoveredErasmus ? "erasmusDescription" : ""}>
+          <Typography 
+            variant="h6" 
+            component="span" 
+            fontWeight = {hoveredErasmus ? "600" : "0"}
+            className = {hoveredErasmus ? "erasmusDescription" : ""}>
           Facultat d'Informatica de Barcelona
           </Typography>
-          <Typography className = {hoveredErasmus ? "erasmusDescription" : ""}>Universitat Politècnica de Catalunya</Typography>
+          <Typography 
+            fontWeight = {hoveredErasmus ? "600" : "0"}
+            className = {hoveredErasmus ? "erasmusDescription" : ""}>Universitat Politècnica de Catalunya</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -213,6 +255,7 @@ const CustomizedTimeLine = () => {
             align="right"
             variant="body2"
             color="text.secondary"
+            fontWeight = {hoveredMaster ? "600" : "0"}
             style={{color: hoveredMaster ? 'rgb(52, 81, 214)' : ''}}
           >
             April, 2021
@@ -231,10 +274,16 @@ const CustomizedTimeLine = () => {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" className = {hoveredMaster ? "masterDescription" : ""}>
+          <Typography 
+            variant="h6" 
+            component="span" 
+            fontWeight = {hoveredMaster ? "600" : "0"}
+            className = {hoveredMaster ? "masterDescription" : ""}>
           Informatica
           </Typography>
-          <Typography className = {hoveredMaster ? "masterDescription" : ""}>Università degli Studi di Milano, 110/110 with honors</Typography>
+          <Typography 
+            fontWeight = {hoveredMaster ? "600" : "0"}
+            className = {hoveredMaster ? "masterDescription" : ""}>Università degli Studi di Milano, 110/110 with honors</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -243,6 +292,7 @@ const CustomizedTimeLine = () => {
             align="right"
             variant="body2"
             color="text.secondary"
+            fontWeight = {hoveredJob ? "600" : "0"}
             style={{color: hoveredJob ? 'rgb(170, 8, 143)' : ''}}
           >
             June, 2021
@@ -261,10 +311,16 @@ const CustomizedTimeLine = () => {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" className = {hoveredJob ? "jobDescription" : ""}>
+          <Typography 
+            variant="h6" 
+            component="span" 
+            fontWeight = {hoveredJob ? "600" : "0"}
+            className = {hoveredJob ? "jobDescription" : ""}>
             Junior Data Engineer
           </Typography>
-          <Typography className = {hoveredJob ? "jobDescription" : ""}>Quantyca - Data at Core</Typography>
+          <Typography 
+            fontWeight = {hoveredJob ? "600" : "0"}
+            className = {hoveredJob ? "jobDescription" : ""}>Quantyca - Data at Core</Typography>
         </TimelineContent>
       </TimelineItem>
     </Timeline>

@@ -37,6 +37,7 @@ a {
 }
 
 .primarySchoolDescription {
+    font-weight: bold;
     color:rgb(226, 7, 7);
 }
 
