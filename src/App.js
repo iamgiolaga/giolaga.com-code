@@ -31,7 +31,7 @@ function App() {
       <section id="projects" className="independentSection">
           <Projects />
       </section>
-      <p>giolaga.com - v1.0</p>
+      <p id="websiteVersion">giolaga.com - v1.0</p>
     </div>
   );
 }
