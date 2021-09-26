@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import './style.css';
 
-const delay = 5000;
-
 const DivSlideshow = ({elements}) => {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
@@ -14,14 +12,27 @@ const DivSlideshow = ({elements}) => {
   }
 
   useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === elements.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
+    if (document.getElementById('projectContainerCurrent')) {
+      timeoutRef.current = setTimeout(
+        () =>
+          setIndex((prevIndex) =>
+            prevIndex === elements.length - 1 ? 0 : prevIndex + 1
+          ),
+        5000
+      );
+    }
+
+    else {
+      resetTimeout();
+
+      timeoutRef.current = setTimeout(
+        () =>
+          setIndex((prevIndex) =>
+            prevIndex === elements.length - 1 ? 0 : prevIndex + 1
+          ),
+        10000000
+      );
+    }
 
     return () => {
       resetTimeout();
