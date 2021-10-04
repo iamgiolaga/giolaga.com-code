@@ -25,10 +25,10 @@ function App() {
       <section id="biography" className="App-header">
           <Biography />
       </section>
-      <section id="history" className="independentSection">
+      <section id="history" className="App-header">
           <History />
       </section>
-      <section id="projects" className="independentSection">
+      <section id="projects" className="App-header">
           <Projects />
       </section>
       <p id="websiteVersion">giolaga.com - v1.0</p>

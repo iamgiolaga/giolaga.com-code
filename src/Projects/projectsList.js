@@ -33,7 +33,18 @@ const projectsList = [
       subtitle="Statistical methods for Machine Learning course"
       startDate="Aug 2020"
       endDate="Oct 2020"
-      description="This was the project..."
+      description={`In the context of Machine Learning, regression represents a supervised approach to infer predictions that
+      lay in the numerical domain from a set of heterogeneus information. Labelling data means attaching a value to some observations 
+      and this value is the prediction object that is desirable to achieve.
+      In supervised learning, labelled data is created to form data sets, and these data sets are used to train a mathematical model.
+      A good tradeoff between the number of examples and the model complexity can lead to a good training such that the model is autonomously 
+      capable to understand the hidden relationships between observations and labels.
+      When data without label is provided, the model tries to do predictions and the results are compared to the actual labels.
+      This comparison lets conduct a numerical analysis of how big the error was and what hyperparameters configuration can be chosen
+      to minimize it and get the best result.
+      Ridge regression is an extension of linear regression that introduces a regularization parameter alpha. The aim of this project 
+      was to build a system capable to infer housing prices in the USA from a dataset containing information about its location, its 
+      area, its capacity and so on...`}
       technologies="Python"
       picture=""
       link=""

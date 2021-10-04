@@ -4,6 +4,8 @@ import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
+import {useDispatch} from 'react-redux'
+import {focusOnProject} from '../../store/focus';
 
 const Project = ({
     title,
@@ -15,6 +17,8 @@ const Project = ({
     picture,
     link
 }) => {
+
+    const dispatch = useDispatch();
 
     const [modalStatus, setModalStatus] = useState(false);
     const [hoveredProject, setHoveredProject] = useState(false);
@@ -39,7 +43,10 @@ const Project = ({
                 style={{opacity: hoveredProject ? '1' : '0.6'}} 
                 id={modalStatus ? "projectContainerCurrent" : "projectContainer"}
                 className="projectContainer" 
-                onClick={() => setModalStatus(true)} 
+                onClick={() => {
+                    setModalStatus(true);
+                    dispatch(focusOnProject(true));
+                }} 
                 onMouseEnter={() => setHoveredProject(true)} 
                 onMouseLeave={() => setHoveredProject(false)}
             >
@@ -52,7 +59,10 @@ const Project = ({
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"
                 open={modalStatus}
-                onClose={() => setModalStatus(false)}
+                onClose={() => {
+                    setModalStatus(false);
+                    dispatch(focusOnProject(false));
+                }}
                 closeAfterTransition
                 BackdropComponent={Backdrop}
                 BackdropProps={{
