@@ -53,7 +53,7 @@ const Project = ({
                 <h1>{title}</h1>
                 <h3>{subtitle}</h3>
                 <h5>{startDate} - {endDate}</h5>
-                <div style={{marginTop: '4%', whiteSpace: 'pre-wrap'}}>{description.substring(0, 1000)}...</div>
+                <div style={{marginTop: '4%', whiteSpace: 'pre-wrap'}}>{description.substring(0, 1000)}... <i>(continue reading)</i></div>
             </div>
             <Modal
                 aria-labelledby="transition-modal-title"
@@ -76,7 +76,7 @@ const Project = ({
                             <h3>{subtitle}</h3>
                             <h5>{startDate} - {endDate}</h5>
                             <div style={{marginTop: '4%'}}>{description}</div>
-                            <p style={{marginTop: '3%'}}>Technologies: {technologies}</p>
+                            <p style={{marginTop: '3%'}}><b>Technologies:</b> {technologies}</p>
                         </div>
                     </Box>
                 </Fade>
