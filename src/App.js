@@ -6,7 +6,6 @@ import History from './History';
 import Projects from './Projects';
 
 function App() {
-
   return (
     <div className="App">
       <nav id="nav-wrap">
@@ -28,7 +27,7 @@ function App() {
       <section id="history" className="App-header">
           <History />
       </section>
-      <section id="projects" className="App-header">
+      <section id="projects">
           <Projects />
       </section>
       <p id="websiteVersion">giolaga.com - v1.0</p>

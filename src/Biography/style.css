@@ -3,7 +3,7 @@ h1 {
 }
 
 #biographyContainer {
-  position: absolute;
+  /* position: absolute; */
   background-color: #667085;
   color: white;
   width: 100%;

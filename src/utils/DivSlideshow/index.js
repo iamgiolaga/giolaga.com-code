@@ -36,7 +36,7 @@ const DivSlideshow = ({elements}) => {
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
         {elements.map((el, index) => (
-            <div className="slide" key={index}>
+            <div className="projectSlide" key={index}>
                 {el}
             </div>
         ))}
