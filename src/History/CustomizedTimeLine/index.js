@@ -13,6 +13,10 @@ import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import Typography from '@mui/material/Typography';
 import {useState} from 'react';
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
 import './style.css';
 
 const CustomizedTimeLine = () => {
@@ -25,6 +29,21 @@ const CustomizedTimeLine = () => {
   const [hoveredErasmus, setHoveredErasmus] = useState(false);
   const [hoveredMaster, setHoveredMaster] = useState(false);
   const [hoveredJob, setHoveredJob] = useState(false);
+  const [modalStatus, setModalStatus] = useState(false);
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '65%',
+    height: 'fit-content%',
+    padding: '2%',
+    bgcolor: '#181b20',
+    boxShadow: '0 5px 10px rgba(0, 0, 0, 0.3)',
+    outline: 'none',
+    color: 'white'
+};
 
   return (
     <Timeline position="alternate">
@@ -41,15 +60,41 @@ const CustomizedTimeLine = () => {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-            <a href="https://scontent-mxp1-1.xx.fbcdn.net/v/t1.18169-9/403125_3093045456650_845884444_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=Up_7-tQm0uIAX-n9wlo&_nc_ht=scontent-mxp1-1.xx&oh=086e65cc2989088a89419703f9d3ede0&oe=616FB992">
-              <TimelineDot 
+              <TimelineDot
+                style={{cursor: 'pointer'}} 
                 onMouseEnter = {() => setHoveredChild(true)} 
                 onMouseLeave = {() => setHoveredChild(false)} 
+                onClick = {() => {
+                  setModalStatus(true);
+                }}
                 className="iconChildhood"
                 color="warning">
                 <ChildFriendlyIcon className="iconChildhood"/>
               </TimelineDot>
-            </a> 
+              <Modal
+                  aria-labelledby="transition-modal-title"
+                  aria-describedby="transition-modal-description"
+                  open={modalStatus}
+                  onClose={() => {
+                      setModalStatus(false);
+                  }}
+                  closeAfterTransition
+                  BackdropComponent={Backdrop}
+                  BackdropProps={{
+                  timeout: 500,
+                  }}
+              >
+                  <Fade in={modalStatus}>
+                      <Box sx={style}>
+                          <div style={{textAlign:'center'}}>
+                          <iframe 
+                            style={{width: '70%', height: '530px'}}
+                            src="https://scontent-mxp1-1.xx.fbcdn.net/v/t1.18169-9/403125_3093045456650_845884444_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=Up_7-tQm0uIAX-n9wlo&_nc_ht=scontent-mxp1-1.xx&oh=086e65cc2989088a89419703f9d3ede0&oe=616FB992" title="Little me"
+                            ></iframe>
+                          </div>
+                      </Box>
+                  </Fade>
+              </Modal>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
