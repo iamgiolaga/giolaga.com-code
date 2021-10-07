@@ -123,7 +123,8 @@ const projectsList = [
       subtitle="Mobile computing course"
       startDate="Jun 2017"
       endDate="Jan 2018"
-      description="This was the project..."
+      description={`The idea of this project was to develop an Android native application and a cross-platform web application.
+      Geopost is a social network where the user can register, follow other people, see them in his feed and publish georeferenced posts with latitude and longitude coordinates.`}
       technologies="Android (Java), HTML, CSS, JavaScript, jQuery, Apache Cordova"
       picture=""
       link=""
@@ -133,7 +134,10 @@ const projectsList = [
       startDate="Nov 2017"
       endDate="Jan 2018"
       subtitle="Graphics course"
-      description="This was the project..."
+      description={`Modelling is an important branch of graphics and in this case the project consisted of composing a virtual scene.
+      I choosed to represent a spaceship passing between two planets right before they collide in space.
+      The same scene has been reproduced with stereoscopy technology such that by wearing blue and red lens glasses, it was possible
+      to perceive 3D.`}
       technologies="Blender"
       picture=""
       link=""
@@ -143,7 +147,10 @@ const projectsList = [
       subtitle="Digital publishing course"
       startDate="May 2017"
       endDate="Jul 2017"
-      description="This was the project..."
+      description={`Ebooks are an undervalued technology which can instead have a great potential in user experience.
+      In this project I reproduced the famous opera of Shakespeare in a digital book by implementing special features to improve
+      the multimedial experience: pictures, audios and videos had been included and the presence of a dictionary enriched the reading by
+      allowing the user to analyze words and get their meaning or paraphrase.`}
       technologies="EPUB3"
       picture=""
       link=""
@@ -153,7 +160,12 @@ const projectsList = [
       subtitle="Methods and applications for social networks course"
       startDate="May 2017"
       endDate="Jun 2017"
-      description="This was the project..."
+      description={`In this project I had to choose a social network, detect an inner community and analyze its data.
+      I choosed Instagram and tried to extract interesting information about the network of famous rappers in Italy and USA.
+      My research started by creating a list of potential usernames and then performing web scraping technique to get automatically
+      the HTML page of those profiles. From this, I built a network based on following and follower relationships and I represented it through a graph
+      where each node dimension was proportional to the number of followers (in degree).
+      The analysis regarded finding the coefficient of assortativity, discover if my community was a small-word network, if its distribution followed the Power Law and so on...`}
       technologies="Python, Jupyter Notebook, Gephi"
       picture=""
       link=""
@@ -163,7 +175,9 @@ const projectsList = [
       subtitle="Database course"
       startDate="Mar 2016"
       endDate="Jun 2016"
-      description="This was the project..."
+      description={`Cinguettio is a social network miming Twitter where the user can publish three kinds of posts: texts, pictures and locations.
+      The project embraced different phases of development, starting from the ER schema to design the database, logically restructuring it and forming
+      the relational database. The session managament has been handled in PHP such that cookies could be stored for the web application.`}
       technologies="HTML, CSS, PHP, SQL"
       picture=""
       link=""
@@ -173,7 +187,9 @@ const projectsList = [
       subtitle="Web and cloud applications course"
       startDate="Mar 2016"
       endDate="Jun 2016"
-      description="This was the project..."
+      description="This is my first web application project where I developed a website for a multiplex handling its bookings and projections.
+      The application was able to show its weekly programme of movies and let its users to book a certain number of seats for a specific projection.
+      This project didn't rely on a persistent storage like a database but used local and session storage."
       technologies="HTML, CSS, JavaScript, JQuery"
       picture=""
       link=""
