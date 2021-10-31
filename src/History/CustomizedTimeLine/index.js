@@ -17,6 +17,7 @@ import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
+import baby from "../../profilePictures/baby.jpg";
 import './style.css';
 
 const CustomizedTimeLine = () => {
@@ -89,7 +90,7 @@ const CustomizedTimeLine = () => {
                           <div style={{textAlign:'center'}}>
                           <iframe 
                             style={{width: '70%', height: '530px'}}
-                            src="https://scontent-mxp1-1.xx.fbcdn.net/v/t1.18169-9/403125_3093045456650_845884444_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=Up_7-tQm0uIAX-n9wlo&_nc_ht=scontent-mxp1-1.xx&oh=086e65cc2989088a89419703f9d3ede0&oe=616FB992" title="Little me"
+                            src={baby}
                             ></iframe>
                           </div>
                       </Box>
