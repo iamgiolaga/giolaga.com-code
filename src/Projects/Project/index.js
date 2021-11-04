@@ -38,7 +38,7 @@ const Project = ({
     };
 
     return(
-        <div style={{width: '60%', margin: '0 auto'}}>
+        <div style={{margin: '0 auto'}}>
             <div 
                 style={{opacity: hoveredProject ? '1' : '0.6'}} 
                 id={modalStatus ? "projectContainerCurrent" : "projectContainer"}

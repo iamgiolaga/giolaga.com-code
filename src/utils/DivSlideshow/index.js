@@ -33,7 +33,7 @@ const DivSlideshow = ({elements}) => {
     <div className="slideshow">
       <div
         className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+        style={{ height: '600px', transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
         {elements.map((el, index) => (
             <div className="projectSlide" key={index}>
