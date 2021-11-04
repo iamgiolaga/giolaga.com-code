@@ -30,10 +30,11 @@ const DivSlideshow = ({elements}) => {
   }, [index, focus.isFocusingOnProject]);
 
   return (
-    <div className="slideshow">
+    <div style={{height: '100vh', position: 'relative'}} className="slideshow">
       <div
+        id="projectSlideshowSlider"
         className="slideshowSlider"
-        style={{ height: '600px', transform: `translate3d(${-index * 100}%, 0, 0)` }}
+        style={{transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
         {elements.map((el, index) => (
             <div className="projectSlide" key={index}>
