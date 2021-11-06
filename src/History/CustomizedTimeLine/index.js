@@ -57,7 +57,7 @@ const CustomizedTimeLine = () => {
           fontWeight = {hoveredChild ? "600" : "0"}
           style={{color: hoveredChild ? 'rgb(236, 95, 13)' : ''}}
         >
-          25th November, 1995
+          November 25th, 1995
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
