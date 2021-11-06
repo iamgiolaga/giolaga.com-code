@@ -71,7 +71,7 @@ const Project = ({
             >
                 <Fade in={modalStatus}>
                     <Box sx={style}>
-                        <div style={{textAlign:'center'}}>
+                        <div>
                             <h1>{title}</h1>
                             <h3>{subtitle}</h3>
                             <h5>{startDate} - {endDate}</h5>

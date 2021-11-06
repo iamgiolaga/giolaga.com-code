@@ -5,11 +5,12 @@ import me2 from "../../profilePictures/me2.png";
 import me3 from "../../profilePictures/me3.png";
 import me4 from "../../profilePictures/me4.png";
 import me5 from "../../profilePictures/me5.png";
+import { useSwipeable } from "react-swipeable";
 
 const pictures = [me, me2, me3, me4, me5];
 const delay = 5000;
 
-const Slideshow = () => {
+const Slideshow = (config) => {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
 
@@ -18,6 +19,12 @@ const Slideshow = () => {
       clearTimeout(timeoutRef.current);
     }
   }
+
+  const handlers = useSwipeable({
+    onSwipedLeft: (eventData) => setIndex((prevIndex) => prevIndex === pictures.length - 1 ? 0 : prevIndex + 1),
+    onSwipedRight: (eventData) => setIndex((prevIndex) => prevIndex === 0 ? pictures.length - 1 : prevIndex - 1),
+    ...config,
+  });
 
   useEffect(() => {
     resetTimeout();
@@ -37,6 +44,7 @@ const Slideshow = () => {
   return (
     <div className="slideshow">
       <div
+        {...handlers}
         className="slideshowSlider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >

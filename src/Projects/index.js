@@ -3,7 +3,8 @@ import FadeInSection from '../utils/FadeInSection';
 import DivSlideshow from '../utils/DivSlideshow';
 import projectsList from './projectsList.js';
 
-const Projects = () => {    
+const Projects = (config) => {    
+  
     return(
         <div id="projectsContainer">
           <FadeInSection>

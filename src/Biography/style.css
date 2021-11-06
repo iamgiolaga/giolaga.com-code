@@ -2,6 +2,10 @@ h1 {
   margin-block-start: 0;
 }
 
+#biography {
+  text-align: left;
+}
+
 #biographyContainer {
   /* position: absolute; */
   background-color: #667085;
