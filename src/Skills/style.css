@@ -1,11 +1,15 @@
 #skillsContainer {
-    background-color: #667085;
+    background-color: #1f1f1f;
     color: white;
     width: 100%;
-  }
+}
+
+#skillsTitle {
+    padding-top: 2%;
+}
 
 #skillsContent {
-    height: 900px;
+    height: fit-content;
 }
 
 .leftSkills {
