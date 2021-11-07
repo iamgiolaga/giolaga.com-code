@@ -47,7 +47,7 @@ const Skills = () => {
             <div id="skillsContent">
                 <Container>
                     <Row>
-                        <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+                        <Col xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight:'3%'}}>
                             <h4 id="softSkills" className="leftSkills">Soft skills</h4>
                             <div className="skill">
                                 <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>Precision</p>
@@ -76,7 +76,7 @@ const Skills = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={12} sm={12} md={6} lg={6} xl={6}>
+                        <Col xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight:'3%'}}>
                             <h4 id="hardSkills" className="leftSkills">Hard skills</h4>
                             <div className="skill">
                                 <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>Java</p>
@@ -135,19 +135,19 @@ const Skills = () => {
                         <Col className="d-block d-md-none" md={6} lg={6} xl={6}>
                             <h4 className="rightSkills">Languages</h4>
                             <div className="skill">
-                                <ReactCountryFlag countryCode="IT" svg style={{marginLeft: '35%', float: 'left', width:'2em', height:'2em'}}/>
+                                <ReactCountryFlag countryCode="IT" svg style={{marginLeft: '25%', float: 'left', width:'2em', height:'2em'}}/>
                                 <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Mother Tongue</p>
                             </div>
                             <div className="skill">
-                                <ReactCountryFlag countryCode="GB" svg style={{marginLeft: '35%', float: 'left', width:'2em', height:'2em'}}/>
+                                <ReactCountryFlag countryCode="GB" svg style={{marginLeft: '25%', float: 'left', width:'2em', height:'2em'}}/>
                                 <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Proficient</p>
                             </div>
                             <div className="skill">
-                                <ReactCountryFlag countryCode="ES" svg style={{marginLeft: '35%', float: 'left', width:'2em', height:'2em'}}/>
+                                <ReactCountryFlag countryCode="ES" svg style={{marginLeft: '25%', float: 'left', width:'2em', height:'2em'}}/>
                                 <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Basic Knowledge</p>
                             </div>
                             <div className="skill">
-                                <ReactCountryFlag countryCode="FR" svg style={{marginLeft: '35%', float: 'left', width:'2em', height:'2em'}}/>
+                                <ReactCountryFlag countryCode="FR" svg style={{marginLeft: '25%', float: 'left', width:'2em', height:'2em'}}/>
                                 <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Basic Knowledge</p>
                             </div>
                         </Col>

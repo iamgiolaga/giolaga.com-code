@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <nav id="nav-wrap">
         <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-        <a className="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+        <a className="mobile-btn" href="#nav" title="Hide navigation">Hide navigation</a>
         <ul id="nav" class="nav">
           <li><Link to="presentation" spy={true} smooth={true} duration={1500}><a className="smoothscroll" href="#presentation">Home</a></Link></li>
           <li><Link to="biography" spy={true} smooth={true} duration={1500}><a className="smoothscroll" href="#biography">Biography</a></Link></li>
