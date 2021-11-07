@@ -1,0 +1,21 @@
+#skillsContainer {
+    background-color: #667085;
+    color: white;
+    width: 100%;
+  }
+
+#skillsContent {
+    height: 900px;
+}
+
+.leftSkills {
+    padding: 10%;
+}
+
+.rightSkills {
+    padding: 10%;
+}
+
+.skill {
+    height: 40px;
+}
