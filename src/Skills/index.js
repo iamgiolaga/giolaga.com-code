@@ -47,22 +47,22 @@ const Skills = () => {
             <div id="skillsContent">
                 <Container>
                     <Row>
-                        <Col xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight:'3%'}}>
+                        <Col xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight:'6%'}}>
                             <h4 id="softSkills" className="leftSkills">Soft skills</h4>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>Precision</p>
+                                <p style={{display:'flex', float:'left', paddingLeft: '6%'}}>Precision</p>
                                 <BorderLinearProgress variant="determinate" value={100}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>Autonomy</p>
+                                <p style={{display:'flex', float:'left', paddingLeft: '6%'}}>Autonomy</p>
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>Communication</p>
+                                <p style={{display:'flex', float:'left', paddingLeft: '6%'}}>Communication</p>
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>Problem Solving</p>
+                                <p style={{display:'flex', float:'left', paddingLeft: '6%'}}>Problem Solving</p>
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                         </Col>
@@ -76,30 +76,30 @@ const Skills = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight:'3%'}}>
+                        <Col xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight:'6%'}}>
                             <h4 id="hardSkills" className="leftSkills">Hard skills</h4>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>Java</p>
+                                <p style={{display:'flex', float:'left', paddingLeft: '6%'}}>Java</p>
                                 <BorderLinearProgress variant="determinate" value={90}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>Python</p>
+                                <p style={{display:'flex', float:'left', paddingLeft: '6%'}}>Python</p>
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>JavaScript</p>
+                                <p style={{display:'flex', float:'left', paddingLeft: '6%'}}>JavaScript</p>
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>R</p>
+                                <p style={{display:'flex', float:'left', paddingLeft: '6%'}}>R</p>
                                 <BorderLinearProgress variant="determinate" value={70}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>Kotlin</p>
+                                <p style={{display:'flex', float:'left', paddingLeft: '6%'}}>Kotlin</p>
                                 <BorderLinearProgress variant="determinate" value={70}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft: '10%'}}>Scala</p>
+                                <p style={{display:'flex', float:'left', paddingLeft: '6%'}}>Scala</p>
                                 <BorderLinearProgress variant="determinate" value={60}/>
                             </div>
                         </Col>
