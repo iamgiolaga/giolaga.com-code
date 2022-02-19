@@ -35,7 +35,7 @@ function App() {
       <section id="skills">
           <Skills />
       </section>
-      <p id="websiteVersion">giolaga.com - v1.1</p>
+      <p id="websiteVersion">giolaga.com - v1.2</p>
     </div>
   );
 }
