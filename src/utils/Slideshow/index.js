@@ -5,9 +5,10 @@ import me2 from "../../profilePictures/me2.png";
 import me3 from "../../profilePictures/me3.png";
 import me4 from "../../profilePictures/me4.png";
 import me5 from "../../profilePictures/me5.png";
+import me6 from "../../profilePictures/me6.png";
 import { useSwipeable } from "react-swipeable";
 
-const pictures = [me, me2, me3, me4, me5];
+const pictures = [me6, me, me2, me3, me4, me5];
 const delay = 5000;
 
 const Slideshow = (config) => {
