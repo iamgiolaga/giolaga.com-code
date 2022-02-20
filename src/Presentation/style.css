@@ -2,6 +2,11 @@
     width: 300px;
     height: 300px;
   }
+
+.profilePicGroup {
+  position: relative;
+  top: 8%;
+}
   
 #presentationContainer {
   animation: topToBottom ease 2s;
