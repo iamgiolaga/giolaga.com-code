@@ -6,8 +6,10 @@
     display: flex;
     justify-content: left;
     flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #projectsTitle {
-    margin-top: 2%;
+    padding-top: 2%;
 }
