@@ -53,6 +53,7 @@ const Slideshow = (config) => {
             <div className="slide" key={index}>
                 <img 
                     id="profilePic" 
+                    class="profilePicGroup"
                     src={pic}
                     alt="Profile"
                 />
