@@ -6,3 +6,4 @@ cd ../iamgiolaga.github.io/
 git add .
 git commit -m "$1"
 git push
+cd ../giolaga.com-code/
