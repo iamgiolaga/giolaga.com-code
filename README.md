@@ -1,8 +1,9 @@
 ## What is this Repository?
 
 This is the repository where you can find the code of [my personal website](https://giolaga.com).
-From this code I run the command
+From this repository I launch the command
 ```
-npm run build
+sh autobuild
 ```
-so that a ```build``` folder is generated. This folder content is then moved to [this repository](https://github.com/iamgiolaga/iamgiolaga.github.io).
+This brief script has the effect of automatically build the application:
+a ```build``` folder is generated and its content is then moved to [this repository](https://github.com/iamgiolaga/iamgiolaga.github.io).
