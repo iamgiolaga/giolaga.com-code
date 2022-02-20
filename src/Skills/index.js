@@ -47,22 +47,22 @@ const Skills = () => {
             <div id="skillsContent">
                 <Container>
                     <Row>
-                        <Col xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight:'3%'}}>
+                        <Col xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight:'6%'}}>
                             <h4 id="softSkills" className="leftSkills">Soft skills</h4>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left'}}>Precision</p>
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Precision</p>
                                 <BorderLinearProgress variant="determinate" value={100}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left'}}>Autonomy</p>
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Autonomy</p>
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left'}}>Communication</p>
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Communication</p>
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left'}}>Problem Solving</p>
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Problem Solving</p>
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                         </Col>
@@ -76,30 +76,30 @@ const Skills = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight:'3%'}}>
+                        <Col xs={12} sm={12} md={6} lg={6} xl={6} style={{paddingRight:'6%'}}>
                             <h4 id="hardSkills" className="leftSkills">Hard skills</h4>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left'}}>Java</p>
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Java</p>
                                 <BorderLinearProgress variant="determinate" value={90}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left'}}>Python</p>
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Python</p>
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left'}}>JavaScript</p>
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>JavaScript</p>
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left'}}>R</p>
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>R</p>
                                 <BorderLinearProgress variant="determinate" value={70}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left'}}>Kotlin</p>
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Kotlin</p>
                                 <BorderLinearProgress variant="determinate" value={70}/>
                             </div>
                             <div className="skill">
-                                <p style={{display:'flex', float:'left'}}>Scala</p>
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Scala</p>
                                 <BorderLinearProgress variant="determinate" value={60}/>
                             </div>
                         </Col>
@@ -107,19 +107,19 @@ const Skills = () => {
                             <h4 className="rightSkills">Languages</h4>
                             <div className="skill" style={{textAlign: 'center'}}>
                                 <ReactCountryFlag countryCode="IT" svg style={{marginLeft: '35%', float: 'left', width:'2em', height:'2em'}}/>
-                                <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Mother Tongue</p>
+                                <p style={{display:'flex', paddingLeft:'6%', paddingTop: '3px'}}>Mother Tongue</p>
                             </div>
                             <div className="skill">
                                 <ReactCountryFlag countryCode="GB" svg style={{marginLeft: '35%', float: 'left', width:'2em', height:'2em'}}/>
-                                <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Proficient</p>
+                                <p style={{display:'flex', paddingLeft:'6%', paddingTop: '3px'}}>Proficient</p>
                             </div>
                             <div className="skill">
                                 <ReactCountryFlag countryCode="ES" svg style={{marginLeft: '35%', float: 'left', width:'2em', height:'2em'}}/>
-                                <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Basic Knowledge</p>
+                                <p style={{display:'flex', paddingLeft:'6%', paddingTop: '3px'}}>Basic Knowledge</p>
                             </div>
                             <div className="skill">
                                 <ReactCountryFlag countryCode="FR" svg style={{marginLeft: '35%', float: 'left', width:'2em', height:'2em'}}/>
-                                <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Basic Knowledge</p>
+                                <p style={{display:'flex', paddingLeft:'6%', paddingTop: '3px'}}>Basic Knowledge</p>
                             </div>
                         </Col>
                     </Row>
@@ -135,20 +135,20 @@ const Skills = () => {
                         <Col className="d-block d-md-none" md={6} lg={6} xl={6}>
                             <h4 className="rightSkills">Languages</h4>
                             <div className="skill">
-                                <ReactCountryFlag countryCode="IT" svg style={{marginLeft: '25%', float: 'left', width:'2em', height:'2em'}}/>
-                                <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Mother Tongue</p>
+                                <ReactCountryFlag countryCode="IT" svg style={{marginLeft: '30%', float: 'left', width:'2em', height:'2em'}}/>
+                                <p style={{display:'flex', paddingLeft:'6%', paddingTop: '3px'}}>Mother Tongue</p>
                             </div>
                             <div className="skill">
-                                <ReactCountryFlag countryCode="GB" svg style={{marginLeft: '25%', float: 'left', width:'2em', height:'2em'}}/>
-                                <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Proficient</p>
+                                <ReactCountryFlag countryCode="GB" svg style={{marginLeft: '30%', float: 'left', width:'2em', height:'2em'}}/>
+                                <p style={{display:'flex', paddingLeft:'6%', paddingTop: '3px'}}>Proficient</p>
                             </div>
                             <div className="skill">
-                                <ReactCountryFlag countryCode="ES" svg style={{marginLeft: '25%', float: 'left', width:'2em', height:'2em'}}/>
-                                <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Basic Knowledge</p>
+                                <ReactCountryFlag countryCode="ES" svg style={{marginLeft: '30%', float: 'left', width:'2em', height:'2em'}}/>
+                                <p style={{display:'flex', paddingLeft:'6%', paddingTop: '3px'}}>Basic Knowledge</p>
                             </div>
                             <div className="skill">
-                                <ReactCountryFlag countryCode="FR" svg style={{marginLeft: '25%', float: 'left', width:'2em', height:'2em'}}/>
-                                <p style={{display:'flex', paddingLeft: '15px', paddingTop: '3px'}}>Basic Knowledge</p>
+                                <ReactCountryFlag countryCode="FR" svg style={{marginLeft: '30%', float: 'left', width:'2em', height:'2em'}}/>
+                                <p style={{display:'flex', paddingLeft:'6%', paddingTop: '3px'}}>Basic Knowledge</p>
                             </div>
                         </Col>
                     </Row>
