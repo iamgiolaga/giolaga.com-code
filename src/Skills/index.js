@@ -91,16 +91,16 @@ const Skills = () => {
                                 <BorderLinearProgress variant="determinate" value={80}/>
                             </div>
                             <div className="skill">
+                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Scala</p>
+                                <BorderLinearProgress variant="determinate" value={80}/>
+                            </div>
+                            <div className="skill">
                                 <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>R</p>
                                 <BorderLinearProgress variant="determinate" value={70}/>
                             </div>
                             <div className="skill">
                                 <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Kotlin</p>
                                 <BorderLinearProgress variant="determinate" value={70}/>
-                            </div>
-                            <div className="skill">
-                                <p style={{display:'flex', float:'left', paddingLeft:'3%'}}>Scala</p>
-                                <BorderLinearProgress variant="determinate" value={60}/>
                             </div>
                         </Col>
                         <Col className="d-none d-md-block" md={6} lg={6} xl={6}>
