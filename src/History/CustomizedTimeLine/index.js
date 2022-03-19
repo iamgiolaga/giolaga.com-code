@@ -88,10 +88,11 @@ const CustomizedTimeLine = () => {
                   <Fade in={modalStatus}>
                       <Box sx={style}>
                           <div style={{textAlign:'center'}}>
-                          <iframe 
-                            style={{width: '70%', height: '530px'}}
-                            src={baby}
-                            ></iframe>
+                            <img 
+                                id="baby"
+                                src={baby}
+                                alt="Baby"
+                            />
                           </div>
                       </Box>
                   </Fade>
