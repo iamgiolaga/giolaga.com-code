@@ -9,3 +9,17 @@
     white-space: pre-line;
     text-align: left;
 }
+
+#closeIcon {
+    float: right;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#closeIcon:hover {
+    opacity: 1;
+}
+
+#projectModal {
+    overflow: scroll;
+}
