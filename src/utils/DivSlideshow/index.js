@@ -54,7 +54,7 @@ const DivSlideshow = ({elements}, config) => {
 
       <Container>
         <Row>
-          <Col className="d-none d-sm-block">
+          <Col className="d-none d-md-block">
             <div className="slideshowDots">
               {elements.map((_, idx) => (
                 <div
