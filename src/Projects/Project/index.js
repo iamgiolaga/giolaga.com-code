@@ -35,7 +35,7 @@ const Project = ({
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: '90%',
-        height: '530px',
+        height: '80%',
         padding: '2%',
         bgcolor: '#181b20',
         boxShadow: '0 5px 10px rgba(0, 0, 0, 0.3)',
