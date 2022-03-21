@@ -39,6 +39,11 @@
 .socialIcon {
   margin: 20px;
   opacity: 0.6;
+  /* animation: quickBottomUp ease 2s;
+  -webkit-animation: quickBottomUp ease 2s;
+  -moz-animation: quickBottomUp ease 2s;
+  -o-animation: quickBottomUp ease 2s;
+  -ms-animation: quickBottomUp ease 2s; */
 }
 
 .socialIcon:hover {
@@ -137,3 +142,52 @@
     margin-top: 0%;
   }
 }
+
+/* QUICK BOTTOM UP */
+@keyframes quickBottomUp {
+  0% {
+    margin-bottom: -15%;
+  }
+  100% {
+    margin-bottom: 0%;
+  }
+}
+
+@-moz-keyframes quickBottomUp {
+  0% {
+    margin-bottom: -15%;
+  }
+  100% {
+    margin-bottom: 0%;
+  }
+}
+
+@-webkit-keyframes quickBottomUp {
+  0% {
+    margin-bottom: -15%;
+  }
+  100% {
+    margin-bottom: 0%;
+  }
+}
+
+@-o-keyframes quickBottomUp {
+  0% {
+    margin-bottom: -15%;
+  }
+  100% {
+    margin-bottom: 0%;
+  }
+}
+
+@-ms-keyframes quickBottomUp {
+  0% {
+    margin-bottom: -15%;
+  }
+  100% {
+    margin-bottom: 0%;
+  }
+}
+
+
+
