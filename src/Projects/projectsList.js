@@ -2,6 +2,27 @@ import Project from './Project';
 
 const projectsList = [
     <Project
+      title="PartitelleBot"
+      subtitle="Telegam Bot"
+      startDate="Mar 2022"
+      endDate="Present"
+      description={`A Telegram Bot in Python to retrieve participants for the organization of a football game.
+I am currently working to provide a customizable solution for every use case.
+Currently, it is possible to add the bot to a group chat and use it to continuously update the list of participants 
+by adding and removing people.
+\n
+At the moment, my activities backlog includes:
+- customizing date and time of the football match
+- customizing the message under the list of participants
+- customizing the football pitch
+- set the target number of participants
+- implement pseudorandom answers
+- implement other actions like /help, /list, /commands and so on`}
+      technologies="Python, Postgres, Heroku"
+      picture=""
+      link=""
+    />, 
+    <Project
       title="Fake news based on the induction of fuzzy sets"
       subtitle="Master's degree thesis"
       startDate="Jul 2020"
