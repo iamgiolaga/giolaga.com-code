@@ -3,7 +3,7 @@ import Project from './Project';
 const projectsList = [
     <Project
       title="PartitelleBot"
-      subtitle="Telegam Bot"
+      subtitle="Telegram Bot"
       startDate="Mar 2022"
       endDate="Present"
       description={`A Telegram Bot in Python to retrieve participants for the organization of a football game.
