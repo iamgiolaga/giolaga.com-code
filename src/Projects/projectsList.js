@@ -17,7 +17,7 @@ At the moment, my activities backlog includes:
 - customizing the football pitch
 - set the target number of participants
 - implement pseudorandom answers
-- implement other actions like /help, /list, /commands and so on`}
+- implement other actions like /help, /list, /commands and so on.`}
       technologies="Python, Postgres, Heroku"
       picture=""
       link=""
