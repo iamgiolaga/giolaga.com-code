@@ -10,14 +10,22 @@ const projectsList = [
 I am currently working to provide a customizable solution for every use case.
 Currently, it is possible to add the bot to a group chat and use it to continuously update the list of participants 
 by adding and removing people.
+
+A Telegram Bot in Python to retrieve participants for the organization of a football game.
+Chat members can interact and add themselves by writing "aggiungimi" (add me) or "aggiungi <nome>" (add <name>).
+Dually, they can remove their participation with "toglimi" (remove me) or "togli <nome>" (remove <name>).
+Currently, the following commands are available: 
 \n
-At the moment, my activities backlog includes:
-- customizing date and time of the football match
-- customizing the message under the list of participants
-- customizing the football pitch
-- set the target number of participants
-- implement pseudorandom answers
-- implement other actions like /help, /list, /commands and so on.`}
+/start - Create new match
+/setnumber - Set the number of participants
+/setday - Set the day of the match
+/settime - Set the time of the match
+/setdescription - Set the custom message under the list of participants
+/setpitch - Set the football pitch
+/participants - Show the participants of the current match
+/help - Show the list of available commands
+\n
+More features are coming soon.`}
       technologies="Python, Postgres, Heroku"
       picture=""
       link=""
