@@ -23,6 +23,7 @@ Currently, the following commands are available:
 /setdescription - Set the custom message under the list of participants
 /setpitch - Set the football pitch
 /participants - Show the participants of the current match
+/stop - Remove the match
 /help - Show the list of available commands
 \n
 More features are coming soon.`}
