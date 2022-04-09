@@ -3,11 +3,15 @@ import Slideshow from '../utils/Slideshow';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { useTranslation, withTranslation } from 'react-i18next';
+import { compose } from 'redux';
 
 const Presentation = () => {
+    const { t, i18n } = useTranslation('common');
+
     return(
         <div id="presentationContainer">
-          <p id="hello">Hi! I am <b>Giovanni</b> :)</p>
+          <p id="hello">{t("presentation.header")} <b>Giovanni</b> :)</p>
           <Slideshow/>
           <div >
             <a className="socialLink" href="https://www.linkedin.com/in/giovannilagana/"><LinkedInIcon style={{width:'50px', height: '50px'}} className="socialIcon"/></a>
@@ -18,4 +22,6 @@ const Presentation = () => {
     );
 };
 
-export default Presentation;
+export default compose(
+  withTranslation('common')
+)(Presentation);

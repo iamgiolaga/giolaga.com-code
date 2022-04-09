@@ -1,0 +1,63 @@
+{
+    "section": {
+        "home": "Home",
+        "biography": "Biografia",
+        "history": "Storia",
+        "projects": "Progetti",
+        "skills": "Skills"
+    },
+    "presentation": {
+        "header": "Ciao! Sono"
+    },
+    "biography": {
+        "title": "Breve biografia",
+        "beforeName": "Il mio nome è",
+        "name": "Giovanni Laganà",
+        "afterName": ", nato a Milano il 25 Novembre 1995. Quando avevo 5 anni la mia famiglia ed io ci siamo trasferiti in una piccola città nella zona est di Milano chiamata Gorgonzola (se te lo stai chiedendo... sì, dove è stato inventato il formaggio). Sono cresciuto a Gorgonzola, ricevendo lì la prima parte della mia istruzione e sono tornato a Milano per la scuola superiore e sia per la laurea triennale che per quella magistrale. Inoltre, ho trascorso 5 mesi tra il 2019 e il 2020 a Barcellona per il programma Erasmus+. Al momento sono un Junior Data Engineer in Quantyca, amo la tecnologia e sono sempre assetato di conoscenza."
+    },
+    "history": {
+        "title": "Storia",
+        "birthDate": "25 Novembre 1995",
+        "birthPlace": "Milano",
+        "birthDescription": "circa alle 2, sono sempre stato un tipo notturno",
+        "primarySchool": "Istituto Comprensivo 'Molino Vecchio'",
+        "primarySchoolDescription": "Scuola Elementare",
+        "primarySchoolDate": "Giugno 2006",
+        "middleSchool": "Istituto Comprensivo 'Molino Vecchio'",
+        "middleSchoolDescription": "Scuola Media",
+        "middleSchoolDate": "Luglio 2009",
+        "highSchool": "ITS Pier Paolo Pasolini",
+        "highSchoolDescription": "Liceo Linguistico, 77/100",
+        "highSchoolDate": "Giugno 2014",
+        "bachelor": "Informatica per la Comunicazione Digitale",
+        "bachelorDescription": "Università degli Studi di Milano, 101/110",
+        "bachelorDate": "Aprile 2018",
+        "erasmus": "Facultat d'Informatica de Barcelona",
+        "erasmusDescription": "Universitat Politècnica de Catalunya",
+        "erasmusDate": "Settembre 2019 - Febbraio 2020",
+        "master": "Informatica",
+        "masterDescription": "Università degli Studi di Milano, 110/110 with honors",
+        "masterDate": "Aprile 2021",
+        "juniorDataEngineer": "Junior Data Engineer",
+        "juniorDataEngineerDescription": "Quantyca - Data at Core",
+        "juniorDataEngineerDate": "Giugno 2021"
+    },
+    "projects": {
+        "title": "Progetti",
+        "partitelleBotEndDate": "Presente"
+    },
+    "skills": {
+        "title": "Skills",
+        "precision": "Precisione",
+        "autonomy": "Autonomia",
+        "communication": "Comunicazione",
+        "problemSolving": "Problem Solving",
+        "keywords": "Parole Chiave",
+        "languages": "Lingue",
+        "motherTongue": "Madre Lingua",
+        "proficient": "Abile",
+        "basicKnowledge": "Conoscenza Base",
+        "distributedSystems": "Sistemi Distribuiti",
+        "appCreator": "Creatore di App"
+    }
+}

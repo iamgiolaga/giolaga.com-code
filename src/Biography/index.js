@@ -4,8 +4,12 @@ import Image from 'react-bootstrap/Image';
 import { Row, Col, Container } from 'react-bootstrap';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import FadeInSection from '../utils/FadeInSection';
+import { useTranslation, withTranslation } from 'react-i18next';
+import { compose } from 'redux';
 
 const Biography = () => {
+    const { t, i18n } = useTranslation('common');
+
     return(
         <div id="biographyContainer">
           <div id="biographyText">
@@ -14,14 +18,8 @@ const Biography = () => {
                 <Row>
                   <Col md={2}></Col>
                   <Col md={8}>
-                    <h1 style={{textAlign: 'center', paddingTop: '-10%'}}>Short Biography</h1>
-                    <p style={{marginTop: '10%'}} id="biography">My name is <b>Giovanni Laganà</b>, born in Milan on November 25th, 1995. 
-                      When I was 5 years old my family and I moved to a little city in the east of Milan called Gorgonzola 
-                      (if you are wondering... yes, where the cheese was invented).
-                      I grew up in Gorgonzola, receiving there the first part of my education and 
-                      I came back to Milan for high school and for my bachelor and master's degree.
-                      Moreover, I spent 5 months between 2019 and 2020 in Barcelona for the Erasmus+ Programme.
-                      I am currently a Junior Data Engineer at Quantyca, I love technology and I am always thirsty for knowledge.</p>
+                    <h1 style={{textAlign: 'center', paddingTop: '-10%'}}>{t("biography.title")}</h1>
+                    <p style={{marginTop: '10%'}} id="biography">{t("biography.beforeName")} <b>{t("biography.name")}</b>{t("biography.afterName")}</p>
                   </Col>
                   <Col xs={3} md={1}>
                   </Col>
@@ -36,4 +34,6 @@ const Biography = () => {
     );
 };
 
-export default Biography;
+export default compose(
+  withTranslation('common')
+)(Biography);

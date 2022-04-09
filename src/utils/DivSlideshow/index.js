@@ -3,11 +3,14 @@ import {useSelector} from 'react-redux';
 import { Container, Col, Row } from "react-bootstrap";
 import { useSwipeable } from "react-swipeable";
 import './style.css';
+import { useTranslation, withTranslation } from 'react-i18next';
+import { compose } from 'redux';
 
 const DivSlideshow = ({elements}, config) => {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
   const { focus } = useSelector(state => state);
+  const { t, i18n } = useTranslation('common');
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -73,4 +76,6 @@ const DivSlideshow = ({elements}, config) => {
   );
 }
 
-export default DivSlideshow;
+export default compose(
+  withTranslation('common')
+)(DivSlideshow);

@@ -13,6 +13,10 @@
   }
 }
 
+.languageFlag:hover {
+  cursor: pointer;
+}
+
 #presentation {
   min-height: 100vh;
 }
@@ -137,6 +141,16 @@ ul#nav li a:hover {opacity: 1}
 
   /* mobile navigation
   -------------------------------------------------------------------- */
+  #languages {
+    width: 100px;
+    height: 40px;
+    background-color: #1f2024;
+    text-shadow: none;
+    color: transparent;
+    position: relative;
+    bottom: 0;
+  }
+  
   #nav-wrap {
      font: 12px 'opensans-bold', sans-serif;
      background: transparent !important;
