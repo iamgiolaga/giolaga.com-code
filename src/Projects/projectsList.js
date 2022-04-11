@@ -34,7 +34,7 @@ More features are coming soon.`}
       description={`Fake news is a problem that has spread a lot in the last period, in particular with the pandemic. 
 The other side of the digitalization is how much easy is today to manipulate information and how Web news can go viral. 
 The idea behind this project was to build a system capable to recognize fake news; at the state of art, the tendency is to 
-use mostly classification techniques that are forced for definition to give drastic response about observations. 
+use mostly classification techniques that are forced, by definition, to give a drastic response about observations. 
 With the assumption that this kind of approach can be particularly error-prone, my effort was to adopt a different strategy with the objective of 
 getting a fakeness score: a number between 0 and 1 representing how big is, in Web news, the component of potential fake information. 
 This system is composed by the repeated execution of three steps: 1) Data preprocessing, 2) Model selection, 3) Data visualization. 
@@ -85,7 +85,7 @@ The application of this project is composed by a Java client for the administrat
 a REST server for the endpoints definition.
 The project's aim was to handle the synchronization of nodes autonomously creating a network, choosing a coordinator and 
 executing Ricart-Agrawala algorithm in order to allocate extra energy at maximum two nodes per time. 
-The challenge in this kind of application is to avoid polling through wait and notify paradigm, to optimize communication and to fully understand the lock acquisition of threads 
+The challenge in this kind of application is to avoid polling through wait and notify paradigm to optimize communication and to fully understand the lock acquisition of threads 
 when multiple processes want to access the same resource. In particular, the problem does exists when at least one operation regards writing.
 Another aspect which was important to consider was all the possible borderline cases, like concurrent operations (one node joins the network and another one leaves, 
 what happens when the coordinator exits, etc).`}
@@ -98,7 +98,7 @@ what happens when the coordinator exits, etc).`}
       subtitle="Personal project"
       startDate="May 2018"
       endDate="Jun 2019"
-      description={`This application didn't reach the production stage, but remained in a prototypal phase. The objective was to realize an e-commerce system to let clients and vendors communicate. 
+      description={`This application didn't reach the production stage but remained in a prototypal phase. The objective was to realize an e-commerce system to let clients and vendors communicate. 
 The vendors are minimarkets owners in Italy and clients are people that want to buy their items. 
 The client application (Android and another colleague had developed the iOS side) lets the users register, log in and customize a profile. Inside the application, a map shows nearby minimarkets and 
 gives the possibility to save favourite places.
@@ -135,10 +135,10 @@ more and more popular nowadays. My contribution regarded the maintenance of the 
 In particular, the mobile side focused on the data fetched by the device sensors and on the communication with the server.
 On the other hand, a Machine Learning algorithm was executed to infer statistical predictions based on data; these predictions had to be refined
 through an ontological module.
-In fact, an important part of my contribution regarded the extension of an ontology, a tool based on logical propositions to exclude those
+In fact, an important part of my contribution regarded the extension of an ontology: a tool based on logical propositions to exclude those
 impossibile activities that the statistical reasoning, itself, was keeping on predicting. 
 In particular, I implemented the integration of an OWL library that lets the application interact directly with the ontology, by creating axioms and querying it according to its logics rules. 
-My thesis showed how statistical learning gets a real benefit from the ontological refinement and improved results.`}
+My thesis showed how statistical learning coudl get a real benefit from the ontological refinement and improved results.`}
       technologies="Android (Java), Git, MongoDB, LaTeX"
       picture=""
       link=""
@@ -162,7 +162,7 @@ Geopost is a social network where the user can register, follow other people, se
       description={`Modelling is an important branch of graphics and, in this case, the project consisted of composing a virtual scene.
 I choosed to represent a spaceship passing between two planets right before they collide in space.
 The same scene has been reproduced with stereoscopy technology such that by wearing blue and red lens glasses, it was possible
-to perceive 3D.`}
+to perceive the 3D.`}
       technologies="Blender"
       picture=""
       link=""
@@ -172,8 +172,8 @@ to perceive 3D.`}
       subtitle="Digital publishing course"
       startDate="May 2017"
       endDate="Jul 2017"
-      description={`Ebooks are an undervalued technology which can instead have a great potential in user experience.
-In this project I reproduced the famous opera of Shakespeare in a digital book by implementing special features to improve
+      description={`Ebooks are an undervalued technology which can, instead, have a great potential in user experience.
+In this project I reproduced the famous opera of Shakespeare as a digital book by implementing special features to improve
 the multimedial experience: pictures, audios and videos had been included and the presence of a dictionary enriched the reading by
 allowing the user to analyze words and get their meaning or paraphrase.`}
       technologies="EPUB3"
@@ -212,8 +212,8 @@ the relational database. The session managament has been handled in PHP such tha
       subtitle="Web and Cloud applications course"
       startDate="Mar 2016"
       endDate="Jun 2016"
-      description="This is my first Web application project where I developed a website for a multiplex handling its bookings and projections.
-The application was able to show its weekly programme of movies and let its users to book a certain number of seats for a specific projection.
+      description="This is my first Web application project where I developed a website for a multiplex handling bookings and projections.
+The application was able to show the weekly programme of movies and let its users to book a certain number of seats for a specific projection.
 This project didn't rely on a persistent storage like a database but used local and session storage."
       technologies="HTML, CSS, JavaScript, JQuery"
       picture=""

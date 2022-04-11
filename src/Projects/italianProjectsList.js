@@ -32,20 +32,20 @@ Nuove funzionalità presto in arrivo.`}
       startDate="Lug 2020"
       endDate="Apr 2021"
       description={`Le fake news sono un problema molto diffuso recentemente, in particolare con la pandemia.
-L'altro lato della digitalizzazione è quanto facile è oggi manipolare l'informazione e come le notizie del Web possono diventare virali.
+L'altro aspetto della digitalizzazione è quanto oggi sia facile manipolare l'informazione e come le notizie del Web possano diventare virali.
 L'idea dietro questo progetto era quella di costruire un sistema capace di riconoscere le fake news; allo stato dell'arte, la tendenza è quella
-di usare tipicamente tecniche di classificazione che sono forzate per definizione a dare una risposta drastica alle osservazioni.
-Con l'assunzione che questo tipo di approccio può essere particoloramente prono ad errore, il mio sforzo è stato quello di adottare una strategia differente con l'obiettivo di
-ottenere un punteggio di fakeness: un numero tra 0 e 1 che rappresenta quanto grande è, nelle notizie del Web, la componente di informazioni potenzialmente fake.
+di usare tipicamente tecniche di classificazione che sono portate, per definizione, a dare una risposta drastica alle osservazioni.
+Con l'assunzione che questo tipo di approccio possa essere particoloramente prono ad errore, il mio sforzo è stato quello di adottare una strategia differente con l'obiettivo di
+ottenere un punteggio di fakeness: un numero tra 0 e 1 che rappresenta quanto grande sia, nelle notizie del Web, la componente di informazioni potenzialmente fake.
 Questo sistema è composto dalla ripetuta esecuzione di tre step: 1) Preprocessing dei dati, 2) Selezione del modello, 3) Visualizzazione dei dati.
 Preprocessing dei dati è lo stadio in cui viene eseguita una pipeline di operazioni di ELN (Elaborazione del Linguaggio Naturale): queste operazioni
 riguardano la pulizia del dato, la manipolazione, il riconoscimento di outlier, ecc; alcuni esempi sono il lowercasing, lo stemming, la lemmatizzazione, la tokenizzazione, ecc.
 Lo step finale del preprocessing dei dati è rappresentato dall'applicazione di una tecnica di embedding (Word2Vec o Doc2Vec) che 
 permette di convertire le notizie da un insieme di parole (stringhe) a una lista di float.
-Il preprocessing dei dati è seguito dalla selezione del modello, lo step in cui il sistema si appoggia all'algoritmo mulearn, sviluppato
+Il preprocessing dei dati è seguito dalla selezione del modello, lo step in cui il sistema si affida all'algoritmo mulearn, sviluppato
 dal Professor Malchiodi (Università degli Studi di Milano). Si tratta di un algoritmo di Machine Learning che sfrutta una procedura
 originariamente formalizzata nel contesto del support vector clustering.
-Mulearn lavora con un input di valori numerici, di conseguenza si spiega bene l'importanza del preprocessing dei dati con
+Mulearn lavora con un input di valori numerici, di conseguenza si giustifica l'importanza del preprocessing dei dati con
 uno step di embedding. L'intero processo è governato dalla tecnica di cross-validation a innesto che restituisce un insieme di possibili
 configurazioni di iperparametri che può portare a dei risultati ottimali. Infine, c'è la fase di visualizzazione dei dati dove i risultati sono
 analizzati e presentati in modo descrittivo.`}
@@ -63,7 +63,7 @@ vivono in un dominio numerico da un insieme di informazioni eterogenee. Etichett
 e questo valore è l'oggetto della predizione che è desiderabile ottenere.
 Nell'apprendimento supervisionato, i dati etichettati vengono creati per formare dei dataset, e questi dataset vengono usati per allenare degli algoritmi basati su qualche modello matematico.
 Un buon compromesso tra il numero di esempi e la complessità del modello possono portare a un buon addestramento in modo che il modello sia
-capace di capire autonomamente le relazioni nascoste tra le osservazioni e le etichette.
+capace di intuire autonomamente le relazioni nascoste tra le osservazioni e le etichette.
 Quando vengono forniti i dati senza etichetta, il modello prova a fare delle predizioni e i risultati vengono confrontati con le etichette effettive.
 Questo paragone permette di condurre un'analisi numerica di quanto grande era l'errore e quale configurazione di iperparametri può essere scelta per minimizzarlo e ottenere il miglior risultato.
 La regressione ridge è un'estensione della regressione lineare che introduce il parametro di regolarizzazione alfa. Lo scopo di questo progetto
@@ -79,13 +79,13 @@ la loro dimensione, la loro capacità e così via...`}
       startDate="Mag 2019"
       endDate="Lug 2019"
       description={`I sistemi distribuiti sono un modo potente di decentralizzare gli algoritmi ed evitare i colli di bottiglia.
-In questo caso i nodi erano delle smart-home il cui admin vuole monitorare il consumo di energia e allocare dinamicamente dei boost di energia.
+In questo caso i nodi erano delle smart-home il cui amministratore vuole monitorare il consumo di energia e allocare dinamicamente dei boost di energia.
 L'applicazione di questo progetto è composta da un client Java per l'amministratore per l'ottenimento di statistiche, un client per ogni nodo e 
 un server REST per la definizione di endpoint.
 Lo scopo di questo progetto era quello di gestire la sincronizzazione dei nodi autonomamente in grado di creare una rete, scegliere il coordinatore ed
-eseguire l'algoritmo di Ricart-Agrawala per allocare energia extra al massimo a due nodi per volta.
-La sfida in questo tipo di applicazione è di evitare il polling attraverso il paradigma di wait e notify, per ottimizzare la comunicazione e e di capire pienamente l'acquisizione del lock
-da parte dei thread quando processi multipli vogliono accedere alla stessa risorsa. In particolare, il problema esiste quando almeno un'operazione riguarda la scrittura.
+eseguire l'algoritmo di Ricart-Agrawala per allocare energia extra ad al più due nodi per volta.
+La sfida in questo tipo di applicazione è stata di evitare il polling attraverso il paradigma di wait e notify per ottimizzare la comunicazione e di capire pienamente l'acquisizione del lock
+da parte dei thread quando processi multipli vogliono accedere alla stessa risorsa. In particolare, il problema sussiste quando almeno un'operazione riguarda la scrittura.
 Un altro aspetto che era importante considerare erano tutti i possibili casi limite, come le operazioni concorrenti (un nodo entra nella rete e un altro esce,
 cosa succede quando esce il coordinatore, ecc).`}
       technologies="Java, gRPC, Protocol Buffers"
@@ -97,9 +97,9 @@ cosa succede quando esce il coordinatore, ecc).`}
       subtitle="Progetto personale"
       startDate="Mag 2018"
       endDate="Giun 2019"
-      description={`Quest'applicazione non ha raggiunto lo stadio di produzione, ma è rimasta in una fase prototipale. L'obiettivo era quello di realizzare un sistema di e-commerce per permettere ai clienti e ai venditori di comunicare.
+      description={`Quest'applicazione non ha raggiunto lo stadio di produzione ma è rimasta in una fase prototipale. L'obiettivo era quello di realizzare un sistema di e-commerce per permettere ai clienti e ai venditori di comunicare.
 I venditori sono i proprietari di minimarket in Italia e i clienti sono le persone che vogliono comprare i loro prodotti.
-L'applicazione client (Android e un altro collega aveva sviluppato la parte iOS) permette agli utenti di registrarsi, di accedere e personalizzare un profilo. Dentro l'applicazione, una mappa mostra i minimarket nelle vicinanze e 
+L'applicazione client (Android e un altro collega aveva sviluppato la parte iOS) permette agli utenti di registrarsi, di accedere e personalizzare un profilo. All'interno dell'applicazione, una mappa mostra i minimarket nelle vicinanze e 
 dà la possibilità di salvare i posti preferiti.
 Una volta che viene selezionato il negozio, viene mostrata la sua pagina personale con i prodotti; qui, l'utente può aggiungere i prodotti al suo carrello e formulare un ordine in due modi:
 consegna o ritiro.
@@ -129,15 +129,15 @@ Inoltre, è stata fatta una calibrazione EPS per trovare i valori ottimali per k
       description={`Il riconoscimento di attività è un'ampia area di ricerca dell'Informatica e consiste nel rilevare con la più alta precisione possibile
 i task che l'utente sta facendo. Esempi di queste azioni sono camminare, guidare, salire le scale, usare l'ascensore, andare in bicicletta, ecc...
 Ci sono molte applicazioni che possono sfruttare quest'informazione: in generale, possono rendere l'applicazione context-aware, cioè
-perosnalizzata con quello che circonda l'utente. Ci sono diversi segnali che le applicazioni context-aware 
-stanno diventato sempre più popolari oggigiorno. Il mio contributo riguardava la manutenzione del client mobile Android e il codice backend per le API.
+personalizzata con quello che circonda l'utente. Ci sono diversi segnali che le applicazioni context-aware 
+stiano diventando sempre più popolari oggigiorno. Il mio contributo riguardava la manutenzione del client mobile Android e il codice backend per le API.
 In particolare, la parte mobile si focalizzava sui dati raccolti dai sensori del dispositivo e sulla comunicazione col server.
 Dall'altro lato, un algoritmo di Machine Learning veniva eseguito per inferire delle predizioni statistiche basate sui dati; queste predizioni dovevano essere raffinate
 attraverso un modulo ontologico.
-Infatti, un'importante parte del mio contributo ha riguardato l'estensione di un'ontologia, uno strumento basato su proposizioni logiche per escludere quelle
+Un'importante parte del mio contributo, infatti, ha riguardato l'estensione di un'ontologia: uno strumento basato su proposizioni logiche per escludere quelle
 attività impossibili che il ragionamento statistico, da solo, continuava a predire. In particolare, ho implementato l'integrazione di una libreria OWL
-che permette all'applicazione di interagire direttamente l'ontologia, creando assiomi e interrogandola secondo le sue regole logiche.
-La mia tesi ha mostrato come l'apprendimento statistico ottenga un reale beneficio dal raffinamento ontologico e ha migliorato i risultati.`}
+che permette all'applicazione di interagire direttamente con l'ontologia, creando assiomi e interrogandola secondo le sue regole logiche.
+La mia tesi ha mostrato come l'apprendimento statistico potesse ottenere un reale beneficio dal raffinamento ontologico e ha migliorato i risultati.`}
       technologies="Android (Java), Git, MongoDB, LaTeX"
       picture=""
       link=""
@@ -159,8 +159,8 @@ Geopost è un social network dove l'utente può registrarsi, seguire altre perso
       endDate="Gen 2018"
       subtitle="Corso di grafica"
       description={`La modellazione è un'importante branca della grafica e, in questo caso, il progetto consisteva nel comporre una scena virtuale.
-Ho scelto di rappresentare un'astronave passante tra due pianeti proprio prima che collidono nello spazio.
-La stessa scena è stata riprodotta con la tecnologia della stereoscopia cosicché, indossando gli appositi occhiali con le lenti blu e rosse, era possibile
+Ho scelto di rappresentare un'astronave passante tra due pianeti proprio prima che collidano nello spazio.
+La stessa scena è stata riprodotta con la tecnologia della stereoscopia cosicché, indossando gli appositi occhiali con le lenti blu e rosse, fosse possibile
 percepire il 3D.`}
       technologies="Blender"
       picture=""
@@ -171,8 +171,8 @@ percepire il 3D.`}
       subtitle="Corso di editoria digitale"
       startDate="Mag 2017"
       endDate="Lug 2017"
-      description={`Gli ebook sono una tecnologia sottovalutata che può invece avere un grande potenziale nell'esperienza dell'utente.
-In questo progetto ho riprodotto la famosa opera di Shakespeare in un libro digitale implementando caratteristiche speciali per migliorare
+      description={`Gli ebook sono una tecnologia sottovalutata che può, invece, avere un grande potenziale nell'esperienza dell'utente.
+In questo progetto ho riprodotto la famosa opera di Shakespeare come libro digitale implementando caratteristiche speciali per migliorare
 l'esperienza multimediale: sono state inserite immagini, audio e video e la presenza di un dizionario ha arricchito la lettura
 consentendo all'utente di analizzare le parole e ottenere il loro significato o parafrasi.`}
       technologies="EPUB3"
@@ -201,7 +201,7 @@ L'analisi riguardava la ricerca del coefficiente di assortitività, scoprire se 
       endDate="Giu 2016"
       description={`Cinguettio è un social network ispirato a Twitter in cui l'utente può pubblicare tre tipi di post: testi, immagini e luoghi.
 Il progetto ha abbracciato diverse fasi di sviluppo, partendo dallo schema ER per progettare il database, ristrutturandolo logicamente e formando
-la banca dati relazionale. La gestione della sessione è stata gestita in PHP in modo tale che i cookie potessero essere memorizzati per l'applicazione Web.`}
+il database relazionale. La gestione della sessione è stata gestita in PHP in modo tale che i cookie potessero essere memorizzati per l'applicazione Web.`}
       technologies="HTML, CSS, PHP, SQL"
       picture=""
       link=""
@@ -211,8 +211,8 @@ la banca dati relazionale. La gestione della sessione è stata gestita in PHP in
       subtitle="Corso di applicazioni Web e Cloud"
       startDate="Mar 2016"
       endDate="Giu 2016"
-      description="Questo è il mio primo progetto di applicazione Web in cui ho sviluppato un sito Web per un multiplex che ne gestisce le prenotazioni e le proiezioni.
-L'applicazione è in grado di mostrare il suo programma settimanale di film e consentire ai suoi utenti di prenotare un certo numero di posti per una proiezione specifica.
+      description="Questo è il mio primo progetto di applicazione Web in cui ho sviluppato un sito Web per un multiplex che gestisce le prenotazioni e le proiezioni.
+L'applicazione è in grado di mostrare il programma settimanale di film e consentire ai suoi utenti di prenotare un certo numero di posti per una proiezione specifica.
 Questo progetto non si basava su un'archiviazione persistente come un database, ma utilizzava il local storage e il session storage del browser."
       technologies="HTML, CSS, JavaScript, JQuery"
       picture=""
