@@ -110,10 +110,10 @@ Dietro le quinte, un server REST era il terzo nodo che comunicava con i venditor
       link=""
     />,
     <Project
-      title="Implementation of DBSCAN algorithm"
-      subtitle="Management of geospatial information"
-      startDate="Dec 2018"
-      endDate="Jan 2019"
+      title="Implementazione dell'algoritmo DBSCAN"
+      subtitle="Corso di gestione dell'informazione geospaziale"
+      startDate="Dic 2018"
+      endDate="Gen 2019"
       description={`Analisi di dati geospaziali inerenti i movimenti di un capriolo in un anno, annotati e salvati in un database PostGIS.
 L'obiettivo del progetto era quello di implementare DBSCAN, una tecnica di clustering basata sulla densità per rilevare le aree più visitate dall'animale quando si muove.
 Inoltre, è stata fatta una calibrazione EPS per trovare i valori ottimali per k, il parametro di densità dell'algoritmo.`}

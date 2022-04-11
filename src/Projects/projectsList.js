@@ -111,10 +111,10 @@ Behind the scenes, a REST server was the third node communicating with vendors a
       link=""
     />,
     <Project
-      title="Implementazione dell'algoritmo DBSCAN"
-      subtitle="Corso di gestione dell'informazione geospazialee"
-      startDate="Dic 2018"
-      endDate="Gen 2019"
+      title="Implementation of DBSCAN algorithm"
+      subtitle="Management of geospatial information"
+      startDate="Dec 2018"
+      endDate="Jan 2019"
       description={`Analysis of geospatial data about the movements of a roe deer in a year, annotated and stored in a PostGIS database.
 The goal of the project was to implement DBSCAN, a clustering technique based on density to detect the most visited areas of the animal when moving. 
 Moreover, an EPS calibration has been done to find optimal values for k, the density parameter of the algorithm.`}
@@ -212,10 +212,9 @@ the relational database. The session managament has been handled in PHP such tha
       subtitle="Web and Cloud applications course"
       startDate="Mar 2016"
       endDate="Jun 2016"
-      description="Questo progetto non si basava su un'archiviazione persistente come un database, ma utilizzava il local storage e il session storage del browser.
-This is my first Web application project where I developed a Website for a multiplex handling its bookings and projections.
+      description="This is my first Web application project where I developed a website for a multiplex handling its bookings and projections.
 The application was able to show its weekly programme of movies and let its users to book a certain number of seats for a specific projection.
-This project didn't rely on a persistent storage like a database but used local and session storage of the browser."
+This project didn't rely on a persistent storage like a database but used local and session storage."
       technologies="HTML, CSS, JavaScript, JQuery"
       picture=""
       link=""
