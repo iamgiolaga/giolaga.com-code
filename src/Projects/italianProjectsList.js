@@ -93,7 +93,7 @@ cosa succede quando esce il coordinatore, ecc).`}
       link=""
     />,
     <Project
-      title="Protitipo di un'applicazione di e-commerce per i minimarket"
+      title="Prototipo di un'applicazione di e-commerce per i minimarket"
       subtitle="Progetto personale"
       startDate="Mag 2018"
       endDate="Giun 2019"
