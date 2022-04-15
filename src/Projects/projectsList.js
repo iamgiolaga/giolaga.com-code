@@ -9,6 +9,7 @@ const projectsList = [
       description={`A Telegram Bot in Python to retrieve participants for the organization of a football game.
 Chat members can interact and add themselves by writing "aggiungimi" (add me) or "aggiungi <nome>" (add <name>).
 Dually, they can remove their participation with "toglimi" (remove me) or "togli <nome>" (remove <name>).
+Alternatively, it is also possible to express the participation with uncertainty by writing "proponimi" (propose myself) or "proponi <nome>" (propose <name>) and possibly confirming it through "confermami" (confirm me) or "conferma <nome>" (confirm <name>).
 Currently, the following commands are available: 
 \n
 /start - Create new match
