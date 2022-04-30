@@ -10,6 +10,7 @@ const italianProjectsList = [
 I membri della chat possono interagire e aggiungere loro stessi scrivendo "aggiungimi" oppure "aggiungi <nome>".
 Dualmente, possono ritirare la loro partecipazione con "toglimi" oppure "togli <nome>".
 In alternativa, è possibile esprimere la partecipazione anche con dell'incertezza scrivendo "proponimi" o "proponi <nome>" ed eventualmente confermandola o annullandola attraverso i messaggi citati sopra.
+In aggiunta, quando vengono generate casualmente le squadre dal bot, gli utenti possono scambiare i giocatori scrivendo "scambia <nome 1> con <nome 2>".
 Al momento, sono disponibili i seguenti comandi:
 \n
 /start - Crea una nuova partita
@@ -19,6 +20,7 @@ Al momento, sono disponibili i seguenti comandi:
 /setdescription - Imposta la descrizione sotto i partecipanti
 /setpitch - Imposta il campo
 /participants - Mostra i partecipanti della partita attuale
+/teams - Mostra le squadre della partita attuale
 /stop - Rimuovi la partita
 /help - Mostra la lista di comandi disponibili
 \n
