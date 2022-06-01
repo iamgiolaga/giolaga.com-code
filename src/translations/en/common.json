@@ -1,63 +1,66 @@
 {
-    "section": {
-        "home": "Home",
-        "biography": "Biography",
-        "history": "History",
-        "projects": "Projects",
-        "skills": "Skills"
-    },
-    "presentation": {
-        "header": "Hi! I am"
-    },
-    "biography": {
-        "title": "Short biography",
-        "beforeName": "My name is",
-        "name": "Giovanni Laganà",
-        "afterName": ", born in Milan on November 25th, 1995. When I was 5 years old my family and I moved to a little city in the east of Milan called Gorgonzola (if you are wondering... yes, where the cheese was invented). I grew up in Gorgonzola, receiving there the first part of my education and I came back to Milan for high school and for my bachelor and master's degree. Moreover, I spent 5 months between 2019 and 2020 in Barcelona for the Erasmus+ Programme. I am currently a Junior Data Engineer at Quantyca, I love technology and I am always thirsty for knowledge."
-    },
-    "history": {
-        "title": "History",
-        "birthDate": "November 25th, 1995",
-        "birthPlace": "Milan",
-        "birthDescription": "at around 2 am, I have always been a night person",
-        "primarySchool": "Istituto Comprensivo 'Molino Vecchio'",
-        "primarySchoolDescription": "Primary School",
-        "primarySchoolDate": "June, 2006",
-        "middleSchool": "Istituto Comprensivo 'Molino Vecchio'",
-        "middleSchoolDescription": "Middle School",
-        "middleSchoolDate": "July, 2009",
-        "highSchool": "ITS Pier Paolo Pasolini",
-        "highSchoolDescription": "Linguistic High School, 77/100",
-        "highSchoolDate": "June, 2014",
-        "bachelor": "Informatica per la Comunicazione Digitale",
-        "bachelorDescription": "Università degli Studi di Milano, 101/110",
-        "bachelorDate": "April, 2018",
-        "erasmus": "Facultat d'Informatica de Barcelona",
-        "erasmusDescription": "Universitat Politècnica de Catalunya",
-        "erasmusDate": "September, 2019 - February, 2020",
-        "master": "Informatica",
-        "masterDescription": "Università degli Studi di Milano, 110/110 with honors",
-        "masterDate": "April, 2021",
-        "juniorDataEngineer": "Junior Data Engineer",
-        "juniorDataEngineerDescription": "Quantyca - Data at Core",
-        "juniorDataEngineerDate": "June, 2021"
-    },
-    "projects": {
-        "title": "Projects",
-        "partitelleBotEndDate": "Present"
-    },
-    "skills": {
-        "title": "Skills",
-        "precision": "Precision",
-        "autonomy": "Autonomy",
-        "communication": "Communication",
-        "problemSolving": "Problem Solving",
-        "keywords": "Keywords",
-        "languages": "Languages",
-        "motherTongue": "Mother Tongue",
-        "proficient": "Proficient",
-        "basicKnowledge": "Basic Knowledge",
-        "distributedSystems": "Distributed Systems",
-        "appCreator": "App Creator"
-    }
+  "section": {
+    "home": "Home",
+    "biography": "Biography",
+    "history": "History",
+    "projects": "Projects",
+    "skills": "Skills"
+  },
+  "presentation": {
+    "header": "Hi! I am"
+  },
+  "biography": {
+    "title": "Short biography",
+    "beforeName": "My name is",
+    "name": "Giovanni Laganà",
+    "afterName": ", born in Milan on November 25th, 1995. When I was 5 years old my family and I moved to a little city in the east of Milan called Gorgonzola (if you are wondering... yes, where the cheese was invented). I grew up in Gorgonzola, receiving there the first part of my education and I came back to Milan for high school and for my bachelor and master's degree. Moreover, I spent 5 months between 2019 and 2020 in Barcelona for the Erasmus+ Programme. I am currently a Data Engineer at Quantyca, I love technology and I am always thirsty for knowledge."
+  },
+  "history": {
+    "title": "History",
+    "birthDate": "November 25th, 1995",
+    "birthPlace": "Milan",
+    "birthDescription": "at around 2 am, I have always been a night person",
+    "primarySchool": "Istituto Comprensivo 'Molino Vecchio'",
+    "primarySchoolDescription": "Primary School",
+    "primarySchoolDate": "June, 2006",
+    "middleSchool": "Istituto Comprensivo 'Molino Vecchio'",
+    "middleSchoolDescription": "Middle School",
+    "middleSchoolDate": "July, 2009",
+    "highSchool": "ITS Pier Paolo Pasolini",
+    "highSchoolDescription": "Linguistic High School, 77/100",
+    "highSchoolDate": "June, 2014",
+    "bachelor": "Informatica per la Comunicazione Digitale",
+    "bachelorDescription": "Università degli Studi di Milano, 101/110",
+    "bachelorDate": "April, 2018",
+    "erasmus": "Facultat d'Informatica de Barcelona",
+    "erasmusDescription": "Universitat Politècnica de Catalunya",
+    "erasmusDate": "September, 2019 - February, 2020",
+    "master": "Informatica",
+    "masterDescription": "Università degli Studi di Milano, 110/110 with honors",
+    "masterDate": "April, 2021",
+    "juniorDataEngineer": "Junior Data Engineer",
+    "juniorDataEngineerDescription": "Quantyca - Data at Core",
+    "juniorDataEngineerDate": "June, 2021",
+    "dataEngineer": "Data Engineer",
+    "dataEngineerDescription": "Quantyca - Data at Core",
+    "dataEngineerDate": "June, 2022"
+  },
+  "projects": {
+    "title": "Projects",
+    "partitelleBotEndDate": "Present"
+  },
+  "skills": {
+    "title": "Skills",
+    "precision": "Precision",
+    "autonomy": "Autonomy",
+    "communication": "Communication",
+    "problemSolving": "Problem Solving",
+    "keywords": "Keywords",
+    "languages": "Languages",
+    "motherTongue": "Mother Tongue",
+    "proficient": "Proficient",
+    "basicKnowledge": "Basic Knowledge",
+    "distributedSystems": "Distributed Systems",
+    "appCreator": "App Creator"
+  }
 }
