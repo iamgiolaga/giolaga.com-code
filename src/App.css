@@ -149,6 +149,7 @@ ul#nav li a:hover {opacity: 1}
     color: transparent;
     position: relative;
     bottom: 0;
+    border-radius: 4px;
   }
   
   #nav-wrap {
@@ -193,6 +194,7 @@ ul#nav li a:hover {opacity: 1}
  #nav-wrap:not( :target ) > a:first-of-type,
  #nav-wrap:target > a:last-of-type  {
     display: block;
+    border-radius: 4px;
  }
 
   /* hide menu panel */
@@ -215,6 +217,7 @@ ul#nav li a:hover {opacity: 1}
      background: #1f2024;
      margin: 0 30px;
      clear: both;
+     border-radius: 4px;
   }
 
   ul#nav li {
@@ -228,8 +231,7 @@ ul#nav li a:hover {opacity: 1}
   }
  
   ul#nav li a {  
-     display: block;    
-     margin: 0;
+     display: block;  
      padding: 0;      
      margin: 12px 0; 
      line-height: 16px; /* reset line-height from 48px */
