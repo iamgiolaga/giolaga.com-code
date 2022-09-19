@@ -32,6 +32,7 @@ const CustomizedTimeLine = () => {
   const [hoveredErasmus, setHoveredErasmus] = useState(false);
   const [hoveredMaster, setHoveredMaster] = useState(false);
   const [hoveredFirstJob, setHoveredFirstJob] = useState(false);
+  const [hoveredSecondJob, setHoveredSecondJob] = useState(false);
   const [hoveredCurrentJob, setHoveredCurrentJob] = useState(false);
   const [modalStatus, setModalStatus] = useState(false);
 
@@ -415,8 +416,8 @@ const CustomizedTimeLine = () => {
           align="right"
           variant="body2"
           color="text.secondary"
-          fontWeight={hoveredCurrentJob ? "600" : "0"}
-          style={{ color: hoveredCurrentJob ? "rgb(170, 8, 143)" : "" }}
+          fontWeight={hoveredSecondJob ? "600" : "0"}
+          style={{ color: hoveredSecondJob ? "rgb(170, 8, 143)" : "" }}
         >
           {t("history.dataEngineerDate")}
         </TimelineOppositeContent>
@@ -424,10 +425,52 @@ const CustomizedTimeLine = () => {
           <TimelineConnector />
           <a href="https://www.quantyca.it">
             <TimelineDot
+              onMouseEnter={() => setHoveredSecondJob(true)}
+              onMouseLeave={() => setHoveredSecondJob(false)}
+              className="iconJob"
+              color="secondary"
+            >
+              <WorkIcon className="iconJob" />
+            </TimelineDot>
+          </a>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: "12px", px: 2 }}>
+          <Typography
+            variant="h6"
+            component="span"
+            fontWeight={hoveredSecondJob ? "600" : "0"}
+            className={hoveredSecondJob ? "jobDescription" : ""}
+          >
+            {t("history.dataEngineer")}
+          </Typography>
+          <Typography
+            fontWeight={hoveredSecondJob ? "600" : "0"}
+            className={hoveredSecondJob ? "jobDescription" : ""}
+          >
+            {t("history.dataEngineerDescription")}
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: "auto 0" }}
+          align="right"
+          variant="body2"
+          color="text.secondary"
+          fontWeight={hoveredCurrentJob ? "600" : "0"}
+          style={{ color: hoveredCurrentJob ? "rgb(170, 8, 143)" : "" }}
+        >
+          {t("history.juniorDataEngineerDate")}
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineConnector />
+          <a href="https://www.thefork.it">
+            <TimelineDot
               onMouseEnter={() => setHoveredCurrentJob(true)}
               onMouseLeave={() => setHoveredCurrentJob(false)}
               className="iconJob"
-              color="secondary"
+              color="success"
             >
               <WorkIcon className="iconJob" />
             </TimelineDot>
@@ -441,13 +484,13 @@ const CustomizedTimeLine = () => {
             fontWeight={hoveredCurrentJob ? "600" : "0"}
             className={hoveredCurrentJob ? "jobDescription" : ""}
           >
-            {t("history.dataEngineer")}
+            {t("history.fullStackSoftwareEngineer")}
           </Typography>
           <Typography
             fontWeight={hoveredCurrentJob ? "600" : "0"}
             className={hoveredCurrentJob ? "jobDescription" : ""}
           >
-            {t("history.dataEngineerDescription")}
+            {t("history.fullStackSoftwareEngineerDescription")}
           </Typography>
         </TimelineContent>
       </TimelineItem>

@@ -13,7 +13,7 @@
     "title": "Breve biografia",
     "beforeName": "Il mio nome è",
     "name": "Giovanni Laganà",
-    "afterName": ", nato a Milano il 25 Novembre 1995. Quando avevo 5 anni la mia famiglia ed io ci siamo trasferiti in una piccola città nella zona est di Milano chiamata Gorgonzola (se te lo stai chiedendo... sì, dove è stato inventato il formaggio). Sono cresciuto a Gorgonzola, ricevendo lì la prima parte della mia istruzione e sono tornato a Milano per la scuola superiore e sia per la laurea triennale che per quella magistrale. Inoltre, ho trascorso 5 mesi tra il 2019 e il 2020 a Barcellona per il programma Erasmus+. Al momento sono un Data Engineer in Quantyca, amo la tecnologia e sono sempre assetato di conoscenza."
+    "afterName": ", nato a Milano il 25 Novembre 1995. Quando avevo 5 anni la mia famiglia ed io ci siamo trasferiti in una piccola città nella zona est di Milano chiamata Gorgonzola (se te lo stai chiedendo... sì, dove è stato inventato il formaggio). Sono cresciuto a Gorgonzola, ricevendo lì la prima parte della mia istruzione e sono tornato a Milano per la scuola superiore e sia per la laurea triennale che per quella magistrale. Inoltre, ho trascorso 5 mesi tra il 2019 e il 2020 a Barcellona per il programma Erasmus+. Ho lavorato da Giugno 2021 a Settembre 2022 in Quantyca come Data Engineer. Ora sono un Fullstack Software Engineer in crescita in TheFork."
   },
   "history": {
     "title": "Storia",
@@ -43,7 +43,10 @@
     "juniorDataEngineerDate": "Giugno 2021",
     "dataEngineer": "Data Engineer",
     "dataEngineerDescription": "Quantyca - Data at Core",
-    "dataEngineerDate": "Giugno 2022"
+    "dataEngineerDate": "Giugno 2022",
+    "fullStackSoftwareEngineer": "Fullstack Software Engineer",
+    "fullStackSoftwareEngineerDescription": "TheFork, a TripAdvisor company",
+    "fullStackSoftwareEngineerDate": "Settembre 2022"
   },
   "projects": {
     "title": "Progetti",
