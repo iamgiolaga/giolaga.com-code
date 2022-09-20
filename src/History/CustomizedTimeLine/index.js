@@ -385,10 +385,10 @@ const CustomizedTimeLine = () => {
             <TimelineDot
               onMouseEnter={() => setHoveredFirstJob(true)}
               onMouseLeave={() => setHoveredFirstJob(false)}
-              className="iconJob"
+              className="iconQuantycaJob"
               color="secondary"
             >
-              <WorkIcon className="iconJob" />
+              <WorkIcon className="iconQuantycaJob" />
             </TimelineDot>
           </a>
           <TimelineConnector />
@@ -398,13 +398,13 @@ const CustomizedTimeLine = () => {
             variant="h6"
             component="span"
             fontWeight={hoveredFirstJob ? "600" : "0"}
-            className={hoveredFirstJob ? "jobDescription" : ""}
+            className={hoveredFirstJob ? "quantycaJobDescription" : ""}
           >
             {t("history.juniorDataEngineer")}
           </Typography>
           <Typography
             fontWeight={hoveredFirstJob ? "600" : "0"}
-            className={hoveredFirstJob ? "jobDescription" : ""}
+            className={hoveredFirstJob ? "quantycaJobDescription" : ""}
           >
             {t("history.juniorDataEngineerDescription")}
           </Typography>
@@ -427,10 +427,10 @@ const CustomizedTimeLine = () => {
             <TimelineDot
               onMouseEnter={() => setHoveredSecondJob(true)}
               onMouseLeave={() => setHoveredSecondJob(false)}
-              className="iconJob"
+              className="iconQuantycaJob"
               color="secondary"
             >
-              <WorkIcon className="iconJob" />
+              <WorkIcon className="iconQuantycaJob" />
             </TimelineDot>
           </a>
           <TimelineConnector />
@@ -440,13 +440,13 @@ const CustomizedTimeLine = () => {
             variant="h6"
             component="span"
             fontWeight={hoveredSecondJob ? "600" : "0"}
-            className={hoveredSecondJob ? "jobDescription" : ""}
+            className={hoveredSecondJob ? "quantycaJobDescription" : ""}
           >
             {t("history.dataEngineer")}
           </Typography>
           <Typography
             fontWeight={hoveredSecondJob ? "600" : "0"}
-            className={hoveredSecondJob ? "jobDescription" : ""}
+            className={hoveredSecondJob ? "quantycaJobDescription" : ""}
           >
             {t("history.dataEngineerDescription")}
           </Typography>
@@ -459,9 +459,9 @@ const CustomizedTimeLine = () => {
           variant="body2"
           color="text.secondary"
           fontWeight={hoveredCurrentJob ? "600" : "0"}
-          style={{ color: hoveredCurrentJob ? "rgb(170, 8, 143)" : "" }}
+          style={{ color: hoveredCurrentJob ? "rgb(26, 116, 8)" : "" }}
         >
-          {t("history.juniorDataEngineerDate")}
+          {t("history.fullStackSoftwareEngineerDate")}
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -469,10 +469,10 @@ const CustomizedTimeLine = () => {
             <TimelineDot
               onMouseEnter={() => setHoveredCurrentJob(true)}
               onMouseLeave={() => setHoveredCurrentJob(false)}
-              className="iconJob"
+              className="iconTheForkJob"
               color="success"
             >
-              <WorkIcon className="iconJob" />
+              <WorkIcon className="iconTheForkJob" />
             </TimelineDot>
           </a>
           <TimelineConnector />
@@ -482,13 +482,13 @@ const CustomizedTimeLine = () => {
             variant="h6"
             component="span"
             fontWeight={hoveredCurrentJob ? "600" : "0"}
-            className={hoveredCurrentJob ? "jobDescription" : ""}
+            className={hoveredCurrentJob ? "theForkJobDescription" : ""}
           >
             {t("history.fullStackSoftwareEngineer")}
           </Typography>
           <Typography
             fontWeight={hoveredCurrentJob ? "600" : "0"}
-            className={hoveredCurrentJob ? "jobDescription" : ""}
+            className={hoveredCurrentJob ? "theForkJobDescription" : ""}
           >
             {t("history.fullStackSoftwareEngineerDescription")}
           </Typography>
