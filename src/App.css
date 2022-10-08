@@ -149,7 +149,7 @@ ul#nav li a:hover {opacity: 1}
   .languageFlag {
     opacity: 1;
   }
-  
+
   #languages {
     width: 100px;
     height: 40px;
@@ -251,4 +251,7 @@ ul#nav li a:hover {opacity: 1}
 
 #websiteVersion {
   margin-bottom: 0;
+}
+#websiteVersion:hover {
+  cursor: pointer;
 }
