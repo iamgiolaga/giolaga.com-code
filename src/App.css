@@ -13,7 +13,12 @@
   }
 }
 
+.languageFlag {
+  opacity: 0.6;
+}
+
 .languageFlag:hover {
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -141,6 +146,10 @@ ul#nav li a:hover {opacity: 1}
 
   /* mobile navigation
   -------------------------------------------------------------------- */
+  .languageFlag {
+    opacity: 1;
+  }
+  
   #languages {
     width: 100px;
     height: 40px;

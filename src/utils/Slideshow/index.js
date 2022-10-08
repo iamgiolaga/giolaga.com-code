@@ -7,9 +7,12 @@ import me4 from "../../profilePictures/me4.png";
 import me5 from "../../profilePictures/me5.png";
 import me6 from "../../profilePictures/me6.png";
 import me7 from "../../profilePictures/me7.png";
+import me8 from "../../profilePictures/me8.png";
+import me9 from "../../profilePictures/me9.png";
+import me10 from "../../profilePictures/me10.png";
 import { useSwipeable } from "react-swipeable";
 
-const pictures = [me6, me7, me, me2, me3, me4, me5];
+const pictures = [me6, me8, me9, me10, me7, me, me2, me3, me4, me5];
 const delay = 5000;
 
 const Slideshow = (config) => {
@@ -51,14 +54,14 @@ const Slideshow = (config) => {
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
         {pictures.map((pic, index) => (
-            <div className="slide" key={index}>
-                <img 
-                    id="profilePic" 
-                    class="profilePicGroup"
-                    src={pic}
-                    alt="Profile"
-                />
-            </div>
+          <div className="slide" key={index}>
+            <img
+              id="profilePic"
+              class="profilePicGroup"
+              src={pic}
+              alt="Profile"
+            />
+          </div>
         ))}
       </div>
 

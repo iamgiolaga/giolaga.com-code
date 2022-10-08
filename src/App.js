@@ -9,7 +9,6 @@ import Skills from './Skills';
 import { useTranslation, withTranslation } from 'react-i18next';
 import { compose } from 'redux';
 import ReactCountryFlag from 'react-country-flag';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 function App() {
   const { t, i18n } = useTranslation('common');
