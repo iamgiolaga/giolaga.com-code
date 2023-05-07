@@ -13,7 +13,7 @@ import ReactCountryFlag from 'react-country-flag';
 function App() {
   const { t, i18n } = useTranslation('common');
 
-  const handleVersionClick = () => {
+  const handleWebsiteVersionClick = () => {
     const url = "https://github.com/iamgiolaga/iamgiolaga.github.io/tags";
     window.open(url, '_blank').focus();
   }
@@ -51,7 +51,7 @@ function App() {
         <section id="skills">
           <Skills />
         </section>
-        <p id="websiteVersion" onClick={handleVersionClick}>giolaga.com - v1.3</p>
+        <p id="websiteVersion" onClick={handleWebsiteVersionClick}>giolaga.com - v1.3</p>
       </div>
     </Suspense>
   );
