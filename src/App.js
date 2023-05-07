@@ -9,11 +9,12 @@ import Skills from './Skills';
 import { useTranslation, withTranslation } from 'react-i18next';
 import { compose } from 'redux';
 import ReactCountryFlag from 'react-country-flag';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 function App() {
   const { t, i18n } = useTranslation('common');
 
-  const handleVersionClick = () => {
+  const handleWebsiteVersionClick = () => {
     const url = "https://github.com/iamgiolaga/iamgiolaga.github.io/tags";
     window.open(url, '_blank').focus();
   }
@@ -21,9 +22,12 @@ function App() {
   return (
     <Suspense fallback="loading">
       <div className="App">
-        <div id="languages" style={{ position: 'fixed', float: 'left', marginLeft: '20px', zIndex: '999' }}>
-          <ReactCountryFlag className="languageFlag" onClick={() => i18n.changeLanguage('it')} countryCode="IT" svg style={{ marginTop: '5px', width: '1.80em', height: '1.80em' }} />
-          <ReactCountryFlag className="languageFlag" onClick={() => i18n.changeLanguage('en')} countryCode="GB" svg style={{ marginTop: '5px', marginLeft: '10px', width: '1.80em', height: '1.80em' }} />
+        <div id="languages">
+          <ReactCountryFlag className="languageFlag" onClick={() => i18n.changeLanguage('it')} countryCode="IT" svg style={{ marginTop: '5px', width: '1.8em', height: '1.8em' }} />
+          <ReactCountryFlag className="languageFlag" onClick={() => i18n.changeLanguage('en')} countryCode="GB" svg style={{ marginTop: '5px', marginLeft: '10px', width: '1.8em', height: '1.8em' }} />
+        </div>
+        <div id="mailContainer">
+          <div onClick={() => window.open('mailto:giovanni.lagana1995@gmail.com')}><MailOutlineIcon style={{ marginTop: '2px', width: '1.5em', height: '1.5em', color: 'white' }} /></div>
         </div>
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
@@ -51,7 +55,7 @@ function App() {
         <section id="skills">
           <Skills />
         </section>
-        <p id="websiteVersion" onClick={handleVersionClick}>giolaga.com - v1.3</p>
+        <p id="websiteVersion" onClick={handleWebsiteVersionClick}>giolaga.com - v1.3</p>
       </div>
     </Suspense>
   );
