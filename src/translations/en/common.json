@@ -50,7 +50,8 @@
   },
   "projects": {
     "title": "Projects",
-    "partitelleBotEndDate": "Present"
+    "partitelleBotEndDate": "Present",
+    "continueReading": "continue reading"
   },
   "skills": {
     "title": "Skills",

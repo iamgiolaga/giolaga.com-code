@@ -1,12 +1,13 @@
 import './style.css';
-import {useState} from 'react';
+import { useState } from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import CloseIcon from '@mui/icons-material/Close';
-import {useDispatch} from 'react-redux'
-import {focusOnProject} from '../../store/focus';
+import { useDispatch } from 'react-redux'
+import { focusOnProject } from '../../store/focus';
+import { useTranslation } from 'react-i18next';
 
 const Project = ({
     title,
@@ -18,6 +19,7 @@ const Project = ({
     picture,
     link
 }) => {
+    const { t, i18n } = useTranslation('common');
 
     const dispatch = useDispatch();
 
@@ -43,23 +45,34 @@ const Project = ({
         color: 'white'
     };
 
-    return(
-        <div style={{margin: '0 auto'}}>
-            <div 
-                style={{opacity: hoveredProject ? '1' : '0.6'}} 
+    const renderDescription = () => {
+        if (description.length <= 1000) {
+            return description;
+        }
+        return (
+            <>
+                {description.substring(0, 1000)}... <i>{t("projects.continueReading")}</i>
+            </>
+        )
+    }
+
+    return (
+        <div style={{ margin: '0 auto' }}>
+            <div
+                style={{ opacity: hoveredProject ? '1' : '0.6' }}
                 id={modalStatus ? "projectContainerCurrent" : "projectContainer"}
-                className="projectContainer" 
+                className="projectContainer"
                 onClick={() => {
                     setModalStatus(true);
                     dispatch(focusOnProject(true));
-                }} 
-                onMouseEnter={() => setHoveredProject(true)} 
+                }}
+                onMouseEnter={() => setHoveredProject(true)}
                 onMouseLeave={() => setHoveredProject(false)}
             >
                 <h1>{title}</h1>
                 <h3>{subtitle}</h3>
                 <h5>{startDate} - {endDate}</h5>
-                <div style={{marginTop: '4%', whiteSpace: 'pre-wrap'}}>{description.substring(0, 1000)}... <i>(continue reading)</i></div>
+                <div style={{ marginTop: '4%', whiteSpace: 'pre-wrap' }}>{renderDescription()}</div>
             </div>
             <Modal
                 aria-labelledby="transition-modal-title"
@@ -76,14 +89,14 @@ const Project = ({
                 <Fade in={modalStatus}>
                     <Box sx={style}>
                         <CloseIcon id="closeIcon" onClick={handleCloseModal}></CloseIcon>
-                        <div style={{height: '450px'}}>
+                        <div style={{ height: '450px' }}>
                             <h1>{title}</h1>
                             <h3>{subtitle}</h3>
                             <h5>{startDate} - {endDate}</h5>
-                            <div style={{position: 'relative', marginTop: '4%', maxHeight: '60%', overflowY: 'scroll'}}>
+                            <div style={{ position: 'relative', marginTop: '4%', maxHeight: '60%', overflowY: 'scroll' }}>
                                 <div>{description}</div>
                             </div>
-                                <p style={{marginTop: '3%'}}><b>Technologies:</b> {technologies}</p>
+                            <p style={{ marginTop: '3%' }}><b>Technologies:</b> {technologies}</p>
                         </div>
                     </Box>
                 </Fade>
