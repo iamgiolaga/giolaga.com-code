@@ -33,6 +33,7 @@ const CustomizedTimeLine = () => {
   const [hoveredMaster, setHoveredMaster] = useState(false);
   const [hoveredFirstJob, setHoveredFirstJob] = useState(false);
   const [hoveredSecondJob, setHoveredSecondJob] = useState(false);
+  const [hoveredThirdJob, setHoveredThirdJob] = useState(false);
   const [hoveredCurrentJob, setHoveredCurrentJob] = useState(false);
   const [modalStatus, setModalStatus] = useState(false);
 
@@ -458,10 +459,52 @@ const CustomizedTimeLine = () => {
           align="right"
           variant="body2"
           color="text.secondary"
+          fontWeight={hoveredThirdJob ? "600" : "0"}
+          style={{ color: hoveredThirdJob ? "rgb(26, 116, 8)" : "" }}
+        >
+          {t("history.fullStackSoftwareEngineerDate")}
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineConnector />
+          <a href="https://www.thefork.it">
+            <TimelineDot
+              onMouseEnter={() => setHoveredThirdJob(true)}
+              onMouseLeave={() => setHoveredThirdJob(false)}
+              className="iconTheForkJob"
+              color="success"
+            >
+              <WorkIcon className="iconTheForkJob" />
+            </TimelineDot>
+          </a>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: "12px", px: 2 }}>
+          <Typography
+            variant="h6"
+            component="span"
+            fontWeight={hoveredThirdJob ? "600" : "0"}
+            className={hoveredThirdJob ? "theForkJobDescription" : ""}
+          >
+            {t("history.fullStackSoftwareEngineer")}
+          </Typography>
+          <Typography
+            fontWeight={hoveredThirdJob ? "600" : "0"}
+            className={hoveredThirdJob ? "theForkJobDescription" : ""}
+          >
+            {t("history.fullStackSoftwareEngineerDescription")}
+          </Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: "auto 0" }}
+          align="right"
+          variant="body2"
+          color="text.secondary"
           fontWeight={hoveredCurrentJob ? "600" : "0"}
           style={{ color: hoveredCurrentJob ? "rgb(26, 116, 8)" : "" }}
         >
-          {t("history.fullStackSoftwareEngineerDate")}
+          {t("history.fullStackSoftwareEngineerIIDate")}
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -484,13 +527,13 @@ const CustomizedTimeLine = () => {
             fontWeight={hoveredCurrentJob ? "600" : "0"}
             className={hoveredCurrentJob ? "theForkJobDescription" : ""}
           >
-            {t("history.fullStackSoftwareEngineer")}
+            {t("history.fullStackSoftwareEngineerII")}
           </Typography>
           <Typography
             fontWeight={hoveredCurrentJob ? "600" : "0"}
             className={hoveredCurrentJob ? "theForkJobDescription" : ""}
           >
-            {t("history.fullStackSoftwareEngineerDescription")}
+            {t("history.fullStackSoftwareEngineerIIDescription")}
           </Typography>
         </TimelineContent>
       </TimelineItem>
