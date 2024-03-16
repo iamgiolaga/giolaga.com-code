@@ -46,7 +46,10 @@
     "dataEngineerDate": "Giugno 2022",
     "fullStackSoftwareEngineer": "Fullstack Software Engineer",
     "fullStackSoftwareEngineerDescription": "TheFork, a TripAdvisor company",
-    "fullStackSoftwareEngineerDate": "Settembre 2022"
+    "fullStackSoftwareEngineerDate": "Settembre 2022",
+    "fullStackSoftwareEngineerII": "Fullstack Software Engineer II",
+    "fullStackSoftwareEngineerIIDescription": "TheFork, a TripAdvisor company",
+    "fullStackSoftwareEngineerIIDate": "Marzo 2024"
   },
   "projects": {
     "title": "Progetti",
