@@ -1,12 +1,26 @@
-import Project from './Project';
+import Project from "./Project";
 
 const italianProjectsList = [
+  <Project
+    title="LinkedIn Graph"
+    subtitle="Web app"
+    startDate="Apr 2024"
+    endDate="Presente"
+    description={
+      "Un’applicazione web che mostra la tua rete LinkedIn come grafo. Le società attorno a te sono più vicine a seconda della loro frequenza che hanno tra i tuoi collegamenti."
+    }
+    technologies="React, Next.js, TypeScript, Vercel"
+    picture=""
+    link=""
+  />,
   <Project
     title="Il Presidente"
     subtitle="Bot di Telegram"
     startDate="Set 2023"
-    endDate="Presente"
-    description={"Un Bot di Telegram in Python progettato per un gruppo di fantacalcio, che serve a ricordare ai partecipanti di impostare la propria formazione prima dell'inizio della prossima partita di Serie A."}
+    endDate="Giu 2024"
+    description={
+      "Un Bot di Telegram in Python progettato per un gruppo di fantacalcio, che serve a ricordare ai partecipanti di impostare la propria formazione prima dell'inizio della prossima partita di Serie A."
+    }
     technologies="Python, Postgres, Google Cloud Function, Google Cloud Scheduler"
     picture=""
     link=""
@@ -230,7 +244,7 @@ Questo progetto non si basava su un'archiviazione persistente come un database, 
     technologies="HTML, CSS, JavaScript, JQuery"
     picture=""
     link=""
-  />
+  />,
 ];
 
 export default italianProjectsList;
