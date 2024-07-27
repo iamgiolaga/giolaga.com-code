@@ -1,12 +1,26 @@
-import Project from './Project';
+import Project from "./Project";
 
 const projectsList = [
+  <Project
+    title="LinkedIn Graph"
+    subtitle="Web app"
+    startDate="Apr 2024"
+    endDate="Present"
+    description={
+      "A web application to display your LinkedIn network as a graph. Companies around you are closer based on the frequencies they have among your connections."
+    }
+    technologies="React, Next.js, TypeScript, Vercel"
+    picture=""
+    link=""
+  />,
   <Project
     title="Il Presidente"
     subtitle="Telegram Bot"
     startDate="Sep 2023"
-    endDate="Present"
-    description={"Telegram Bot in Python designed for a fantasy football group, serving as a reminder to participants to set their lineup before the upcoming Serie A match day kicks off."}
+    endDate="Jun 2024"
+    description={
+      "Telegram Bot in Python designed for a fantasy football group, serving as a reminder to participants to set their lineup before the upcoming Serie A match day kicks off."
+    }
     technologies="Python, Postgres, Google Cloud Function, Google Cloud Scheduler"
     picture=""
     link=""
@@ -231,7 +245,7 @@ This project didn't rely on a persistent storage like a database but used local 
     technologies="HTML, CSS, JavaScript, JQuery"
     picture=""
     link=""
-  />
+  />,
 ];
 
 export default projectsList;
