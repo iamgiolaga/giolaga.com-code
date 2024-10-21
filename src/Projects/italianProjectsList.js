@@ -2,14 +2,22 @@ import Project from "./Project";
 
 const italianProjectsList = [
   <Project
+    title="Una Ricetta Al Giorno"
+    subtitle="Canale Telegram"
+    startDate="Ott 2024"
+    endDate="Presente"
+    description={"Canale Telegram in lingua italiana dove viene pubblicata una nuova ricetta ogni giorno. Le ricette sono generate con l'AI e sono accompagnate da un'immagine, dagli ingredienti e dai passaggi di preparazione."}
+    technologies="Make, OpenAI, Telegram Bot API"
+    picture=""
+    link=""
+  />,
+  <Project
     title="LinkedIn Graph"
-    subtitle="Web app"
+    subtitle="Applicazione Web"
     startDate="Apr 2024"
     endDate="Presente"
-    description={
-      "Un’applicazione web che mostra la tua rete LinkedIn come grafo. Le società attorno a te sono più vicine a seconda della loro frequenza che hanno tra i tuoi collegamenti."
-    }
-    technologies="React, Next.js, TypeScript, Vercel"
+    description={"Un'applicazione Web per visualizzare la tua rete LinkedIn come un grafo. Le aziende intorno a te sono più vicine in base alle frequenze che hanno tra i tuoi collegamenti."}
+    technologies="React, Next.js, LinkedIn API"
     picture=""
     link=""
   />,
