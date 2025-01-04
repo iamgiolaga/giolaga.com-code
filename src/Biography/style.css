@@ -23,15 +23,14 @@ h1 {
   float: right;
 }
 
-@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
-  .hide-on-landscape {
-      display: none;
+.hide-on-landscape {
+  @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+    display: none;
   }
 }
 
-@media (orientation:portrait) {
+@media (orientation: portrait) {
   .hide-on-portrait {
-      display: none;
+    display: none;
   }
 }
-
