@@ -18,17 +18,31 @@
 
 .iframe-container {
   position: relative;
-  display: inline-block;
-  margin-top: 20px;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgb(140, 255, 180);
+  @media (min-width: 768px) {
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgb(140, 255, 180);
+  }
+}
+
+.iframe {
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .my-newsletter-badge {
-  cursor: pointer;
+  @media (max-width: 768px) {
+    right: 134px;
+  }
+  @media (min-width: 768px) {
+    bottom: -20px;
+    right: 32%;
+    z-index: 10;
+  }
   position: absolute;
-  bottom: -20px;
-  right: 32%;
+  cursor: pointer;
   font-size: small;
   box-shadow: 0 0 10px rgb(140, 255, 180);
   background-color: rgb(140, 255, 180);
@@ -37,7 +51,6 @@
   color: rgb(8, 55, 23);
   padding: 5px 10px;
   border-radius: 20px;
-  z-index: 10;
   animation: bounce 1.5s infinite;
 }
 

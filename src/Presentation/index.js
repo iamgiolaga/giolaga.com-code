@@ -40,6 +40,7 @@ const Presentation = () => {
       </div>
       <div class="iframe-container">
         <iframe
+          className="iframe"
           src="https://www.thelinkedinengineer.com/embed"
           width="320"
           height="210"
