@@ -5,8 +5,10 @@ const projectsList = [
     title="Una Ricetta Al Giorno"
     subtitle="Telegram Channel"
     startDate="Oct 2024"
-    endDate="Present"
-    description={"Telegram Channel in Italian language where a new recipe is published every day. The recipes are generated with AI and are accompanied by a picture, the ingredients and the preparation steps."}
+    endDate="May 2025"
+    description={
+      "Telegram Channel in Italian language where a new recipe is published every day. The recipes are generated with AI and are accompanied by a picture, the ingredients and the preparation steps."
+    }
     technologies="Make, OpenAI, Telegram Bot API"
     picture=""
     link=""
@@ -16,7 +18,9 @@ const projectsList = [
     subtitle="Web application"
     startDate="Apr 2024"
     endDate="Present"
-    description={"A web application to display your LinkedIn network as a graph. Companies around you are closer based on the frequencies they have among your connections."}
+    description={
+      "A web application to display your LinkedIn network as a graph. Companies around you are closer based on the frequencies they have among your connections."
+    }
     technologies="React, Next.js, LinkedIn API"
     picture=""
     link=""

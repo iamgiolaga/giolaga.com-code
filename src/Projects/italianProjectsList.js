@@ -5,8 +5,10 @@ const italianProjectsList = [
     title="Una Ricetta Al Giorno"
     subtitle="Canale Telegram"
     startDate="Ott 2024"
-    endDate="Presente"
-    description={"Canale Telegram in lingua italiana dove viene pubblicata una nuova ricetta ogni giorno. Le ricette sono generate con l'AI e sono accompagnate da un'immagine, dagli ingredienti e dai passaggi di preparazione."}
+    endDate="Mag 2025"
+    description={
+      "Canale Telegram in lingua italiana dove viene pubblicata una nuova ricetta ogni giorno. Le ricette sono generate con l'AI e sono accompagnate da un'immagine, dagli ingredienti e dai passaggi di preparazione."
+    }
     technologies="Make, OpenAI, Telegram Bot API"
     picture=""
     link=""
@@ -16,7 +18,9 @@ const italianProjectsList = [
     subtitle="Applicazione Web"
     startDate="Apr 2024"
     endDate="Presente"
-    description={"Un'applicazione Web per visualizzare la tua rete LinkedIn come un grafo. Le aziende intorno a te sono più vicine in base alle frequenze che hanno tra i tuoi collegamenti."}
+    description={
+      "Un'applicazione Web per visualizzare la tua rete LinkedIn come un grafo. Le aziende intorno a te sono più vicine in base alle frequenze che hanno tra i tuoi collegamenti."
+    }
     technologies="React, Next.js, LinkedIn API"
     picture=""
     link=""
