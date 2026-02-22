@@ -1,4 +1,4 @@
-import Project from "./Project";
+import Project from './Project';
 
 const projectsList = [
   <Project
@@ -7,7 +7,7 @@ const projectsList = [
     startDate="Oct 2024"
     endDate="May 2025"
     description={
-      "Telegram Channel in Italian language where a new recipe is published every day. The recipes are generated with AI and are accompanied by a picture, the ingredients and the preparation steps."
+      'Telegram Channel in Italian language where a new recipe is published every day. The recipes are generated with AI and are accompanied by a picture, the ingredients and the preparation steps.'
     }
     technologies="Make, OpenAI, Telegram Bot API"
     picture=""
@@ -19,7 +19,7 @@ const projectsList = [
     startDate="Apr 2024"
     endDate="Present"
     description={
-      "A web application to display your LinkedIn network as a graph. Companies around you are closer based on the frequencies they have among your connections."
+      'A web application to display your LinkedIn network as a graph. Companies around you are closer based on the frequencies they have among your connections.'
     }
     technologies="React, Next.js, LinkedIn API"
     picture=""
@@ -31,7 +31,7 @@ const projectsList = [
     startDate="Sep 2023"
     endDate="Jun 2024"
     description={
-      "Telegram Bot in Python designed for a fantasy football group, serving as a reminder to participants to set their lineup before the upcoming Serie A match day kicks off."
+      'Telegram Bot in Python designed for a fantasy football group, serving as a reminder to participants to set their lineup before the upcoming Serie A match day kicks off.'
     }
     technologies="Python, Postgres, Google Cloud Function, Google Cloud Scheduler"
     picture=""
