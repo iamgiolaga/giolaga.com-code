@@ -3,7 +3,6 @@ import packageJson from '../../package.json';
 export const APP_VERSION = packageJson.version;
 
 export const MAIL_ICON_STYLE = {
-  marginTop: '2px',
   width: '1.5em',
   height: '1.5em',
   color: 'white',

@@ -1,53 +1,72 @@
 /* DivSlideshow */
 
-#projectSlideshowSlider {
-  height: 90%;
+.slideshow-container {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
 }
 
-.slideshow {
-    width: 100%;
-    overflow: hidden;
-    /*max-width: 500px;*/
-  }
-  
-  .slideshowSlider {
-    white-space: nowrap;
-    transition: ease 1000ms;
-  }
-  
-  .slide {
-    display: inline-block;
-    height: 350px;
-    width: 100%;
-    border-radius: 40px;
-  }
+.slideshow-slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
-  .projectSlide {
-      display: inline-block;
-      vertical-align: top;
-      height: 285px;
-      width: 100%;
-      border-radius: 40px;
+.slideshow-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slideshow-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.slideshow-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.slideshow-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slideshow-dot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.2);
+}
+
+.slideshow-dot.active {
+  background-color: #ffffff;
+  transform: scale(1.3);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .slideshow-slide {
+    padding: 0 1rem;
   }
-  
-  /* Buttons */
-  
-  .slideshowDots {
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  .slideshow-slide {
+    padding: 0 0.5rem;
   }
-  
-  .slideshowDot {
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-bottom: 3%;
-    opacity: 0.6;
-    background-color: #c4c4c4;
-  }
-  
-  .slideshowDot.active {
-    opacity: 1;
-    background-color: #ffffff;
-  }
+}

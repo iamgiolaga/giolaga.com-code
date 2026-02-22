@@ -1,11 +1,296 @@
 #timelineContainer {
-    color: black;
+    color: var(--text-primary);
     width: 100%;
-    background-color: rgb(238, 237, 237);
-    padding-bottom: 5%;
+    background: var(--bg-dark-tertiary);
+    padding: var(--spacing-xl) var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+}
+
+#timelineContainer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: radial-gradient(circle at 50% 100%, rgba(102, 126, 234, 0.06) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 #historyTitle {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: var(--spacing-xl) 0;
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    background: var(--secondary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-card {
+    background: rgba(22, 33, 62, 0.7) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin: 40px auto;
+    max-width: 78%;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-card .MuiCardContent-root {
+    padding: var(--spacing-lg) !important;
+}
+
+.floating-icon {
+    position: absolute;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-icon .MuiTimelineDot-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-1 {
+    animation: bounce-1 25s infinite linear;
+}
+
+.icon-1 .MuiTimelineDot-root {
+    width: 350px;
+    height: 350px;
+}
+
+.icon-1 .MuiSvgIcon-root {
+    font-size: 220px;
+}
+
+.icon-2 {
+    animation: bounce-2 22s infinite linear;
+}
+
+.icon-2 .MuiTimelineDot-root {
+    width: 250px;
+    height: 250px;
+}
+
+.icon-2 .MuiSvgIcon-root {
+    font-size: 150px;
+}
+
+.icon-3 {
+    animation: bounce-3 28s infinite linear;
+}
+
+.icon-3 .MuiTimelineDot-root {
+    width: 400px;
+    height: 400px;
+}
+
+.icon-3 .MuiSvgIcon-root {
+    font-size: 260px;
+}
+
+.icon-4 {
+    animation: bounce-4 20s infinite linear;
+}
+
+.icon-4 .MuiTimelineDot-root {
+    width: 280px;
+    height: 280px;
+}
+
+.icon-4 .MuiSvgIcon-root {
+    font-size: 170px;
+}
+
+.icon-5 {
+    animation: bounce-5 24s infinite linear;
+}
+
+.icon-5 .MuiTimelineDot-root {
+    width: 320px;
+    height: 320px;
+}
+
+.icon-5 .MuiSvgIcon-root {
+    font-size: 200px;
+}
+
+.icon-6 {
+    animation: bounce-6 26s infinite linear;
+}
+
+.icon-6 .MuiTimelineDot-root {
+    width: 290px;
+    height: 290px;
+}
+
+.icon-6 .MuiSvgIcon-root {
+    font-size: 180px;
+}
+
+.icon-7 {
+    animation: bounce-7 23s infinite linear;
+}
+
+.icon-7 .MuiTimelineDot-root {
+    width: 360px;
+    height: 360px;
+}
+
+.icon-7 .MuiSvgIcon-root {
+    font-size: 230px;
+}
+
+.icon-8 {
+    animation: bounce-8 21s infinite linear;
+}
+
+.icon-8 .MuiTimelineDot-root {
+    width: 270px;
+    height: 270px;
+}
+
+.icon-8 .MuiSvgIcon-root {
+    font-size: 160px;
+}
+
+.icon-9 {
+    animation: bounce-9 27s infinite linear;
+}
+
+.icon-9 .MuiTimelineDot-root {
+    width: 340px;
+    height: 340px;
+}
+
+.icon-9 .MuiSvgIcon-root {
+    font-size: 210px;
+}
+
+.icon-10 {
+    animation: bounce-10 24s infinite linear;
+}
+
+.icon-10 .MuiTimelineDot-root {
+    width: 310px;
+    height: 310px;
+}
+
+.icon-10 .MuiSvgIcon-root {
+    font-size: 190px;
+}
+
+@keyframes bounce-1 {
+    0% { top: 10%; left: 5%; }
+    25% { top: 70%; left: 80%; }
+    50% { top: 20%; left: 90%; }
+    75% { top: 80%; left: 15%; }
+    100% { top: 10%; left: 5%; }
+}
+
+@keyframes bounce-2 {
+    0% { top: 60%; left: 85%; }
+    25% { top: 15%; left: 10%; }
+    50% { top: 75%; left: 20%; }
+    75% { top: 30%; left: 85%; }
+    100% { top: 60%; left: 85%; }
+}
+
+@keyframes bounce-3 {
+    0% { top: 40%; left: 15%; }
+    25% { top: 20%; left: 75%; }
+    50% { top: 85%; left: 70%; }
+    75% { top: 50%; left: 5%; }
+    100% { top: 40%; left: 15%; }
+}
+
+@keyframes bounce-4 {
+    0% { top: 80%; left: 60%; }
+    25% { top: 25%; left: 20%; }
+    50% { top: 10%; left: 85%; }
+    75% { top: 70%; left: 40%; }
+    100% { top: 80%; left: 60%; }
+}
+
+@keyframes bounce-5 {
+    0% { top: 30%; left: 90%; }
+    25% { top: 75%; left: 10%; }
+    50% { top: 15%; left: 30%; }
+    75% { top: 60%; left: 80%; }
+    100% { top: 30%; left: 90%; }
+}
+
+@keyframes bounce-6 {
+    0% { top: 5%; left: 50%; }
+    25% { top: 80%; left: 5%; }
+    50% { top: 25%; left: 70%; }
+    75% { top: 60%; left: 95%; }
+    100% { top: 5%; left: 50%; }
+}
+
+@keyframes bounce-7 {
+    0% { top: 70%; left: 25%; }
+    25% { top: 10%; left: 65%; }
+    50% { top: 85%; left: 80%; }
+    75% { top: 40%; left: 15%; }
+    100% { top: 70%; left: 25%; }
+}
+
+@keyframes bounce-8 {
+    0% { top: 15%; left: 75%; }
+    25% { top: 65%; left: 30%; }
+    50% { top: 35%; left: 5%; }
+    75% { top: 80%; left: 85%; }
+    100% { top: 15%; left: 75%; }
+}
+
+@keyframes bounce-9 {
+    0% { top: 50%; left: 10%; }
+    25% { top: 20%; left: 85%; }
+    50% { top: 75%; left: 50%; }
+    75% { top: 10%; left: 20%; }
+    100% { top: 50%; left: 10%; }
+}
+
+@keyframes bounce-10 {
+    0% { top: 85%; left: 40%; }
+    25% { top: 30%; left: 75%; }
+    50% { top: 60%; left: 15%; }
+    75% { top: 15%; left: 90%; }
+    100% { top: 85%; left: 40%; }
+}
+
+/* Responsive Mobile Styles */
+@media (max-width: 768px) {
+    #timelineContainer {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    #historyTitle {
+        padding: var(--spacing-md) 0;
+    }
+
+    .timeline-card {
+        max-width: 95% !important;
+        margin: 20px auto !important;
+        border-radius: 12px !important;
+    }
+
+    .timeline-card .MuiCardContent-root {
+        padding: var(--spacing-md) !important;
+    }
+
+    .floating-icon {
+        display: none;
+    }
 }

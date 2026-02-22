@@ -4,66 +4,133 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { useTranslation } from 'react-i18next';
-import arrow from '../arrow.png';
-import Image from 'react-bootstrap/Image';
+import { motion } from 'framer-motion';
 
 const Presentation = () => {
   const { t } = useTranslation('common');
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.4, 0, 0.2, 1] as any,
+      },
+    },
+  };
+
+  const iconVariants = {
+    hover: {
+      scale: 1.2,
+      rotate: 5,
+      transition: {
+        duration: 0.3,
+        type: 'spring' as const,
+        stiffness: 300,
+      },
+    },
+  };
+
   return (
-    <div id="presentationContainer">
-      <p id="hello">
-        {t('presentation.header')} <b>Giovanni</b> :)
-      </p>
-      <Slideshow />
-      <div>
-        <a
+    <motion.div
+      id="presentationContainer"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div variants={itemVariants}>
+        <Slideshow />
+      </motion.div>
+      <motion.div variants={itemVariants} className="socialIconsContainer">
+        <motion.a
           className="socialLink"
           href="https://www.linkedin.com/in/giovannilagana/"
+          variants={iconVariants}
+          whileHover="hover"
         >
           <LinkedInIcon
             style={{ width: '50px', height: '50px' }}
             className="socialIcon"
           />
-        </a>
-        <a className="socialLink" href="https://github.com/iamgiolaga">
+        </motion.a>
+        <motion.a
+          className="socialLink"
+          href="https://github.com/iamgiolaga"
+          variants={iconVariants}
+          whileHover="hover"
+        >
           <GitHubIcon
             style={{ width: '45px', height: '45px' }}
             className="socialIcon"
           />
-        </a>
-        <a className="socialLink" href="https://www.youtube.com/@iamgiolaga">
+        </motion.a>
+        <motion.a
+          className="socialLink"
+          href="https://www.youtube.com/@iamgiolaga"
+          variants={iconVariants}
+          whileHover="hover"
+        >
           <YouTubeIcon
-            style={{ width: '60px', height: '60px' }}
+            style={{ width: '56px', height: '56px' }}
             className="socialIcon"
           />
-        </a>
-      </div>
-      <div className="newsletter-container">
-        <iframe
-          id="iframe"
-          src="https://www.thelinkedinengineer.com/embed"
-          width="320"
-          height="210"
-          style={{ borderRadius: '20px', border: 0 }}
-          title="Newsletter embed"
-        />
-        <div className="my-newsletter-badge-container hide-on-landscape">
-          <div className="click-me-container">
-            <p id="click-me">Click me!</p>
-            <Image width={60} id="arrow" src={arrow} fluid />
+        </motion.a>
+      </motion.div>
+      <motion.div className="newsletter-container" variants={itemVariants}>
+        <div className="newsletter-content">
+          <div className="newsletter-header">
+            <a
+              href="https://www.thelinkedinengineer.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="newsletter-title-link"
+            >
+              <h3 className="newsletter-title">
+                <span className="newsletter-icon">📭</span> The LinkedIn
+                Engineer
+              </h3>
+            </a>
+            <p className="newsletter-subtitle">
+              Are you a Software Engineer who hates the idea of "selling
+              yourself"? This newsletter is for you.
+            </p>
           </div>
-          <span
-            onClick={() =>
-              (window.location.href = 'https://www.thelinkedinengineer.com')
-            }
-            className="my-newsletter-badge"
+          <form
+            action="https://www.thelinkedinengineer.com/subscribe"
+            method="POST"
+            target="_blank"
+            className="newsletter-form"
           >
-            My Newsletter
-          </span>
+            <input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              className="newsletter-input"
+              required
+            />
+            <button type="submit" className="newsletter-button">
+              Subscribe
+            </button>
+          </form>
         </div>
-      </div>
-    </div>
+      </motion.div>
+      <motion.p id="hello" variants={itemVariants}>
+        {t('presentation.header')} <b>Giovanni</b> :)
+      </motion.p>
+    </motion.div>
   );
 };
 

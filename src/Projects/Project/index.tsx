@@ -7,6 +7,7 @@ import Fade from '@mui/material/Fade';
 import CloseIcon from '@mui/icons-material/Close';
 import { useFocus } from '../../context/FocusContext';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 interface ProjectProps {
   title: string;
@@ -65,9 +66,14 @@ const Project = ({
   };
 
   return (
-    <div style={{ margin: '0 auto' }}>
+    <motion.div 
+      style={{ margin: '0 auto' }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
       <div
-        style={{ opacity: hoveredProject ? '1' : '0.6' }}
+        style={{ opacity: hoveredProject ? '1' : '0.8' }}
         id={modalStatus ? 'projectContainerCurrent' : 'projectContainer'}
         className="projectContainer"
         onClick={() => {
@@ -82,7 +88,7 @@ const Project = ({
         <h5>
           {startDate} - {endDate}
         </h5>
-        <div style={{ marginTop: '4%', whiteSpace: 'pre-wrap' }}>
+        <div className="projectDescription">
           {renderDescription()}
         </div>
       </div>
@@ -124,7 +130,7 @@ const Project = ({
           </Box>
         </Fade>
       </Modal>
-    </div>
+    </motion.div>
   );
 };
 

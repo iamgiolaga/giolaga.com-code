@@ -1,36 +1,255 @@
-h1 {
-  margin-block-start: 0;
-}
-
-#biography {
-  text-align: left;
-}
-
+/* Biography Container - Outer wrapper with background */
 #biographyContainer {
-  /* position: absolute; */
-  background-color: #667085;
+  background: linear-gradient(135deg, #667085 0%, #536278 100%);
   color: white;
+  width: 100%;
+  padding: 4rem 2rem;
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+/* Biography Content - Main content wrapper */
+#biographyContent {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Biography Title */
+.biographyTitle {
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: white;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+/* Biography Card Wrapper - Contains card and quote */
+.biographyCardWrapper {
+  position: relative;
   width: 100%;
 }
 
-#biographyText {
-  margin-top: 10%;
+/* Decorative 3D quote mark */
+.quoteMarkWrapper {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  z-index: 10;
+  pointer-events: none;
 }
 
-#signature {
-  margin-top: -10%;
-  margin-left: 70%;
-  float: right;
+.quoteMark {
+  font-size: 80px;
+  color: rgba(180, 185, 200, 1);
+  font-family: Georgia, serif;
+  line-height: 0.7;
+  text-shadow: 
+    0 0 10px rgba(200, 200, 220, 0.6),
+    0 0 20px rgba(180, 180, 200, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.5),
+    4px 4px 8px rgba(0, 0, 0, 0.3),
+    -1px -1px 2px rgba(255, 255, 255, 0.3);
+  display: block;
+  filter: brightness(1.2);
+  animation: quote-shake 5s ease-in-out infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.hide-on-landscape {
-  @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
-    display: none;
+@keyframes quote-shake {
+  0%, 85%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  86% {
+    transform: translate(-2px, -1px) rotate(-8deg);
+  }
+  87% {
+    transform: translate(3px, 2px) rotate(10deg);
+  }
+  88% {
+    transform: translate(-3px, 1px) rotate(-9deg);
+  }
+  89% {
+    transform: translate(2px, -2px) rotate(8deg);
+  }
+  90% {
+    transform: translate(-1px, 2px) rotate(-6deg);
+  }
+  91% {
+    transform: translate(2px, -1px) rotate(7deg);
+  }
+  92% {
+    transform: translate(-1px, 1px) rotate(-4deg);
+  }
+  93% {
+    transform: translate(0, 0) rotate(0deg);
   }
 }
 
-@media (orientation: portrait) {
-  .hide-on-portrait {
-    display: none;
+/* Biography Text Wrapper - Glass morphism card */
+#biographyTextWrapper {
+  position: relative;
+  padding: 3rem;
+  padding-bottom: 7rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.37),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Metallic shine effect */
+#biographyTextWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  animation: metallic-shine 8s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes metallic-shine {
+  0%, 100% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+}
+
+/* Biography Text */
+#biographyText {
+  margin: 0;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+#biographyText b {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Signature Wrapper - Positioned at bottom right */
+#signatureWrapper {
+  position: absolute;
+  top: calc(100% - 200px);
+  right: 0rem;
+  max-width: 280px;
+  z-index: 2;
+}
+
+#biographySignature {
+  width: 100%;
+  display: block;
+  opacity: 0.9;
+  filter: brightness(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #biographyContainer {
+    padding: 3rem 1rem;
+  }
+
+  #biographyTextWrapper {
+    padding: 2rem 1.5rem;
+    padding-bottom: 5.5rem;
+  }
+
+  #biographyText {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  #signatureWrapper {
+    top: calc(100% - 170px);
+    right: 0rem;
+    max-width: 250px;
+  }
+
+  .quoteMarkWrapper {
+    top: -8px;
+    left: 8px;
+  }
+
+  .quoteMark {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  #biographyContainer {
+    padding: 2rem 0.75rem;
+  }
+
+  #biographyTextWrapper {
+    padding: 1.5rem 1rem;
+    padding-bottom: 5rem;
+  }
+
+  #biographyText {
+    margin-bottom: 0;
+  }
+
+  #signatureWrapper {
+    top: calc(100% - 160px);
+    right: 0rem;
+    max-width: 230px;
+  }
+
+  .quoteMarkWrapper {
+    top: -5px;
+    left: 5px;
+  }
+
+  .quoteMark {
+    font-size: 60px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  #biographyContainer {
+    padding: 2rem 1rem;
+  }
+
+  #signatureWrapper {
+    top: calc(100% - 50px);
+    max-width: 170px;
   }
 }

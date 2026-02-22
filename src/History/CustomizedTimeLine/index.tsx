@@ -21,16 +21,22 @@ import './style.css';
 
 const style = {
   position: 'absolute' as const,
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  top: '50% !important',
+  left: '50% !important',
+  transform: 'translate(-50%, -50%) !important',
   width: '65%',
+  maxWidth: '90vw',
+  maxHeight: '90vh',
   height: 'fit-content',
   padding: '2%',
   bgcolor: '#181b20',
   boxShadow: '0 5px 10px rgba(0, 0, 0, 0.3)',
   outline: 'none',
   color: 'white',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  margin: '0 !important',
 };
 
 interface TimelineEventProps {
@@ -65,9 +71,8 @@ const TimelineEvent = ({
         sx={{ m: 'auto 0' }}
         align="right"
         variant="body2"
-        color="text.secondary"
         fontWeight={hovered ? '600' : '0'}
-        style={{ color: hovered ? hoverColor : '' }}
+        style={{ color: hovered ? hoverColor : 'rgb(255, 255, 255)' }}
       >
         {date}
       </TimelineOppositeContent>
@@ -98,7 +103,18 @@ const TimelineEvent = ({
             }}
           >
             <Fade in={modalStatus}>
-              <Box sx={style}>{modalContent}</Box>
+              <div>
+                {modalStatus && (
+                  <div className="celebration-container">
+                    {[...Array(20)].map((_, i) => (
+                      <div key={i} className={`confetti confetti-${i % 5}`}>
+                        {['🎉', '🎊', '✨', '🎆', '🎇'][i % 5]}
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <Box sx={style}>{modalContent}</Box>
+              </div>
             </Fade>
           </Modal>
         )}
@@ -109,7 +125,7 @@ const TimelineEvent = ({
           fontSize={14}
           fontWeight={hovered ? '600' : '0'}
           className={hovered ? `${className}Description` : ''}
-          style={{ color: hovered ? hoverColor : '' }}
+          style={{ color: hovered ? hoverColor : 'rgb(120, 230, 120)' }}
         >
           {title}
         </Typography>
@@ -118,7 +134,7 @@ const TimelineEvent = ({
           fontStyle="italic"
           fontWeight={hovered ? '600' : '0'}
           className={hovered ? `${className}Description` : ''}
-          style={{ color: hovered ? hoverColor : '' }}
+          style={{ color: hovered ? hoverColor : 'rgb(120, 230, 120)' }}
         >
           {description}
         </Typography>

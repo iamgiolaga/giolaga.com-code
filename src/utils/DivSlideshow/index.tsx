@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef, ReactNode } from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
-import { useSwipeable } from 'react-swipeable';
 import './style.css';
 import { useFocus } from '../../context/FocusContext';
 
@@ -12,6 +10,7 @@ const DivSlideshow = ({ elements }: DivSlideshowProps) => {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { isFocusingOnProject } = useFocus();
+  const sliderRef = useRef<HTMLDivElement>(null);
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -19,24 +18,24 @@ const DivSlideshow = ({ elements }: DivSlideshowProps) => {
     }
   }
 
-  const handlers = useSwipeable({
-    onSwipedLeft: () =>
-      setIndex((prevIndex) =>
-        prevIndex === elements.length - 1 ? 0 : prevIndex + 1
-      ),
-    onSwipedRight: () =>
-      setIndex((prevIndex) =>
-        prevIndex === 0 ? elements.length - 1 : prevIndex - 1
-      ),
-  });
+  const goToSlide = (slideIndex: number) => {
+    setIndex(slideIndex);
+    if (sliderRef.current) {
+      const slideWidth = sliderRef.current.offsetWidth;
+      sliderRef.current.scrollTo({
+        left: slideIndex * slideWidth,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   useEffect(() => {
     if (!isFocusingOnProject) {
       timeoutRef.current = setTimeout(
-        () =>
-          setIndex((prevIndex) =>
-            prevIndex === elements.length - 1 ? 0 : prevIndex + 1
-          ),
+        () => {
+          const nextIndex = index === elements.length - 1 ? 0 : index + 1;
+          goToSlide(nextIndex);
+        },
         5000
       );
     }
@@ -47,40 +46,27 @@ const DivSlideshow = ({ elements }: DivSlideshowProps) => {
   }, [index, isFocusingOnProject, elements.length]);
 
   return (
-    <div
-      style={{ height: '100vh', position: 'relative' }}
-      className="slideshow"
-    >
-      <div
-        {...handlers}
-        id="projectSlideshowSlider"
-        className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+    <div className="slideshow-container">
+      <div 
+        className="slideshow-slider"
+        ref={sliderRef}
       >
         {elements.map((el, idx) => (
-          <div className="projectSlide" key={idx}>
+          <div className="slideshow-slide" key={idx}>
             {el}
           </div>
         ))}
       </div>
 
-      <Container>
-        <Row>
-          <Col className="d-none d-md-block">
-            <div className="slideshowDots">
-              {elements.map((_, idx) => (
-                <div
-                  key={idx}
-                  className={`slideshowDot${index === idx ? ' active' : ''}`}
-                  onClick={() => {
-                    setIndex(idx);
-                  }}
-                ></div>
-              ))}
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      <div className="slideshow-dots">
+        {elements.map((_, idx) => (
+          <div
+            key={idx}
+            className={`slideshow-dot${index === idx ? ' active' : ''}`}
+            onClick={() => goToSlide(idx)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

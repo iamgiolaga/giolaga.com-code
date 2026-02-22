@@ -30,7 +30,7 @@ function App() {
       <div className="App">
         <LanguageSelector onChangeLanguage={i18n.changeLanguage} />
         <div id="mailContainer">
-          <div onClick={() => window.open(EMAIL)}>
+          <div style={{ display: 'flex' }} onClick={() => window.open(EMAIL)}>
             <MailOutlineIcon style={MAIL_ICON_STYLE} />
           </div>
         </div>
@@ -52,6 +52,7 @@ function App() {
           </ul>
         </nav>
         <section id="presentation" className="App-header">
+          <div className="light-rays"></div>
           <Presentation />
         </section>
         <section id="biography" className="App-header">
@@ -66,8 +67,10 @@ function App() {
         <section id="skills">
           <Skills />
         </section>
-        <p id="websiteVersion" onClick={handleWebsiteVersionClick}>
-          giolaga.com - v{APP_VERSION}
+        <p id="websiteVersion">
+          <span onClick={handleWebsiteVersionClick}>
+            giolaga.com - v{APP_VERSION}
+          </span>
         </p>
       </div>
     </Suspense>

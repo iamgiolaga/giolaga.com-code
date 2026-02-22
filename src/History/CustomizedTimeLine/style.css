@@ -1,82 +1,295 @@
 a {
-    color: white;
+    color: var(--accent-cyan);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-primary);
+    text-decoration: none;
 }
 
 #baby {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+}
+
+.celebration-container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.confetti {
+    position: absolute;
+    font-size: 2rem;
+    animation: confettiFall 2s ease-out forwards;
+    opacity: 0;
+}
+
+.confetti-0 { top: 50%; left: 50%; animation-delay: 0s; }
+.confetti-1 { top: 50%; left: 50%; animation-delay: 0.1s; }
+.confetti-2 { top: 50%; left: 50%; animation-delay: 0.2s; }
+.confetti-3 { top: 50%; left: 50%; animation-delay: 0.3s; }
+.confetti-4 { top: 50%; left: 50%; animation-delay: 0.4s; }
+
+@keyframes confettiFall {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(
+            calc(var(--x, 0) * 1px),
+            calc(var(--y, 0) * 1px)
+        ) rotate(720deg) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.confetti:nth-child(1) { --x: 200; --y: -300; }
+.confetti:nth-child(2) { --x: -200; --y: -300; }
+.confetti:nth-child(3) { --x: 300; --y: -200; }
+.confetti:nth-child(4) { --x: -300; --y: -200; }
+.confetti:nth-child(5) { --x: 150; --y: -350; }
+.confetti:nth-child(6) { --x: -150; --y: -350; }
+.confetti:nth-child(7) { --x: 250; --y: -100; }
+.confetti:nth-child(8) { --x: -250; --y: -100; }
+.confetti:nth-child(9) { --x: 100; --y: -250; }
+.confetti:nth-child(10) { --x: -100; --y: -250; }
+.confetti:nth-child(11) { --x: 350; --y: -150; }
+.confetti:nth-child(12) { --x: -350; --y: -150; }
+.confetti:nth-child(13) { --x: 180; --y: -320; }
+.confetti:nth-child(14) { --x: -180; --y: -320; }
+.confetti:nth-child(15) { --x: 280; --y: -180; }
+.confetti:nth-child(16) { --x: -280; --y: -180; }
+.confetti:nth-child(17) { --x: 120; --y: -280; }
+.confetti:nth-child(18) { --x: -120; --y: -280; }
+.confetti:nth-child(19) { --x: 320; --y: -220; }
+.confetti:nth-child(20) { --x: -320; --y: -220; }
+
+.icon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon:hover {
-    box-shadow: inset 0 0 100px 100px rgba(13, 74, 240, 0.1);
-    background-color: rgb(197, 220, 241);
-    color:rgb(52, 81, 214);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 20px rgba(52, 81, 214, 0.4), var(--shadow-lg);
+}
+
+.iconChildhood {
+    position: relative;
+    overflow: hidden;
+}
+
+.iconChildhood::before {
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        transparent 30%,
+        rgba(255, 255, 255, 0.6) 50%,
+        transparent 70%,
+        transparent 100%
+    );
+    animation: metallicShine 2s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes metallicShine {
+    0%, 14% {
+        top: 100%;
+        left: -100%;
+        opacity: 0;
+    }
+    15% {
+        top: 80%;
+        left: -80%;
+        opacity: 1;
+    }
+    35% {
+        top: -80%;
+        left: 80%;
+        opacity: 1;
+    }
+    36%, 100% {
+        top: -100%;
+        left: 100%;
+        opacity: 0;
+    }
 }
 
 .iconChildhood:hover {
-    box-shadow: inset 0 0 100px 100px rgba(106, 7, 116, 0.1);
-    background-color: rgb(245, 224, 212);
-    color:rgb(236, 95, 13);
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 0 20px rgba(236, 95, 13, 0.4), var(--shadow-lg);
+    background: linear-gradient(135deg, rgba(236, 95, 13, 0.2), rgba(245, 120, 50, 0.2));
+    color: rgb(236, 95, 13);
+    border-color: rgba(236, 95, 13, 0.5);
 }
 
 .iconCompulsorySchool:hover {
-    box-shadow: inset 0 0 100px 100px rgba(106, 7, 116, 0.1);
-    background-color: rgb(238, 208, 208);
-    color:rgb(226, 7, 7);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 20px rgba(226, 7, 7, 0.4), var(--shadow-lg);
+    background: linear-gradient(135deg, rgba(226, 7, 7, 0.2), rgba(255, 50, 50, 0.2));
+    color: rgb(226, 7, 7);
+    border-color: rgba(226, 7, 7, 0.5);
 }
 
 .iconErasmus:hover {
-    box-shadow: inset 0 0 100px 100px rgba(106, 7, 116, 0.1);
-    background-color: rgb(124, 233, 103);
-    color:rgb(26, 116, 8);
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 0 20px rgba(26, 116, 8, 0.4), var(--shadow-lg);
+    background: linear-gradient(135deg, rgba(26, 116, 8, 0.2), rgba(50, 200, 30, 0.2));
+    color: rgb(26, 200, 8);
+    border-color: rgba(26, 116, 8, 0.5);
 }
 
 .iconQuantycaJob:hover {
-    box-shadow: inset 0 0 100px 100px rgba(106, 7, 116, 0.1);
-    background-color: rgb(241, 197, 239);
-    color:rgb(145, 5, 121);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 20px rgba(145, 5, 121, 0.4), var(--shadow-lg);
+    background: linear-gradient(135deg, rgba(145, 5, 121, 0.2), rgba(200, 50, 180, 0.2));
+    color: rgb(200, 50, 180);
+    border-color: rgba(145, 5, 121, 0.5);
 }
 
 .iconTheForkJob:hover {
-    box-shadow: inset 0 0 100px 100px rgba(106, 7, 116, 0.1);
-    background-color: rgb(124, 233, 103);
-    color:rgb(26, 116, 8);
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 0 20px rgba(26, 116, 8, 0.4), var(--shadow-lg);
+    background: linear-gradient(135deg, rgba(26, 116, 8, 0.2), rgba(50, 200, 30, 0.2));
+    color: rgb(26, 200, 8);
+    border-color: rgba(26, 116, 8, 0.5);
 }
 
 .childDescription {
-    color: rgb(236, 95, 13);
+    color: rgb(236, 120, 50);
+    font-weight: 500;
+    line-height: 1.7;
 }
 
 .primarySchoolDescription {
-    font-weight: bold;
-    color:rgb(226, 7, 7);
+    font-weight: 600;
+    color: rgb(255, 80, 80);
+    line-height: 1.7;
 }
 
 .middleSchoolDescription {
-    color:rgb(226, 7, 7);
+    color: rgb(255, 80, 80);
+    font-weight: 500;
+    line-height: 1.7;
 }
 
 .highSchoolDescription {
-    color:rgb(226, 7, 7);
+    color: rgb(255, 80, 80);
+    font-weight: 500;
+    line-height: 1.7;
 }
 
 .bachelorDescription {
-    color:rgb(52, 81, 214);
+    color: rgb(102, 126, 234);
+    font-weight: 500;
+    line-height: 1.7;
 }
 
 .erasmusDescription {
-    color:rgb(26, 116, 8);
+    color: rgb(50, 200, 50);
+    font-weight: 500;
+    line-height: 1.7;
 }
 
 .masterDescription {
-    color:rgb(52, 81, 214);
+    color: rgb(102, 126, 234);
+    font-weight: 500;
+    line-height: 1.7;
 }
 
 .quantycaJobDescription {
-    color:rgb(170, 8, 143);
+    color: rgb(200, 50, 180);
+    font-weight: 500;
+    line-height: 1.7;
 }
 
 .theForkJobDescription {
-    color:rgb(26, 116, 8);
+    color: rgb(50, 200, 50);
+    font-weight: 500;
+    line-height: 1.7;
 }
 
+/* Timeline Paper Enhancement */
+.MuiTimelineContent-root .MuiPaper-root {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.MuiTimelineContent-root .MuiPaper-root:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Mobile Styles */
+@media (max-width: 768px) {
+    .MuiTimeline-root {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .MuiTimelineItem-root {
+        min-height: auto !important;
+    }
+
+    .MuiTimelineItem-root::before {
+        flex: 1 !important;
+    }
+
+    .MuiTimelineOppositeContent-root {
+        flex: 1 !important;
+        padding: 6px 8px !important;
+    }
+
+    .MuiTimelineOppositeContent-root .MuiTypography-root {
+        font-size: 0.75rem !important;
+    }
+
+    .MuiTimelineSeparator-root {
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+    }
+
+    .MuiTimelineContent-root {
+        padding: 6px 8px !important;
+        flex: 1 !important;
+    }
+
+    .MuiTimelineContent-root .MuiPaper-root {
+        padding: var(--spacing-sm) !important;
+    }
+
+    .MuiTimelineContent-root .MuiTypography-root {
+        font-size: 0.875rem !important;
+    }
+
+    #baby {
+        max-width: 100%;
+        height: auto;
+    }
+}
