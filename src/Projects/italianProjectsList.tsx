@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import Project from './Project';
 
-const italianProjectsList = [
+const italianProjectsList: ReactElement[] = [
   <Project
     title="Una Ricetta Al Giorno"
     subtitle="Canale Telegram"

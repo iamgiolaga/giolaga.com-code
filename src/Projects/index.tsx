@@ -1,7 +1,7 @@
 import './style.css';
 import FadeInSection from '../utils/FadeInSection';
 import DivSlideshow from '../utils/DivSlideshow';
-import projectsList from './projectsList.js';
+import projectsList from './projectsList';
 import { useTranslation } from 'react-i18next';
 import italianProjectsList from './italianProjectsList';
 
