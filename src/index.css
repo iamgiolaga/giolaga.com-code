@@ -118,11 +118,6 @@ p {
   h2, h3 {
     margin-bottom: var(--spacing-xs);
   }
-  
-  /* Disable parallax and 3D effects on mobile for performance */
-  * {
-    transform: none !important;
-  }
 }
 
 @media (max-width: 480px) {

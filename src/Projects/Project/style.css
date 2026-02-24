@@ -97,16 +97,14 @@
     transition: all 0.3s ease;
     border-radius: 50%;
     padding: 4px;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
 }
 
 #closeIcon:hover {
     opacity: 1;
     background: var(--glass-bg);
     transform: rotate(90deg) scale(1.1);
-}
-
-#projectModal {
-    overflow: scroll;
 }
 
 #projectModal .MuiBox-root {
@@ -123,7 +121,8 @@
 @media (max-width: 768px) {
   .projectContainer {
     padding: var(--spacing-lg);
-    height: 45vh;
+    height: auto;
+    min-height: 55vh;
   }
   
   .projectDescription {

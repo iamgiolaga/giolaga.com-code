@@ -144,6 +144,10 @@
     display: none;
 }
 
+.skill-language p {
+    text-align: center;
+}
+
 .flag {
     width: 2.8em !important;
     height: 2.8em !important;
@@ -203,9 +207,9 @@
   }
   
   .skill p {
-    flex: none;
-    width: 100%;
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .skill .MuiLinearProgress-root {

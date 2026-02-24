@@ -28,7 +28,10 @@ function App() {
   return (
     <Suspense fallback="loading">
       <div className="App">
-        <LanguageSelector onChangeLanguage={i18n.changeLanguage} />
+        <LanguageSelector
+          onChangeLanguage={i18n.changeLanguage}
+          currentLanguage={i18n.language}
+        />
         <div id="mailContainer">
           <div style={{ display: 'flex' }} onClick={() => window.open(EMAIL)}>
             <MailOutlineIcon style={MAIL_ICON_STYLE} />

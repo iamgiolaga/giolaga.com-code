@@ -11,6 +11,7 @@ const DivSlideshow = ({ elements }: DivSlideshowProps) => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { isFocusingOnProject } = useFocus();
   const sliderRef = useRef<HTMLDivElement>(null);
+  const isManualScrolling = useRef(false);
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -24,20 +25,40 @@ const DivSlideshow = ({ elements }: DivSlideshowProps) => {
       const slideWidth = sliderRef.current.offsetWidth;
       sliderRef.current.scrollTo({
         left: slideIndex * slideWidth,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   };
 
+  const handleScroll = () => {
+    if (sliderRef.current && !isManualScrolling.current) {
+      const slideWidth = sliderRef.current.offsetWidth;
+      const scrollLeft = sliderRef.current.scrollLeft;
+      const currentIndex = Math.round(scrollLeft / slideWidth);
+      if (
+        currentIndex !== index &&
+        currentIndex >= 0 &&
+        currentIndex < elements.length
+      ) {
+        setIndex(currentIndex);
+      }
+    }
+  };
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (slider) {
+      slider.addEventListener('scroll', handleScroll, { passive: true });
+      return () => slider.removeEventListener('scroll', handleScroll);
+    }
+  }, [index, elements.length]);
+
   useEffect(() => {
     if (!isFocusingOnProject) {
-      timeoutRef.current = setTimeout(
-        () => {
-          const nextIndex = index === elements.length - 1 ? 0 : index + 1;
-          goToSlide(nextIndex);
-        },
-        5000
-      );
+      timeoutRef.current = setTimeout(() => {
+        const nextIndex = index === elements.length - 1 ? 0 : index + 1;
+        goToSlide(nextIndex);
+      }, 5000);
     }
 
     return () => {
@@ -47,10 +68,7 @@ const DivSlideshow = ({ elements }: DivSlideshowProps) => {
 
   return (
     <div className="slideshow-container">
-      <div 
-        className="slideshow-slider"
-        ref={sliderRef}
-      >
+      <div className="slideshow-slider" ref={sliderRef}>
         {elements.map((el, idx) => (
           <div className="slideshow-slide" key={idx}>
             {el}

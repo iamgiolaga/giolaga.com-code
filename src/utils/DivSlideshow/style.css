@@ -63,6 +63,10 @@
   .slideshow-slide {
     padding: 0 1rem;
   }
+
+  .slideshow-dots {
+    margin-top: 3rem;
+  }
 }
 
 @media (max-width: 480px) {
