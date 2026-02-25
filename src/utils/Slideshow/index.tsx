@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef } from 'react';
 import './style.css';
 
-import me1 from '../../profilePictures/me1.png';
-import me2 from '../../profilePictures/me2.png';
-import me3 from '../../profilePictures/me3.png';
-import me4 from '../../profilePictures/me4.png';
-import me5 from '../../profilePictures/me5.png';
-import me6 from '../../profilePictures/me6.png';
-import me7 from '../../profilePictures/me7.png';
-import me8 from '../../profilePictures/me8.png';
-import me9 from '../../profilePictures/me9.png';
+import me1 from '../../profilePictures/me1.webp';
+import me2 from '../../profilePictures/me2.webp';
+import me3 from '../../profilePictures/me3.webp';
+import me4 from '../../profilePictures/me4.webp';
+import me5 from '../../profilePictures/me5.webp';
+import me6 from '../../profilePictures/me6.webp';
+import me7 from '../../profilePictures/me7.webp';
+import me8 from '../../profilePictures/me8.webp';
+import me9 from '../../profilePictures/me9.webp';
 import { useSwipeable } from 'react-swipeable';
 
 const pictures = [me1, me9, me6, me5, me2, me7, me4, me3, me8];
