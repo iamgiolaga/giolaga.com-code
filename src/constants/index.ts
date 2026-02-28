@@ -16,6 +16,6 @@ export const NAV_SECTIONS = [
   { id: 'skills', key: 'skills' },
 ] as const;
 
-export const GITHUB_TAGS_URL =
-  'https://github.com/iamgiolaga/iamgiolaga.github.io/tags';
 export const EMAIL = 'mailto:giovanni.lagana1995@gmail.com';
+
+export const VERSIONS_URL = 'https://giolaga.com/versions/';

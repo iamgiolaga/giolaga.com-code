@@ -13,15 +13,15 @@ import {
   APP_VERSION,
   MAIL_ICON_STYLE,
   NAV_SECTIONS,
-  GITHUB_TAGS_URL,
   EMAIL,
+  VERSIONS_URL,
 } from './constants';
 
 function App() {
   const { t, i18n } = useTranslation('common');
 
   const handleWebsiteVersionClick = () => {
-    const newWindow = window.open(GITHUB_TAGS_URL, '_blank');
+    const newWindow = window.open(VERSIONS_URL, '_blank');
     if (newWindow) newWindow.focus();
   };
 
