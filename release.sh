@@ -42,9 +42,11 @@ echo "🔨 Building and deploying..."
 # Archive previous version before overwriting root
 echo "📂 Archiving previous version..."
 cd ../iamgiolaga.github.io
-# Extract previous version from root index.html (looking for version number in the footer)
-PREV_VERSION=$(grep -o 'giolaga.com - v[0-9.]*' index.html | grep -o 'v[0-9.]*' | head -1)
+# Get the latest tag from deploy repo to determine current deployed version
+PREV_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+echo "   Detected previous version: $PREV_VERSION (new version: v$VERSION)"
 
+ARCHIVED="false"
 if [ -n "$PREV_VERSION" ] && [ "$PREV_VERSION" != "v$VERSION" ]; then
   echo "   Archiving $PREV_VERSION before deploying v$VERSION..."
   mkdir -p "$PREV_VERSION"
@@ -52,14 +54,14 @@ if [ -n "$PREV_VERSION" ] && [ "$PREV_VERSION" != "v$VERSION" ]; then
   # Also copy me1.webp if it exists
   [ -f me1.webp ] && cp me1.webp "$PREV_VERSION/"
   echo "   ✓ $PREV_VERSION archived"
+  ARCHIVED="true"
 else
-  echo "   No previous version to archive (current: $PREV_VERSION)"
+  echo "   No previous version to archive (detected: $PREV_VERSION, current: v$VERSION)"
 fi
 
 cd ../giolaga.com-code
-sh autobuild.sh
 
-# Update versions page
+# Update versions page BEFORE building
 echo "📄 Updating versions page..."
 VERSIONS_FILE="versions-page/index.html"
 
@@ -73,10 +75,13 @@ else
   # Add new version at the top of the allVersions array
   sed -i '' "s/const allVersions = \[/const allVersions = [\n            { tag: 'v$VERSION', date: '$CURRENT_DATE' },/" "$VERSIONS_FILE"
   echo "   ✓ Added v$VERSION to versions page"
-  
-  # Copy updated versions page to deploy repo
-  cp "$VERSIONS_FILE" ../iamgiolaga.github.io/versions/index.html
 fi
+
+# Always copy updated versions page to deploy repo
+cp "$VERSIONS_FILE" ../iamgiolaga.github.io/versions/index.html
+
+# Now build with updated versions page
+sh autobuild.sh
 
 # Navigate to deploy repo
 cd ../iamgiolaga.github.io
@@ -104,11 +109,17 @@ echo ""
 echo "📍 Changes:"
 echo "   - Code repo: committed, tagged, and pushed"
 echo "   - Built and deployed to root"
-echo "   - Archived in /v$VERSION/"
+if [ "$ARCHIVED" = "true" ]; then
+  echo "   - Previous version archived in /$PREV_VERSION/"
+else
+  echo "   - No previous version archived"
+fi
 echo "   - Versions page updated"
 echo "   - Deploy repo: committed, tagged, and pushed"
 echo ""
 echo "🌐 Your site is now live at:"
 echo "   - https://giolaga.com (v$VERSION)"
-echo "   - https://giolaga.com/v$VERSION/ (archived)"
+if [ "$ARCHIVED" = "true" ]; then
+  echo "   - https://giolaga.com/$PREV_VERSION/ (previous version archived)"
+fi
 echo "   - https://giolaga.com/versions/ (version selector)"
