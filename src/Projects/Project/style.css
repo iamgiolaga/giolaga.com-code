@@ -1,7 +1,7 @@
 .projectContainer {
     width: 100%;
     max-width: 900px;
-    height: 50vh;
+    min-height: auto;
     margin: 0 auto;
     padding: var(--spacing-xl);
     cursor: pointer;
@@ -121,8 +121,7 @@
 @media (max-width: 768px) {
   .projectContainer {
     padding: var(--spacing-lg);
-    height: auto;
-    min-height: 55vh;
+    min-height: auto;
   }
   
   .projectDescription {
@@ -153,7 +152,7 @@
   .projectContainer {
     padding: var(--spacing-md);
     border-radius: 16px;
-    height: 40vh;
+    min-height: auto;
   }
   
   .projectDescription {

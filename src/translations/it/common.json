@@ -4,6 +4,7 @@
     "biography": "Biografia",
     "history": "Storia",
     "projects": "Progetti",
+    "achievements": "Achievements",
     "skills": "Skills"
   },
   "presentation": {
@@ -55,6 +56,9 @@
     "title": "Progetti",
     "partitelleBotEndDate": "Presente",
     "continueReading": "continua a leggere"
+  },
+  "achievements": {
+    "title": "Cose di cui sono orgoglioso"
   },
   "skills": {
     "title": "Skills",

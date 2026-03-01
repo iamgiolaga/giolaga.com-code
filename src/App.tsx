@@ -4,6 +4,7 @@ import Presentation from './Presentation';
 import Biography from './Biography';
 import History from './History';
 import Projects from './Projects';
+import Achievements from './Achievements';
 import Skills from './Skills';
 import { useTranslation } from 'react-i18next';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -66,6 +67,9 @@ function App() {
         </section>
         <section id="projects">
           <Projects />
+        </section>
+        <section id="achievements">
+          <Achievements />
         </section>
         <section id="skills">
           <Skills />

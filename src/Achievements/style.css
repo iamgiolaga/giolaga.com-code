@@ -1,8 +1,8 @@
-#projectsContainer {
+#achievementsContainer {
     width: 100%;
-    background: var(--bg-dark-secondary);
+    background: var(--bg-dark-primary);
     color: white;
-    min-height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -10,18 +10,18 @@
     position: relative;
 }
 
-#projectsContainer::before {
+#achievementsContainer::before {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 50%;
     height: 100%;
-    background: radial-gradient(circle at 80% 50%, rgba(118, 75, 162, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.08) 0%, transparent 70%);
     pointer-events: none;
 }
 
-#projectsTitle {
+#achievementsTitle {
     padding-top: var(--spacing-md);
     padding-bottom: var(--spacing-lg);
     font-family: var(--font-heading);
@@ -37,7 +37,7 @@
 
 /* Hide background gradient on mobile/tablet */
 @media (max-width: 768px) {
-  #projectsContainer::before {
+  #achievementsContainer::before {
     display: none;
   }
 }

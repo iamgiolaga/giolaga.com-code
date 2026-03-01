@@ -13,6 +13,7 @@ export const NAV_SECTIONS = [
   { id: 'biography', key: 'biography' },
   { id: 'history', key: 'history' },
   { id: 'projects', key: 'projects' },
+  { id: 'achievements', key: 'achievements' },
   { id: 'skills', key: 'skills' },
 ] as const;
 
