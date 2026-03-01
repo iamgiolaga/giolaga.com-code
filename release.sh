@@ -50,7 +50,7 @@ ARCHIVED="false"
 if [ -n "$PREV_VERSION" ] && [ "$PREV_VERSION" != "v$VERSION" ]; then
   echo "   Archiving $PREV_VERSION before deploying v$VERSION..."
   mkdir -p "$PREV_VERSION"
-  cp -r asset-manifest.json cv.ico cv.png index.html manifest.json me.jpg thumbnail.webp static/ "$PREV_VERSION/" 2>/dev/null || true
+  cp -r asset-manifest.json cv.ico cv.png index.html manifest.json me.jpg thumbnail.webp static "$PREV_VERSION/" 2>/dev/null || true
   # Also copy me1.webp if it exists
   [ -f me1.webp ] && cp me1.webp "$PREV_VERSION/"
   echo "   ✓ $PREV_VERSION archived"
