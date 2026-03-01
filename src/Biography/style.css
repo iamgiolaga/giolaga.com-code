@@ -3,14 +3,13 @@
   background: linear-gradient(135deg, #667085 0%, #536278 100%);
   color: white;
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem 4rem;
   position: relative;
-  height: 100vh;
-  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: auto;
 }
 
 /* Biography Content - Main content wrapper */
@@ -24,7 +23,7 @@
 
 /* Biography Title */
 .biographyTitle {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-md) 0;
   text-align: center;
   font-family: var(--font-heading);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
@@ -32,6 +31,8 @@
   position: relative;
   z-index: 1;
   margin: 0;
+  margin-top: -10rem;
+  margin-bottom: 3rem;
 }
 
 /* Biography Card Wrapper - Contains card and quote */
@@ -183,7 +184,12 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   #biographyContainer {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .biographyTitle {
+    margin-top: -8rem;
+    margin-bottom: 2rem;
   }
 
   #biographyTextWrapper {
@@ -214,7 +220,12 @@
 
 @media (max-width: 480px) {
   #biographyContainer {
-    padding: 2rem 0.75rem;
+    padding: 1.5rem 0.75rem 2rem;
+  }
+
+  .biographyTitle {
+    margin-top: -4rem;
+    margin-bottom: 1.5rem;
   }
 
   #biographyTextWrapper {

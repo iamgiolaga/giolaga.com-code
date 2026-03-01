@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useState, useRef, useEffect } from 'react';
 import './App.css';
 import Presentation from './Presentation';
 import Biography from './Biography';
@@ -20,11 +20,39 @@ import {
 
 function App() {
   const { t, i18n } = useTranslation('common');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navWrapRef = useRef<HTMLElement>(null);
 
   const handleWebsiteVersionClick = () => {
     const newWindow = window.open(VERSIONS_URL, '_blank');
     if (newWindow) newWindow.focus();
   };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (navWrapRef.current && !navWrapRef.current.contains(event.target as Node)) {
+        closeMobileMenu();
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('click', handleClickOutside);
+      document.addEventListener('touchstart', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <Suspense fallback="loading">
@@ -38,19 +66,29 @@ function App() {
             <MailOutlineIcon style={MAIL_ICON_STYLE} />
           </div>
         </div>
-        <nav id="nav-wrap">
-          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-            Show navigation
-          </a>
-          <a className="mobile-btn" href="#nav" title="Hide navigation">
-            Hide navigation
-          </a>
-          <ul id="nav" className="nav">
+        <nav
+          id="nav-wrap"
+          className={isMobileMenuOpen ? 'mobile-menu-open' : ''}
+          ref={navWrapRef}
+        >
+          <button
+            className="mobile-btn"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleMobileMenu();
+            }}
+            title="Toggle navigation"
+            aria-label={isMobileMenuOpen ? 'Hide navigation' : 'Show navigation'}
+          >
+            {isMobileMenuOpen ? 'Hide navigation' : 'Show navigation'}
+          </button>
+          <ul id="nav" className="nav" onClick={(e) => e.stopPropagation()}>
             {NAV_SECTIONS.map((section) => (
               <NavLink
                 key={section.id}
                 to={section.id}
                 label={t(`section.${section.key}`)}
+                onLinkClick={closeMobileMenu}
               />
             ))}
           </ul>
