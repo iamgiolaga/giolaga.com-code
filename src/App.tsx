@@ -36,19 +36,40 @@ function App() {
     setIsMobileMenuOpen(false);
   };
 
+  const handleMenuButtonClick = (e: React.MouseEvent) => {
+    // Per mouse/trackpad, gestiamo normalmente
+    e.stopPropagation();
+    toggleMobileMenu();
+  };
+
+  const handleMenuButtonTouch = (e: React.TouchEvent) => {
+    // Per touch, preveniamo il click successivo
+    e.preventDefault();
+    e.stopPropagation();
+    toggleMobileMenu();
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
-      if (navWrapRef.current && !navWrapRef.current.contains(event.target as Node)) {
+      if (
+        navWrapRef.current &&
+        !navWrapRef.current.contains(event.target as Node)
+      ) {
         closeMobileMenu();
       }
     };
 
+    // Blocca lo scroll del body quando il menu è aperto per evitare shift
     if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
       document.addEventListener('click', handleClickOutside);
       document.addEventListener('touchstart', handleClickOutside);
+    } else {
+      document.body.style.overflow = '';
     }
 
     return () => {
+      document.body.style.overflow = '';
       document.removeEventListener('click', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
     };
@@ -73,12 +94,12 @@ function App() {
         >
           <button
             className="mobile-btn"
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleMobileMenu();
-            }}
+            onTouchEnd={handleMenuButtonTouch}
+            onClick={handleMenuButtonClick}
             title="Toggle navigation"
-            aria-label={isMobileMenuOpen ? 'Hide navigation' : 'Show navigation'}
+            aria-label={
+              isMobileMenuOpen ? 'Hide navigation' : 'Show navigation'
+            }
           >
             {isMobileMenuOpen ? 'Hide navigation' : 'Show navigation'}
           </button>
