@@ -6,7 +6,7 @@
   padding: 3rem 2rem 4rem;
   position: relative;
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,12 +184,16 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   #biographyContainer {
-    padding: 2rem 1rem 3rem;
+    padding: calc(var(--spacing-xl) * 2) var(--spacing-md) var(--spacing-xl);
+    align-items: flex-start;
+    min-height: 100svh;
   }
 
   .biographyTitle {
-    margin-top: -8rem;
-    margin-bottom: 2rem;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
   }
 
   #biographyTextWrapper {
@@ -220,12 +224,16 @@
 
 @media (max-width: 480px) {
   #biographyContainer {
-    padding: 1.5rem 0.75rem 2rem;
+    padding: calc(var(--spacing-xl) * 1.5) var(--spacing-sm) var(--spacing-lg);
+    align-items: flex-start;
+    min-height: 100svh;
   }
 
   .biographyTitle {
-    margin-top: -4rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
   }
 
   #biographyTextWrapper {

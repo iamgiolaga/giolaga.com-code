@@ -52,8 +52,7 @@
 }
 
 #presentation {
-  min-height: 120vh;
-  min-height: 120dvh;
+  min-height: 120svh;
   background: var(--hero-gradient);
   position: relative;
   overflow: hidden;
@@ -769,7 +768,7 @@ ul#nav li .smoothscroll:hover::before {
 }
 
 /* Responsive optimizations for presentation section */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #presentation .light-rays {
     opacity: 0.5;
   }

@@ -2,7 +2,7 @@
     width: 100%;
     background: var(--bg-dark-primary);
     color: white;
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -36,7 +36,7 @@
 }
 
 /* Hide background gradient on mobile/tablet */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #achievementsContainer::before {
     display: none;
   }

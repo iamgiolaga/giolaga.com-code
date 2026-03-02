@@ -270,8 +270,12 @@
     100% { top: 85%; left: 40%; }
 }
 
-/* Responsive Mobile Styles */
-@media (max-width: 768px) {
+/* Responsive Mobile/Tablet Styles */
+@media (max-width: 1024px) {
+    #timelineContainer::before {
+        display: none;
+    }
+
     #timelineContainer {
         padding: var(--spacing-md) var(--spacing-sm);
     }
