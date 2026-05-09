@@ -1,5 +1,3 @@
-import { Link } from 'react-scroll';
-
 interface NavLinkProps {
   to: string;
   label: string;
@@ -7,41 +5,29 @@ interface NavLinkProps {
 }
 
 const NavLink = ({ to, label, onLinkClick }: NavLinkProps) => {
-  const handleClick = () => {
-    // Chiudi il menu su desktop
-    if (onLinkClick) {
-      onLinkClick();
-    }
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    // Per mobile, preveniamo double-firing
-    e.preventDefault();
-    e.stopPropagation();
-    
-    if (onLinkClick) {
-      onLinkClick();
-    }
-    
-    // Scroll manualmente alla sezione per touch events
+  const scrollTo = () => {
     const element = document.getElementById(to);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (onLinkClick) {
+      onLinkClick();
     }
   };
 
   return (
     <li>
-      <Link 
-        to={to} 
-        spy={true} 
-        smooth={true} 
+      <span
         className="smoothscroll"
-        onClick={handleClick}
-        onTouchEnd={handleTouchEnd}
+        onClick={scrollTo}
+        onTouchEnd={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          scrollTo();
+        }}
       >
         {label}
-      </Link>
+      </span>
     </li>
   );
 };

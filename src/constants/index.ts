@@ -10,6 +10,7 @@ export const MAIL_ICON_STYLE = {
 
 export const NAV_SECTIONS = [
   { id: 'presentation', key: 'home' },
+  { id: 'working-on', key: 'workingOn' },
   { id: 'biography', key: 'biography' },
   { id: 'history', key: 'history' },
   { id: 'projects', key: 'projects' },

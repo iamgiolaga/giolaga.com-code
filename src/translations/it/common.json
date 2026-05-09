@@ -5,7 +5,8 @@
     "history": "Storia",
     "projects": "Progetti",
     "achievements": "Achievements",
-    "skills": "Skills"
+    "skills": "Skills",
+    "workingOn": "A cosa sto lavorando"
   },
   "presentation": {
     "header": "Ciao! Sono"
@@ -59,6 +60,10 @@
   },
   "achievements": {
     "title": "Cose di cui sono orgoglioso"
+  },
+  "workingOn": {
+    "title": "A cosa sto lavorando",
+    "weekly": "settimanale"
   },
   "skills": {
     "title": "Skills",

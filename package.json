@@ -1,6 +1,6 @@
 {
   "name": "giolaga.com",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
@@ -21,6 +21,7 @@
     "react-bootstrap": "^2.10.4",
     "react-country-flag": "^3.1.0",
     "react-dom": "^18.3.1",
+    "recharts": "^2.15.3",
     "react-i18next": "^15.0.0",
     "react-parallax-tilt": "^1.7.319",
     "react-scripts": "^5.0.1",

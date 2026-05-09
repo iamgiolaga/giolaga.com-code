@@ -6,6 +6,7 @@ import History from './History';
 import Projects from './Projects';
 import Achievements from './Achievements';
 import Skills from './Skills';
+import WorkingOn from './WorkingOn';
 import { useTranslation } from 'react-i18next';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LanguageSelector from './components/LanguageSelector';
@@ -117,6 +118,9 @@ function App() {
         <section id="presentation" className="App-header">
           <div className="light-rays"></div>
           <Presentation />
+        </section>
+        <section id="working-on">
+          <WorkingOn />
         </section>
         <section id="biography" className="App-header">
           <Biography />
