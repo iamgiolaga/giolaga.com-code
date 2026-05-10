@@ -63,7 +63,12 @@
   },
   "workingOn": {
     "title": "A cosa sto lavorando",
-    "weekly": "settimanale"
+    "weekly": "settimanale",
+    "metric": {
+      "follower": "follower",
+      "subscribers": "iscritti",
+      "matches": "partite"
+    }
   },
   "skills": {
     "title": "Skills",

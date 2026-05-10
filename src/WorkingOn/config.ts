@@ -7,6 +7,7 @@ export interface ProjectConfig {
   gid: string;
   color: string;
   url: string;
+  metric: string;
 }
 
 export const PROJECTS: ProjectConfig[] = [
@@ -16,6 +17,7 @@ export const PROJECTS: ProjectConfig[] = [
     gid: '0',
     color: '#0A66C2',
     url: 'https://www.linkedin.com/in/giovannilagana/',
+    metric: 'follower',
   },
   {
     key: 'thelinkedinengineer',
@@ -23,6 +25,7 @@ export const PROJECTS: ProjectConfig[] = [
     gid: '397635401',
     color: '#E7A33E',
     url: 'https://www.thelinkedinengineer.com/',
+    metric: 'subscribers',
   },
   {
     key: 'partitellebot',
@@ -30,6 +33,7 @@ export const PROJECTS: ProjectConfig[] = [
     gid: '1964494419',
     color: '#0088CC',
     url: 'https://t.me/PartitelleBot',
+    metric: 'matches',
   },
   {
     key: 'neochef_it',
@@ -37,6 +41,7 @@ export const PROJECTS: ProjectConfig[] = [
     gid: '1135531046',
     color: '#00B894',
     url: 'https://www.instagram.com/neochef_it/',
+    metric: 'follower',
   },
   {
     key: 'neochef_es',
@@ -44,6 +49,7 @@ export const PROJECTS: ProjectConfig[] = [
     gid: '1110915727',
     color: '#E17055',
     url: 'https://www.instagram.com/neochef_es/',
+    metric: 'follower',
   },
   {
     key: 'neochef_fr',
@@ -51,6 +57,7 @@ export const PROJECTS: ProjectConfig[] = [
     gid: '673502469',
     color: '#6C5CE7',
     url: 'https://www.instagram.com/neochef_fr/',
+    metric: 'follower',
   },
 ];
 

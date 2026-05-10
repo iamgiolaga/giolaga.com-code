@@ -63,7 +63,12 @@
   },
   "workingOn": {
     "title": "What I Am Working On",
-    "weekly": "weekly"
+    "weekly": "weekly",
+    "metric": {
+      "follower": "followers",
+      "subscribers": "subscribers",
+      "matches": "matches"
+    }
   },
   "skills": {
     "title": "Skills",

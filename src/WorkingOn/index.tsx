@@ -47,6 +47,7 @@ const WorkingOn = () => {
               weeklyLabel={weeklyLabel}
               lang={i18n.language}
               url={project.url}
+              metric={t(`workingOn.metric.${project.metric}`)}
             />
           ))}
         </div>

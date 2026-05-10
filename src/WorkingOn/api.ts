@@ -40,6 +40,13 @@ export function formatDate(timestamp: number, lang: string): string {
   return `${months[d.getMonth()]} ${d.getDate()}`;
 }
 
+export function formatDateShort(timestamp: number, lang: string): string {
+  const d = new Date(timestamp);
+  const months = lang === 'it' ? MONTHS_IT : MONTHS_EN;
+  const year = String(d.getFullYear()).slice(2);
+  return `${months[d.getMonth()]} ${year}`;
+}
+
 function parseDate(raw: string): Date {
   // DD/MM/YYYY
   const [day, month, year] = raw.split('/').map(Number);

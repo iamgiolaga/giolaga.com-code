@@ -6,7 +6,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import { DataPoint, formatDate } from '../api';
+import { DataPoint, formatDate, formatDateShort } from '../api';
 import './style.css';
 
 interface StatChartProps {
@@ -17,6 +17,7 @@ interface StatChartProps {
   weeklyLabel?: string;
   lang?: string;
   url?: string;
+  metric?: string;
 }
 
 function getWeeklyGrowth(data: DataPoint[]): number {
@@ -37,6 +38,7 @@ const StatChart = ({
   weeklyLabel,
   lang = 'en',
   url,
+  metric,
 }: StatChartProps) => {
   const current = data.length > 0 ? data[data.length - 1].stat : 0;
   const growth = getWeeklyGrowth(data);
@@ -55,20 +57,21 @@ const StatChart = ({
 
   return (
     <div className="stat-card">
+      <span className="stat-card-title">
+        {url ? (
+          <a href={url} target="_blank" rel="noopener noreferrer" className="stat-card-link">
+            {title}
+          </a>
+        ) : (
+          title
+        )}
+      </span>
       <div className="stat-card-header">
-        <span className="stat-card-title">
-          {url ? (
-            <a href={url} target="_blank" rel="noopener noreferrer" className="stat-card-link">
-              {title}
-            </a>
-          ) : (
-            title
-          )}
-        </span>
         <div className="stat-card-values">
           <span className="stat-card-current">
             {current.toLocaleString()}
           </span>
+          {metric && <span className="stat-card-metric">{metric}</span>}
           {data.length >= 2 && (
             <span
               className={`stat-card-growth ${growth > 0 ? 'positive' : growth < 0 ? 'negative' : 'neutral'}`}
@@ -96,8 +99,8 @@ const StatChart = ({
               axisLine={false}
               tickLine={false}
               tick={{ fill: '#6c757d', fontSize: 10 }}
-              tickFormatter={(ts: number) => formatDate(ts, lang)}
-              interval="preserveStartEnd"
+              tickFormatter={(ts: number) => formatDateShort(ts, lang)}
+              interval="preserveEnd"
             />
             <YAxis hide domain={['auto', 'auto']} />
             <Tooltip
