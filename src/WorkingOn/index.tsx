@@ -7,7 +7,7 @@ import { DataPoint, fetchSheetData } from './api';
 import { useTranslation } from 'react-i18next';
 
 const WorkingOn = () => {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const weeklyLabel = t('workingOn.weekly');
   const [data, setData] = useState<Record<string, DataPoint[]>>({});
   const [loading, setLoading] = useState(true);
@@ -45,6 +45,8 @@ const WorkingOn = () => {
               color={project.color}
               loading={loading}
               weeklyLabel={weeklyLabel}
+              lang={i18n.language}
+              url={project.url}
             />
           ))}
         </div>

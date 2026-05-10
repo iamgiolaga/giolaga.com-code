@@ -1,32 +1,49 @@
 import { getSheetUrl } from './config';
 
 export interface DataPoint {
-  date: string;
+  timestamp: number;
   stat: number;
+}
+
+const MONTHS_EN = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+const MONTHS_IT = [
+  'Gen',
+  'Feb',
+  'Mar',
+  'Apr',
+  'Mag',
+  'Giu',
+  'Lug',
+  'Ago',
+  'Set',
+  'Ott',
+  'Nov',
+  'Dic',
+];
+
+export function formatDate(timestamp: number, lang: string): string {
+  const d = new Date(timestamp);
+  const months = lang === 'it' ? MONTHS_IT : MONTHS_EN;
+  return `${months[d.getMonth()]} ${d.getDate()}`;
 }
 
 function parseDate(raw: string): Date {
   // DD/MM/YYYY
   const [day, month, year] = raw.split('/').map(Number);
   return new Date(year, month - 1, day);
-}
-
-function formatDate(d: Date): string {
-  const months = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
-  ];
-  return `${months[d.getMonth()]} ${d.getDate()}`;
 }
 
 function parseCsv(text: string): DataPoint[] {
@@ -42,14 +59,16 @@ function parseCsv(text: string): DataPoint[] {
       const d = parseDate(cleaned);
       if (isNaN(d.getTime())) return null;
       return {
-        date: formatDate(d),
+        timestamp: d.getTime(),
         stat: Number(rawStat.replace(/"/g, '').trim()),
       };
     })
     .filter((p): p is DataPoint => p !== null && !isNaN(p.stat));
 }
 
-export async function fetchSheetData(gid: string): Promise<DataPoint[]> {
+export async function fetchSheetData(
+  gid: string,
+): Promise<DataPoint[]> {
   const url = getSheetUrl(gid);
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Failed to fetch sheet gid=${gid}`);

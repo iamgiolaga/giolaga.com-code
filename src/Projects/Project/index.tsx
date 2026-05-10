@@ -66,7 +66,7 @@ const Project = ({
   };
 
   return (
-    <motion.div 
+    <motion.div
       style={{ margin: '0 auto' }}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -88,9 +88,7 @@ const Project = ({
         <h5>
           {startDate} - {endDate}
         </h5>
-        <div className="projectDescription">
-          {renderDescription()}
-        </div>
+        <div className="projectDescription">{renderDescription()}</div>
       </div>
       <Modal
         aria-labelledby="transition-modal-title"

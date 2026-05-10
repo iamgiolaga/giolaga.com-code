@@ -6,7 +6,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import { DataPoint } from '../api';
+import { DataPoint, formatDate } from '../api';
 import './style.css';
 
 interface StatChartProps {
@@ -15,6 +15,8 @@ interface StatChartProps {
   color: string;
   loading?: boolean;
   weeklyLabel?: string;
+  lang?: string;
+  url?: string;
 }
 
 function getWeeklyGrowth(data: DataPoint[]): number {
@@ -27,7 +29,15 @@ function getWeeklyGrowth(data: DataPoint[]): number {
   return parseFloat(((current - previous) / previous * 100).toFixed(1));
 }
 
-const StatChart = ({ title, data, color, loading, weeklyLabel }: StatChartProps) => {
+const StatChart = ({
+  title,
+  data,
+  color,
+  loading,
+  weeklyLabel,
+  lang = 'en',
+  url,
+}: StatChartProps) => {
   const current = data.length > 0 ? data[data.length - 1].stat : 0;
   const growth = getWeeklyGrowth(data);
   const gradientId = `gradient-${title.replace(/[^a-zA-Z]/g, '')}`;
@@ -46,7 +56,15 @@ const StatChart = ({ title, data, color, loading, weeklyLabel }: StatChartProps)
   return (
     <div className="stat-card">
       <div className="stat-card-header">
-        <span className="stat-card-title">{title}</span>
+        <span className="stat-card-title">
+          {url ? (
+            <a href={url} target="_blank" rel="noopener noreferrer" className="stat-card-link">
+              {title}
+            </a>
+          ) : (
+            title
+          )}
+        </span>
         <div className="stat-card-values">
           <span className="stat-card-current">
             {current.toLocaleString()}
@@ -74,10 +92,11 @@ const StatChart = ({ title, data, color, loading, weeklyLabel }: StatChartProps)
               </linearGradient>
             </defs>
             <XAxis
-              dataKey="date"
+              dataKey="timestamp"
               axisLine={false}
               tickLine={false}
               tick={{ fill: '#6c757d', fontSize: 10 }}
+              tickFormatter={(ts: number) => formatDate(ts, lang)}
               interval="preserveStartEnd"
             />
             <YAxis hide domain={['auto', 'auto']} />
@@ -90,6 +109,7 @@ const StatChart = ({ title, data, color, loading, weeklyLabel }: StatChartProps)
                 fontSize: '12px',
               }}
               formatter={(value: number) => [value.toLocaleString(), 'Value']}
+              labelFormatter={(ts: number) => formatDate(ts, lang)}
             />
             <Area
               type="monotone"

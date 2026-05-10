@@ -6,6 +6,7 @@ export interface ProjectConfig {
   displayName: string;
   gid: string;
   color: string;
+  url: string;
 }
 
 export const PROJECTS: ProjectConfig[] = [
@@ -14,30 +15,42 @@ export const PROJECTS: ProjectConfig[] = [
     displayName: 'LinkedIn',
     gid: '0',
     color: '#0A66C2',
+    url: 'https://www.linkedin.com/in/giovannilagana/',
   },
   {
     key: 'thelinkedinengineer',
     displayName: 'The LinkedIn Engineer',
     gid: '397635401',
     color: '#E7A33E',
+    url: 'https://www.thelinkedinengineer.com/',
+  },
+  {
+    key: 'partitellebot',
+    displayName: 'PartitelleBot',
+    gid: '1964494419',
+    color: '#0088CC',
+    url: 'https://t.me/PartitelleBot',
   },
   {
     key: 'neochef_it',
     displayName: '@neochef_it',
     gid: '1135531046',
     color: '#00B894',
+    url: 'https://www.instagram.com/neochef_it/',
   },
   {
     key: 'neochef_es',
     displayName: '@neochef_es',
     gid: '1110915727',
     color: '#E17055',
+    url: 'https://www.instagram.com/neochef_es/',
   },
   {
     key: 'neochef_fr',
     displayName: '@neochef_fr',
     gid: '673502469',
     color: '#6C5CE7',
+    url: 'https://www.instagram.com/neochef_fr/',
   },
 ];
 
