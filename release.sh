@@ -77,6 +77,15 @@ else
   echo "   ✓ Added v$VERSION to versions page"
 fi
 
+# Commit and push versions page update in code repo
+if [ -n "$(git status --porcelain "$VERSIONS_FILE")" ]; then
+  echo "📝 Committing versions page update..."
+  git add "$VERSIONS_FILE"
+  git commit -m "Update versions page for v$VERSION"
+  git push
+  echo "   ✓ Versions page committed and pushed"
+fi
+
 # Always copy updated versions page to deploy repo
 cp "$VERSIONS_FILE" ../iamgiolaga.github.io/versions/index.html
 
