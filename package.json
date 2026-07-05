@@ -1,6 +1,6 @@
 {
   "name": "giolaga.com",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "homepage": ".",
   "scripts": {
     "start": "react-scripts start",

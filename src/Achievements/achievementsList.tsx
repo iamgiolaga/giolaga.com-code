@@ -2,6 +2,8 @@ import { ReactElement } from 'react';
 import Achievement from './Achievement';
 import awsMeetupImage from './images/aws-meetup-speaker.webp';
 import innovationWeekImage from './images/innovation-week-winner.webp';
+import innovationWeek2026Image from './images/innovation-week-2026-winner.webp';
+import stopLookingForAJobImage from './images/stop-looking-for-a-job-linkedin.webp';
 import interviewPreviewImage from './images/thefork-interview-preview.webp';
 import mediumArticleImage from './images/medium-article-feed.webp';
 import aiPodcastImage from './images/ai-podcast-guadagno.webp';
@@ -10,6 +12,22 @@ import highSchoolImage from './images/high-school-speaker.webp';
 import codingChallengeImage from './images/coding-challenge-winner.webp';
 
 const achievementsList: ReactElement[] = [
+  <Achievement
+    title="Winner of TheFork Innovation Week 2026"
+    description="Led a team of 8 during TheFork Innovation Week 2026. Out of 350 voters, our project was awarded 1st place for innovation among 14 competing teams (92 participants)."
+    image={innovationWeek2026Image}
+    date="May 2026"
+  />,
+  <Achievement
+    title="Stop looking for a job: let them find you! With Giovanni Laganà (The LinkedIn Engineer)"
+    description="Live stream where I was interviewed about the content created for my newsletter: The LinkedIn Engineer."
+    image={stopLookingForAJobImage}
+    action={{
+      type: 'video',
+      url: 'https://www.youtube.com/embed/OeP1OOPiWEM',
+    }}
+    date="Mar 2026"
+  />,
   <Achievement
     title='Speaker at AWS Meetup - "TheFork Feed: building a social engine"'
     description="Speaker at a meetup held at TheFork's office in Milan, presenting what's behind TheFork Feed"
