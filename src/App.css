@@ -315,6 +315,143 @@
   color: #61dafb;
 }
 
+/* --------------------------------------------------------------------
+   Lit edges
+
+   Straight edges, lit like an LED strip: a coloured core running along
+   the edge, a bloom into whatever sits on either side, and a brighter
+   spot travelling along its length. The colours come from custom
+   properties, so the navbar can run the same strip in white.
+
+   Each strip hangs off whatever sits below its seam -- the last one off
+   the version footer -- so #presentation needs no rule of its own, and
+   its pseudo-elements, which carry the hero's stars, stay free.
+   -------------------------------------------------------------------- */
+
+.App > section:not(#presentation),
+#websiteVersion {
+  position: relative;
+}
+
+.App > section:not(#presentation)::before,
+#websiteVersion::before,
+#nav-wrap::after {
+  content: '';
+  position: absolute;
+  /* Above the containers, which paint their own background over the seam. */
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  pointer-events: none;
+  --led-edge: rgba(102, 126, 234, 0.3);
+  --led-mid: rgba(167, 139, 250, 0.9);
+  --led-spot: rgba(255, 255, 255, 0.7);
+  --led-bloom-near: rgba(167, 139, 250, 0.7);
+  --led-bloom-mid: rgba(139, 92, 246, 0.4);
+  --led-bloom-far: rgba(102, 126, 234, 0.22);
+  background-image:
+    /* the travelling spot */
+    linear-gradient(
+      90deg,
+      transparent 66%,
+      var(--led-spot) 78%,
+      transparent 90%
+    ),
+    /* the steady core */
+    linear-gradient(
+      90deg,
+      var(--led-edge) 0%,
+      var(--led-mid) 50%,
+      var(--led-edge) 100%
+    );
+  /* The spot's tile is a round number of pixels, so travelling exactly one
+     tile per cycle brings it back to where it started with no jump. */
+  background-size: 1400px 100%, 100% 100%;
+  background-repeat: repeat-x, no-repeat;
+  box-shadow:
+    0 0 6px var(--led-bloom-near),
+    0 0 18px var(--led-bloom-mid),
+    0 0 36px var(--led-bloom-far);
+  animation: ledSweep 11s linear infinite;
+}
+
+@keyframes ledSweep {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 1400px 0, 0 0;
+  }
+}
+
+/* The navbar is lit along its lower edge instead, and in white. The core
+   stays under full brightness so the travelling spot still reads, and the
+   whole strip runs at half opacity so it sits behind the links. */
+#nav-wrap::after {
+  top: auto;
+  bottom: 0;
+  opacity: 0.5;
+  --led-edge: rgba(255, 255, 255, 0.25);
+  --led-mid: rgba(255, 255, 255, 0.85);
+  --led-spot: rgba(255, 255, 255, 1);
+  --led-bloom-near: rgba(255, 255, 255, 0.55);
+  --led-bloom-mid: rgba(226, 232, 255, 0.32);
+  --led-bloom-far: rgba(190, 205, 255, 0.18);
+  animation-duration: 15s;
+  animation-delay: -6s;
+}
+
+/* Below this width the navbar collapses behind its toggle, so the strip
+   would underline a bar that is no longer there. Same breakpoint the rest
+   of the mobile navigation uses. */
+@media only screen and (max-width: 767px) {
+  #nav-wrap::after {
+    display: none;
+  }
+}
+
+/* Staggered so the strips do not pulse in unison. These selectors match
+   the specificity of the one above, otherwise they would lose. */
+.App > section#biography::before {
+  animation-duration: 14s;
+  animation-delay: -4s;
+}
+
+.App > section#history::before {
+  animation-duration: 9s;
+  animation-delay: -7s;
+}
+
+.App > section#projects::before {
+  animation-duration: 16s;
+  animation-delay: -2s;
+}
+
+.App > section#achievements::before {
+  animation-duration: 12s;
+  animation-delay: -9s;
+}
+
+.App > section#skills::before {
+  animation-duration: 10s;
+  animation-delay: -5s;
+}
+
+#websiteVersion::before {
+  animation-duration: 13s;
+  animation-delay: -3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .App > section:not(#presentation)::before,
+  #websiteVersion::before,
+  #nav-wrap::after {
+    animation: none;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
