@@ -15,7 +15,7 @@
     "title": "Short biography",
     "beforeName": "My name is",
     "name": "Giovanni Laganà",
-    "afterName": ", born in Milan on November 25th, 1995. When I was 5 years old my family and I moved to a little city in the east of Milan called Gorgonzola (if you are wondering... yes, where the cheese was invented). I grew up in Gorgonzola, receiving there the first part of my education and I came back to Milan for high school and for my bachelor and master's degree. Moreover, I spent 5 months between 2019 and 2020 in Barcelona for the Erasmus+ Programme. I have been working from June, 2021 to September, 2022 at Quantyca as a Data Engineer, now I am a growing Fullstack Software Engineer at TheFork."
+    "afterName": ", born in Milan on November 25th, 1995. When I was 5 years old my family and I moved to a little city in the east of Milan called Gorgonzola (if you are wondering... yes, where the cheese was invented). I grew up in Gorgonzola, receiving there the first part of my education and I came back to Milan for high school and for my bachelor and master's degree. Moreover, I spent 5 months between 2019 and 2020 in Barcelona for the Erasmus+ Programme. I have been working from June, 2021 to September, 2022 at Quantyca as a Data Engineer, and I have been at TheFork since September, 2022, where I am now a Senior Software Engineer."
   },
   "history": {
     "title": "History",
@@ -47,11 +47,14 @@
     "dataEngineerDescription": "Quantyca - Data at Core",
     "dataEngineerDate": "June, 2022",
     "fullStackSoftwareEngineer": "Fullstack Software Engineer",
-    "fullStackSoftwareEngineerDescription": "TheFork, a TripAdvisor company",
+    "fullStackSoftwareEngineerDescription": "TheFork",
     "fullStackSoftwareEngineerDate": "September, 2022",
     "fullStackSoftwareEngineerII": "Fullstack Software Engineer II",
-    "fullStackSoftwareEngineerIIDescription": "TheFork, a TripAdvisor company",
-    "fullStackSoftwareEngineerIIDate": "March, 2024"
+    "fullStackSoftwareEngineerIIDescription": "TheFork",
+    "fullStackSoftwareEngineerIIDate": "March, 2024",
+    "seniorSoftwareEngineer": "Senior Software Engineer",
+    "seniorSoftwareEngineerDescription": "TheFork",
+    "seniorSoftwareEngineerDate": "September, 2026"
   },
   "projects": {
     "title": "Projects",

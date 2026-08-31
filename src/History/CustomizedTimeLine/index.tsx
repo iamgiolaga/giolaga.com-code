@@ -262,6 +262,16 @@ const CustomizedTimeLine = () => {
         className="iconTheForkJob"
         link="https://www.thefork.it"
       />
+      <TimelineEvent
+        date={t('history.seniorSoftwareEngineerDate')}
+        title={t('history.seniorSoftwareEngineer')}
+        description={t('history.seniorSoftwareEngineerDescription')}
+        icon={WorkIcon}
+        iconColor="success"
+        hoverColor="rgb(26, 116, 8)"
+        className="iconTheForkJob"
+        link="https://www.thefork.it"
+      />
     </Timeline>
   );
 };
